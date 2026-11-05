@@ -28,7 +28,7 @@ export default {
 .${id}-prop{position:absolute}
 .${id}-shadow{position:absolute;left:10%;bottom:-14px;height:28px;border-radius:50%;background:#14141418}
 .${id}-call{position:absolute;width:460px;text-align:center;font-size:40px;font-weight:700;line-height:1.3;background:${color.card};border:4px solid ${color.ink};border-radius:20px;padding:14px 18px;box-shadow:6px 6px 0 ${color.ink}}
-.${id}-hl{background:${color.accent};color:${color.paper}}`;
+.${id}-hl{background:${color.accent};color:${color.ink}}`;
     const room = p.set === "plain" ? "" : roomSvg(id);
     const js = [groundIn(ctx)];
     if (p.title) js.push(`FB.blurWords(tl, "#${id}-title", 0.1);`);
@@ -50,7 +50,7 @@ export default {
         if (a.type === "smoke") js.push(`tl.fromTo(".${q.pid}-puff", { y: 0, opacity: 1, scale: 1 }, { y: -60, opacity: 0.25, scale: 1.25, duration: 1.6, ease: "none", stagger: 0.5, repeat: ${Math.max(1, Math.floor(ctx.dur / 1.6))} }, ${ta});`);
         if (a.type === "drawer") { js.push(`tl.fromTo("#${q.pid}-drawer", { y: 0 }, { y: 34, duration: 0.3, ease: "back.out(2)" }, ${ta});`); ctx.cue("click", ta + 0.05, { volume: 0.25 }); }
         if (a.type === "display" && a.to != null) js.push(`FB.countFmt(tl, "#${q.pid}-display", ${a.from ?? 0}, ${a.to}, ${ta}, { style: ${JSON.stringify(a.style ?? "full")}, dur: ${a.dur ?? 1} });`);
-        if (a.type === "notes") (q.opts?.notes ?? [0, 1, 2]).forEach((_, k) => { js.push(`FB.pop(tl, "#${q.pid}-n${k}", ${ta + k * 0.45}, { from: 0.7, dur: 0.35 });`); ctx.cue("pop", ta + k * 0.45 + 0.05, { volume: 0.16 }); });
+        if (a.type === "notes") { (q.opts?.notes ?? [0, 1, 2]).forEach((_, k) => js.push(`FB.pop(tl, "#${q.pid}-n${k}", ${ta + k * 0.45}, { from: 0.7, dur: 0.35 });`)); ctx.cue("pop", ta + 0.05, { volume: 0.16 }); }
         if (a.type === "glow") js.push(`tl.fromTo("#${q.pid}-glow", { opacity: 0.15 }, { opacity: 0.75, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: ${Math.max(1, Math.floor(ctx.dur / 0.8) - 1)} }, ${ta});`);
         if (a.type === "stamp") { js.push(`FB.stamp(tl, "#${q.pid}-stamp", ${ta}, { rot: 0 });`); ctx.cue("pop", ta + 0.05, { volume: 0.28 }); }
         if (a.type === "boxes-out") js.push(`tl.to(".${q.pid}-box", { y: -40, opacity: 0, duration: 0.35, ease: "power3.in", stagger: 0.12 }, ${ta});`);
@@ -63,7 +63,7 @@ export default {
     (p.callouts ?? []).forEach((c, i) => {
       const t = ctx.at(c.at ?? 1);
       js.push(`FB.pop(tl, "#${id}-c${i}", ${t}, { from: 0.75, dur: 0.4 });`);
-      ctx.cue(c.hl ? "pop" : "click-soft", t + 0.05, { volume: 0.2 });
+      if (c.hl) ctx.cue("pop", t + 0.05, { volume: 0.2 });
       if (c.hl) js.push(camera(ctx, t));
     });
     js.push(exitAll(ctx));
