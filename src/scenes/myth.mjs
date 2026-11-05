@@ -18,6 +18,7 @@ export default {
 .${id}-wrong i{position:absolute;right:-6px;left:-6px;top:52%;height:9px;border-radius:5px;background:${ink}}
 #${id}-title{font-size:44px}
 #${id}-right{display:flex;flex-direction:column;gap:34px;margin-top:40px;background:${color.accent};color:${color.ink};padding:26px 48px 34px;border-radius:22px}
+#${id}-right .hl{color:${color.ink};text-decoration:underline;text-decoration-thickness:6px;text-underline-offset:10px}
 #${id}-right #${id}-rl{color:${color.ink};opacity:.75;line-height:1.2}`;
     const js = [groundIn(ctx),
       `FB.blurLine(tl, "#${id}-title", 0.35);`,];
