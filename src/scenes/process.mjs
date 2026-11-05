@@ -25,7 +25,7 @@ export default {
     times.forEach((t, i) => {
       js.push(`FB.rise(tl, "#${id}-s${i}", ${t}, { y: 34, dur: 0.45 });`);
       if (i > 0 && !p.keepAll) js.push(`tl.to("#${id}-s${i - 1}", { opacity: 0.4, duration: 0.3 }, ${t});`);
-      ctx.cue(i % 2 ? "key-press" : "click-soft", t + 0.05, { volume: 0.2 });
+      if (i === 0 || p.steps[i].hl) ctx.cue(p.steps[i].hl ? "pop" : "click-soft", t + 0.05, { volume: 0.2 });
     });
     js.push(exitAll(ctx));
     return { css: css + extra, html, js: js.join("\n") };

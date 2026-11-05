@@ -30,7 +30,7 @@ export default {
       const t = ctx.at(b.at ?? 1 + i * 0.8);
       js.push(`tl.fromTo("#${id}-w${i}", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, ${t - 0.15});`);
       js.push(`FB.rise(tl, "#${id}-b${i}", ${t}, { y: 30, dur: 0.45 });`);
-      ctx.cue("click-soft", t + 0.05, { volume: 0.22 });
+      if (i === 0) ctx.cue("click-soft", t + 0.05, { volume: 0.22 });
     });
     const hl = p.branches.findIndex((b) => b.hl);
     if (hl >= 0 && p.at?.choose) {

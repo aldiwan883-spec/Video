@@ -52,7 +52,7 @@ export default {
       js.push(`FB.blurLine(tl, "#${id}-r${i} .${id}-lbl", ${t});`);
       js.push(`FB.barTo(tl, "#${id}-b${i}", ${t + 0.05}, 1, { origin: "${r.op === "-" ? "left" : "right"} center", dur: 0.55 });`);
       js.push(`FB.blurLine(tl, "#${id}-v${i}", ${t + 0.35});`);
-      ctx.cue(r.op === "=" ? "pop" : "click-soft", t + 0.38, { volume: r.op === "=" ? 0.3 : 0.2 });
+      if (r.op === "=" || i === 0) ctx.cue(r.op === "=" ? "pop" : "click-soft", t + 0.38, { volume: r.op === "=" ? 0.3 : 0.2 });
     });
     if (p.unit) js.push(`FB.blurLine(tl, "#${id}-unit", 0.6);`);
     if (p.note) js.push(`FB.inkWords(tl, "#${id}-note", ${ctx.at(p.at?.note ?? last + 0.8)}, { to: "${ink}" });`);

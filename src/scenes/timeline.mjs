@@ -29,7 +29,7 @@ export default {
     times.forEach((t, i) => {
       if (i > 0) js.push(`tl.to("#${id}-prog", { scaleY: ${((i + 1) / n).toFixed(3)}, duration: 0.45, ease: "power2.inOut" }, ${t - 0.1});`);
       js.push(`FB.rise(tl, "#${id}-i${i}", ${t}, { y: 26, dur: 0.45 });`);
-      ctx.cue(p.items[i].hl ? "pop" : "click-soft", t + 0.08, { volume: 0.2 });
+      if (i === 0 || p.items[i].hl) ctx.cue(p.items[i].hl ? "pop" : "click-soft", t + 0.08, { volume: 0.2 });
     });
     js.push(exitAll(ctx));
     return { css: css + extra, html, js: js.join("\n") };

@@ -25,7 +25,7 @@ export default {
     for (const key of ["pros", "cons"]) p[key].forEach((it, i) => {
       const t = ctx.at(it.at ?? 0.6 + i * 0.6 + (key === "cons" ? 1.5 : 0));
       js.push(`FB.blurLine(tl, "#${id}-${key}${i}", ${t});`);
-      ctx.cue("click-soft", t + 0.03, { volume: 0.18 });
+      if (i === 0) ctx.cue("click-soft", t + 0.03, { volume: 0.18 });
     });
     if (p.verdict) { const t = ctx.at(p.at?.verdict ?? 4); js.push(`FB.blurWords(tl, "#${id}-verdict", ${t});`, camera(ctx, t)); }
     js.push(exitAll(ctx));
