@@ -4,13 +4,14 @@
   "series": "dictionary",
   "number": 1,
   "slug": "valuation",
-  "term": { "en": "Valuation", "ar": "التقييم" },
-
+  "term": {
+    "en": "Valuation",
+    "ar": "التقييم"
+  },
   "cover": {
     "hook": "2 مليون مقابل 10%…\nيبقى الشركة بـ *20*؟",
     "sub": "Post-money · Pre-money · Multiples"
   },
-
   "edu": {
     "objective": "المشاهد بعد الحلقة هيقدر يحوّل أي عرض (فلوس مقابل نسبة) لـ Post-money و Pre-money، ويفرّق بين Primary و Secondary، ويشرح ليه نفس الـ Revenue multiple ممكن يبقى منطقي لشركة ومبالغ فيه لشركة تانية.",
     "insights": [
@@ -37,24 +38,75 @@
       ]
     },
     "calcs": [
-      { "label": "Post-money", "expr": "2000000 / 10%", "expect": 20000000 },
-      { "label": "Pre-money", "expr": "20000000 - 2000000", "expect": 18000000 },
-      { "label": "Secondary: قيمة ضمنية", "expr": "2000000 / 10%", "expect": 20000000 },
-      { "label": "ربح إجمالي السناكس", "expr": "4000000 * 30%", "expect": 1200000 },
-      { "label": "Revenue multiple", "expr": "18000000 / 4000000", "expect": 4.5 },
-      { "label": "Pre-money ÷ ربح إجمالي (سناكس)", "expr": "18000000 / 1200000", "expect": 15 },
-      { "label": "ربح إجمالي الـ Software", "expr": "4000000 * 80%", "expect": 3200000 },
-      { "label": "Pre-money ÷ ربح إجمالي (Software)", "expr": "18000000 / 3200000", "expect": 5.625 },
-      { "label": "نسبة الربح الإجمالي (أكتر من ضعفين ونص)", "expr": "3200000 / 1200000", "expect": 2.667 }
+      {
+        "label": "Post-money",
+        "expr": "2000000 / 10%",
+        "expect": 20000000
+      },
+      {
+        "label": "Pre-money",
+        "expr": "20000000 - 2000000",
+        "expect": 18000000
+      },
+      {
+        "label": "Secondary: قيمة ضمنية",
+        "expr": "2000000 / 10%",
+        "expect": 20000000
+      },
+      {
+        "label": "ربح إجمالي السناكس",
+        "expr": "4000000 * 30%",
+        "expect": 1200000
+      },
+      {
+        "label": "Revenue multiple",
+        "expr": "18000000 / 4000000",
+        "expect": 4.5
+      },
+      {
+        "label": "Pre-money ÷ ربح إجمالي (سناكس)",
+        "expr": "18000000 / 1200000",
+        "expect": 15
+      },
+      {
+        "label": "ربح إجمالي الـ Software",
+        "expr": "4000000 * 80%",
+        "expect": 3200000
+      },
+      {
+        "label": "Pre-money ÷ ربح إجمالي (Software)",
+        "expr": "18000000 / 3200000",
+        "expect": 5.625
+      },
+      {
+        "label": "نسبة الربح الإجمالي (أكتر من ضعفين ونص)",
+        "expr": "3200000 / 1200000",
+        "expect": 2.667
+      }
     ],
-    "terms": ["Post-money: قيمة الشركة بعد الاستثمار", "Pre-money: قيمة الشركة قبل الاستثمار", "Primary: الفلوس داخلة الشركة", "Secondary: الفلوس داخلة جيب البايع", "Gross margin: هامش الربح الإجمالي", "Revenue multiple: التقييم ÷ المبيعات", "multiple", "margin", "Software"],
+    "terms": [
+      "Post-money: قيمة الشركة بعد الاستثمار",
+      "Pre-money: قيمة الشركة قبل الاستثمار",
+      "Primary: الفلوس داخلة الشركة",
+      "Secondary: الفلوس داخلة جيب البايع",
+      "Gross margin: هامش الربح الإجمالي",
+      "Revenue multiple: التقييم ÷ المبيعات",
+      "multiple",
+      "margin",
+      "Software"
+    ],
     "hypothetical": true,
     "sources": [
-      { "claim": "تعريف pre-money / post-money وأثر الـ option pool", "ref": "docs/library/05-pre-post-money.md + docs/research/pilot-sources.md §3" },
-      { "claim": "الـ multiples بتختلف جامد بين القطاعات (Software vs Grocery)", "ref": "Damodaran Online — EV/Sales by industry (docs/research/pilot-sources.md §3)" }
+      {
+        "claim": "تعريف pre-money / post-money وأثر الـ option pool",
+        "ref": "docs/library/05-pre-post-money.md + docs/research/pilot-sources.md §3"
+      },
+      {
+        "claim": "الـ multiples بتختلف جامد بين القطاعات (Software vs Grocery)",
+        "ref": "Damodaran Online — EV/Sales by industry (docs/research/pilot-sources.md §3)"
+      }
     ]
   },
-
   "segments": [
     {
       "id": "hook",
@@ -62,11 +114,30 @@
       "scene": {
         "type": "hook",
         "lines": [
-          { "text": "لو حد طلب", "size": "quiet" },
-          { "text": "2,000,000", "size": "hero", "punch": "2 مليون" },
-          { "text": "مقابل 10%", "size": "h2", "punch": "10%" },
-          { "text": "يبقى الشركة بـ 20 مليون؟", "size": "h2", "at": "يبقى" },
-          { "text": "الحسبة صح… *بس مش القصة كلها*", "size": "h1", "at": "مش معناه" }
+          {
+            "text": "لو حد طلب",
+            "size": "quiet"
+          },
+          {
+            "text": "2,000,000",
+            "size": "hero",
+            "punch": "2 مليون"
+          },
+          {
+            "text": "مقابل 10%",
+            "size": "h2",
+            "punch": "10%"
+          },
+          {
+            "text": "يبقى الشركة بـ 20 مليون؟",
+            "size": "h2",
+            "at": "يبقى"
+          },
+          {
+            "text": "الحسبة صح… *بس مش القصة كلها*",
+            "size": "h1",
+            "at": "مش معناه"
+          }
         ]
       }
     },
@@ -78,9 +149,27 @@
         "title": "التقييم الضمني من العرض",
         "unit": "بالمليون جنيه · استثمار Primary",
         "rows": [
-          { "label": "Post-money", "value": 20, "display": "20M", "at": "Post-money" },
-          { "label": "الاستثمار", "value": 2, "display": "2M", "op": "-", "at": "اطرح" },
-          { "label": "Pre-money", "value": 18, "display": "18M", "op": "=", "hl": true, "at": "Pre-money" }
+          {
+            "label": "Post-money",
+            "value": 20,
+            "display": "20M",
+            "at": "Post-money"
+          },
+          {
+            "label": "الاستثمار",
+            "value": 2,
+            "display": "2M",
+            "op": "-",
+            "at": "اطرح"
+          },
+          {
+            "label": "Pre-money",
+            "value": 18,
+            "display": "18M",
+            "op": "=",
+            "hl": true,
+            "at": "Pre-money"
+          }
         ]
       }
     },
@@ -91,10 +180,22 @@
         "type": "decision",
         "root": "الـ 2 مليون رايحين فين؟",
         "branches": [
-          { "cond": "الشركة · Primary", "outcome": "Pre 18M ← Post 20M", "at": "Primary" },
-          { "cond": "جيب المؤسس · Secondary", "outcome": "الشركة: 0 جنيه جديد", "hl": true, "at": "Secondary" }
+          {
+            "cond": "الشركة · Primary",
+            "outcome": "قبل 18M · بعد 20M",
+            "at": "Primary"
+          },
+          {
+            "cond": "جيب المؤسس · Secondary",
+            "outcome": "الشركة: 0 جنيه جديد",
+            "hl": true,
+            "at": "Secondary"
+          }
         ],
-        "at": { "root": "ده لو", "choose": "ماخدتش" }
+        "at": {
+          "root": "ده لو",
+          "choose": "ماخدتش"
+        }
       }
     },
     {
@@ -105,10 +206,27 @@
         "label": "حالة افتراضية · آخر 12 شهر",
         "title": "شركة سناكس صحية",
         "facts": [
-          { "k": "المبيعات", "v": "4,000,000", "at": "مبيعاتها" },
-          { "k": "Gross margin", "v": "30%", "at": "Gross" },
-          { "k": "الربح الإجمالي", "v": "1,200,000", "at": "فاضل" },
-          { "k": "Pre-money المطلوب", "v": "18,000,000", "hl": true, "at": "تكلفة" }
+          {
+            "k": "المبيعات",
+            "v": "4,000,000",
+            "at": "مبيعاتها"
+          },
+          {
+            "k": "Gross margin",
+            "v": "30%",
+            "at": "Gross"
+          },
+          {
+            "k": "الربح الإجمالي",
+            "v": "1,200,000",
+            "at": "فاضل"
+          },
+          {
+            "k": "Pre-money المطلوب",
+            "v": "18,000,000",
+            "hl": true,
+            "at": "تكلفة"
+          }
         ]
       }
     },
@@ -118,18 +236,64 @@
       "scene": {
         "type": "scenario",
         "title": "نفس الطلب… margin مختلف",
-        "variable": { "label": "Gross margin", "min": "0%", "max": "100%" },
+        "variable": {
+          "label": "Gross margin",
+          "min": "0%",
+          "max": "100%"
+        },
         "outputs": [
-          { "label": "Revenue multiple", "style": "x", "dp": 1 },
-          { "label": "الربح الإجمالي", "style": "short", "dp": 1 },
-          { "label": "Pre ÷ ربح إجمالي", "style": "x", "dp": 1, "hl": true }
+          {
+            "label": "Revenue multiple",
+            "style": "x",
+            "dp": 1
+          },
+          {
+            "label": "الربح الإجمالي",
+            "style": "short",
+            "dp": 1
+          },
+          {
+            "label": "Pre ÷ الربح الإجمالي",
+            "style": "x",
+            "dp": 1,
+            "hl": true
+          }
         ],
         "states": [
-          { "pos": 30, "value": "30%", "outputs": ["4.5x", "1.2M", "15.0x"], "raw": [4.5, 1200000, 15] },
-          { "pos": 80, "value": "80%", "outputs": ["4.5x", "3.2M", "5.6x"], "raw": [4.5, 3200000, 5.625], "at": "80%" }
+          {
+            "pos": 30,
+            "value": "30%",
+            "outputs": [
+              "4.5x",
+              "1.2M",
+              "15.0x"
+            ],
+            "raw": [
+              4.5,
+              1200000,
+              15
+            ]
+          },
+          {
+            "pos": 80,
+            "value": "80%",
+            "outputs": [
+              "4.5x",
+              "3.2M",
+              "5.6x"
+            ],
+            "raw": [
+              4.5,
+              3200000,
+              5.625
+            ],
+            "at": "80%"
+          }
         ],
         "verdict": "نفس الـ multiple… *صفقة مختلفة*",
-        "at": { "verdict": "ضعفين" }
+        "at": {
+          "verdict": "نفس الـ multiple"
+        }
       }
     },
     {
@@ -139,10 +303,18 @@
         "type": "myth",
         "ground": "ink",
         "title": "الفرق المهم",
-        "wrong": ["20M = قيمة الشركة"],
+        "wrong": [
+          "20M = قيمة الشركة"
+        ],
         "rightLabel": "الصح",
         "right": "20M = السعر المطلوب",
-        "at": { "wrong": ["20 مليون"], "strike": "مش قيمة", "right": "السعر" }
+        "at": {
+          "wrong": [
+            0.05
+          ],
+          "strike": "مش قيمة",
+          "right": "السعر"
+        }
       }
     },
     {
@@ -152,8 +324,19 @@
         "type": "takeaway",
         "kicker": "قبل ما تحكم على أي تقييم",
         "line": "الـ multiple بيتحدد بـ *جودة* الإيرادات",
-        "points": ["بتتكرر؟ · Recurring", "بتنمو قد إيه؟ · Growth", "فاضل منها كام؟ · Margin"],
-        "at": { "line": "تلات", "points": ["بتتكرر", "بتنمو", "فاضل"] }
+        "points": [
+          "بتتكرر؟ · Recurring",
+          "بتنمو قد إيه؟ · Growth",
+          "فاضل منها كام؟ · Margin"
+        ],
+        "at": {
+          "line": "تلات",
+          "points": [
+            "بتتكرر",
+            "بتنمو",
+            "فاضل"
+          ]
+        }
       }
     },
     {
@@ -164,21 +347,40 @@
         "kicker": "نفس الطلب: 2M مقابل 10% · نفس المبيعات: 4M",
         "question": "مين طلبه منطقي أكتر؟",
         "options": [
-          { "key": "أ", "text": "سناكس · margin 30% · عميل = نص المبيعات", "at": "الأولى" },
-          { "key": "ب", "text": "Software عيادات · margin 80% · اشتراكات", "at": "التانية" },
-          { "key": "ج", "text": "الاتنين نفس القيمة", "at": "مين" }
+          {
+            "key": "أ",
+            "text": "سناكس · margin 30% · عميل = نص المبيعات",
+            "at": "الأولى"
+          },
+          {
+            "key": "ب",
+            "text": "Software عيادات · margin 80% · اشتراكات",
+            "at": "التانية"
+          },
+          {
+            "key": "ج",
+            "text": "الاتنين نفس القيمة",
+            "at": "مين"
+          }
         ],
         "ask": "وإيه السؤال اللي لازم تسأله قبل ما تقرر؟",
         "cta": "الإجابة في أول كومنت",
         "countdown": 3,
-        "at": { "question": "مين", "ask": "وإيه", "cta": "الإجابة" }
+        "at": {
+          "question": "مين",
+          "ask": "وإيه",
+          "cta": "الإجابة"
+        }
       }
     }
   ],
-
   "post": {
     "caption": "\"عايز 2 مليون مقابل 10%\" = الشركة بـ 20 مليون؟ الحسبة صح… بس مش القصة كلها.\nالحلقة 1 من قاموس المستثمر: Post-money و Pre-money و Primary vs Secondary، وليه نفس الـ multiple ممكن يبقى صفقة مختلفة تماماً.\nجاوب على السؤال 👇",
     "first_comment": "الإجابة: (ب) أقرب للمنطق — نفس الـ 4M مبيعات بتسيب 3.2M ربح إجمالي مش 1.2M، والاشتراكات بتتكرر، والسناكس معتمدة على عميل واحد بنص المبيعات. بس السؤال اللازم قبل القرار: كام في المية من عملاء الـ Software بيجدّدوا كل شهر؟ (retention). (ج) غلط: نفس القسمة = نفس السعر المطلوب، مش نفس القيمة. ⚠️ الأرقام افتراضية للتعليم، مش نصيحة استثمار.",
-    "hashtags": ["#Valuation", "#التقييم", "#PreMoney"]
+    "hashtags": [
+      "#Valuation",
+      "#التقييم",
+      "#PreMoney"
+    ]
   }
 }

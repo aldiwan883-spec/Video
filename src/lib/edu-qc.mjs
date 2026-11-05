@@ -4,7 +4,7 @@ import { tokenize } from "./text.mjs";
 
 const APPLIED = new Set(["scenario", "breakdown", "case", "decision", "compare", "chart", "proscons", "beforeafter", "ratio", "timeline", "process"]);
 const JUDGMENT = new Set(["judgment", "missing-info", "tradeoff", "interpretation", "prioritization", "risk"]);
-const BANNED = ["هتصدمك", "محدش هيقولك", "سر ", "مضمون", "اشتري سهم", "هتكسب أكيد", "فلوس سهلة", "ثراء"];
+const BANNED = ["هتصدمك", "محدش هيقولك", "سر محدش", "عائد مضمون", "مكسب مضمون", "ربح مضمون", "اشتري سهم", "هتكسب أكيد", "فلوس سهلة", "ثراء سريع"];
 
 // تقييم آمن لمعادلة أرقام بس
 export function evalCalc(expr) {

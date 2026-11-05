@@ -6,7 +6,7 @@ Branch: `claude/lucid-heisenberg-2zaul3` · Brand: **فهّمني بيزنس** (
 | # | Milestone | Status |
 |---|---|---|
 | 0 | Phase 1 engine (7 scenes, voice align, QC, cover) | ✅ committed f9bbf71 |
-| 1 | Content Bible + concept map + curriculum allocation | ⏳ in progress |
+| 1 | Content Bible + concept map + curriculum allocation | ✅ |
 | 1b | 100-episode roadmap (5 × 20) + ratings + top 10 | ⏳ |
 | 2 | Engine upgrade: new scenes, variation, series config, QC, batch, storyboard, tests | ⏳ |
 | 3a | Financial accuracy library (19 concepts) | ⏳ |

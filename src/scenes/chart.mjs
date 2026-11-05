@@ -6,7 +6,8 @@ export default {
   build(ctx) {
     const { id, p } = ctx;
     const ink = ctx.ground === "ink" ? color.paper : color.ink;
-    const data = p.data, n = data.length, H = 470, W = 888;
+    const data = p.data, n = data.length, W = 888;
+    const H = p.height ?? (p.title && p.annotation ? (p.source ? 330 : 380) : 470);
     const max = p.max ?? Math.max(...data.map((d) => d.value));
     const hlIdx = data.findIndex((d) => d.hl);
     let plot;

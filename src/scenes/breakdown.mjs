@@ -6,7 +6,8 @@ export default {
   type: "breakdown", family: "numbers",
   build(ctx) {
     const { id, p } = ctx;
-    const W = 470;
+    const longest = Math.max(...p.rows.map((r) => String(r.display ?? r.value).length));
+    const W = Math.max(220, Math.min(470, 888 - 250 - 36 - longest * 36));
     let run = 0;
     const max = p.max ?? Math.max(...p.rows.map((r) => (r.op === "-" ? 0 : r.value)), ...p.rows.reduce((a, r) => { run = r.op === "-" ? run - r.value : r.op === "=" ? run : r.op === "+" ? run + r.value : r.value; a.push(run); return a; }, []));
     run = 0;
@@ -35,7 +36,7 @@ export default {
     const ink = ctx.ground === "ink" ? color.paper : color.ink;
     const extra = `
 #${id}-rows{display:flex;flex-direction:column;gap:30px;width:100%}
-.${id}-row{display:grid;grid-template-columns:250px ${W}px 1fr;align-items:center;gap:18px;font-size:38px;font-weight:600}
+.${id}-row{display:grid;grid-template-columns:250px ${W}px 1fr;direction:rtl;align-items:center;gap:18px;font-size:38px;font-weight:600}
 .${id}-res{border-top:4px solid ${ink};padding-top:24px}
 .${id}-lbl{text-align:right;line-height:1.25}
 .${id}-lbl b{color:${color.muted}}

@@ -17,7 +17,7 @@
     },
     // كلمة كلمة من رمادي لأسود، من غير حركة (للتعريفات الهادية)
     inkWords(tl, sel, t, o = {}) {
-      tl.fromTo(all(sel, ".w"), { color: o.from ?? "#B5AC9C" },
+      tl.fromTo(all(sel, ".w"), { color: o.from ?? "#8A8172" },
         { color: (i, el) => (el.classList.contains("hl") ? o.hl ?? "#EC4E2A" : o.to ?? "#141414"),
           duration: 0.25, ease: "none", stagger: o.stagger ?? 0.1 }, t);
     },
@@ -77,6 +77,7 @@
 // ---- transitions + intensity (series config) ----
 (function () {
   const FB = window.FB;
+  const D = () => 1 / Math.sqrt(window.FB_INTENSITY || 1);
   FB.whipIn = (tl, sel, t) => tl.fromTo(sel, { x: -150, filter: "blur(14px)", opacity: 0 }, { x: 0, filter: "blur(0px)", opacity: 1, duration: 0.32, ease: "expo.out" }, t);
   FB.whipOut = (tl, sel, t) => tl.to(sel, { x: 150, filter: "blur(14px)", opacity: 0, duration: 0.2, ease: "power3.in" }, t);
   FB.iris = (tl, sel, t) => tl.fromTo(sel, { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(120% at 50% 50%)", duration: 0.45, ease: "power2.inOut" }, t);

@@ -48,7 +48,7 @@ export function findAnchor(segTiming, anchor) {
   const words = segTiming.words.map((w) => normalize(w.text));
   let seen = 0;
   for (let i = 0; i <= words.length - target.length; i++) {
-    if (target.every((tw, k) => words[i + k] === tw || words[i + k].startsWith(tw))) {
+    if (target.every((tw, k) => { const w = words[i + k]; return w === tw || w.startsWith(tw) || w.replace(/^[وفبل]/, "").startsWith(tw); })) {
       seen++;
       if (seen === occ) return segTiming.words[i].start;
     }

@@ -19,7 +19,7 @@ export default {
     const { css, html } = frame(ctx, inner, { stageCss: "gap:44px" });
     const extra = `
 #${id}-var{width:100%;text-align:right}
-.${id}-vl{font-size:40px;font-weight:600;margin-bottom:56px}
+.${id}-vl{font-size:40px;font-weight:600;margin-bottom:104px}
 #${id}-track{position:relative;height:14px;border-radius:7px;background:${ctx.ground === "ink" ? "#FFFFFF22" : color.ghost};direction:ltr}
 #${id}-fill{position:absolute;left:0;top:0;bottom:0;width:100%;background:${ink};border-radius:7px;transform-origin:left center}
 #${id}-knob{position:absolute;top:50%;width:0;height:0}

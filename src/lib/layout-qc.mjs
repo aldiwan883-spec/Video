@@ -73,6 +73,9 @@ const MEASURE = (L) => {
   for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
     const a = boxes[i], b = boxes[j];
     if (a.el.contains(b.el) || b.el.contains(a.el)) continue;
+    // كلمات في نفس الفقرة على سطرين ورا بعض: ده line box عادي مش تداخل
+    const block = (el) => { for (let e = el; e; e = e.parentElement) { const d = getComputedStyle(e).display; if (d !== "inline" && d !== "inline-block") return e; } return null; };
+    if (block(a.el) === block(b.el)) continue;
     if (a.el.closest("[data-layout-allow-overlap]") && a.el.closest("[data-layout-allow-overlap]") === b.el.closest("[data-layout-allow-overlap]")) continue;
     const ix = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
     const iy = Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);

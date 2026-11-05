@@ -8,7 +8,10 @@
     "script": "node src/cli/script.mjs",
     "build:episode": "node src/cli/build.mjs",
     "preview:episode": "node src/cli/build.mjs --no-render",
-    "studio": "node src/cli/studio.mjs"
+    "studio": "node src/cli/studio.mjs",
+    "test": "node --test test/*.test.mjs",
+    "edu-check": "node src/cli/edu-check.mjs",
+    "roadmap": "node src/cli/roadmap.mjs"
   },
   "devDependencies": {
     "gsap": "^3.15.0",

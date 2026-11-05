@@ -42,7 +42,7 @@ export function pauseAfter(word) {
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 // أرقام ونِسَب وعلامات حسابية تتعزل LTR عشان متتقلبش جوه جملة عربي
-const NUM_RE = /([+\-−]?[\d][\d,.]*[%MK]?|[×÷=])/g;
+const NUM_RE = /([≈~]?[$€£]?[+\-−]?\d[\d,.]*(?:[%MKBx](?![A-Za-z]))?|[×÷=])/g;
 function isolateNumbers(html) {
   return html.replace(NUM_RE, (m) => `<span class="num">${m}</span>`);
 }
