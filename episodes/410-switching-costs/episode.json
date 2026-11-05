@@ -1,0 +1,253 @@
+{
+  "id": "410",
+  "roadmap": "S4-10",
+  "series": "decode",
+  "number": 10,
+  "slug": "switching-costs",
+  "term": {
+    "en": "Switching Costs",
+    "ar": "تمن الخروج"
+  },
+  "cover": {
+    "hook": "بتكره البرنامج…\nوبرضه *هتجدد*",
+    "sub": "فك شفرة: Switching costs · Microsoft 10-K",
+    "motif": false
+  },
+  "edu": {
+    "objective": "المشاهد بعد الحلقة هيقدر يفكك الـ switching costs لأي منتج (تدريب، ملفات، ربط بأنظمة، خطر إن الشغل يقف)، ويفرّق بين وصف الشركة لنفسها في الـ 10-K وبين الدليل اللي بييجي من سلوك العملاء في الأرقام.",
+    "insights": [
+      "الـ switching cost الحقيقي مش سعر البديل، ده تمن الانتقال: تدريب الناس، وتحويل الملفات، والربط بأنظمة تانية، وخطر إن الشغل يقف.",
+      "وصف الشركة لنفسها مش دليل. Microsoft بتقول إنها بتنافس بإن أدواتها integrated وبتشتغل مع اللي عند العميل، بس الدليل بييجي من الأرقام: في FY2026 إيراد Microsoft 365 Commercial cloud زاد 17% وعدد الـ seats زاد 6% بس.",
+      "العميل اللي مكمّل مش لازم يكون بيحبك: ممكن مكمّل عشان الخروج مكلّف، والولاء ده بيتهز لو ظهر بديل بيقلل تمن الانتقال."
+    ],
+    "case": "Microsoft Form 10-K للسنة المالية 2026 (انتهت 30 يونيو 2026): Microsoft 365 Commercial cloud revenue زاد 17% «with growth in revenue per user driven by Microsoft 365 Copilot and Microsoft 365 E5»، و Microsoft 365 Commercial seats زادوا 6%. في قسم Competition: Microsoft بتنافس بأدوات «secure, integrated … that … work well with technologies our customers already have». وفي Risk Factors: منافسين بيقدموا برامج «at little or no cost» ممولة من الإعلانات أو open-source.",
+    "assumptions": [
+      "المصدر: Microsoft Form 10-K FY2026 (filed 2026-07-29): MD&A (Productivity and Business Processes)، Item 1 Competition، Item 1A Risk Factors.",
+      "«الإيراد لكل مستخدم زاد حوالي 10%» تقريب مننا (1.17 ÷ 1.06)، لأن نمو الإيراد سنوي ونمو الـ seats آخر الفترة.",
+      "كلمة «moat» تفسيرنا. التقرير بيوصف المنافسة والمنتجات، مش بيقول إن فيه moat.",
+      "مكونات تمن الانتقال (تدريب، ملفات، ربط، توقف) إطار تحليلي عام مش أرقام من Microsoft."
+    ],
+    "nonObvious": "العملاء اللي مكمّلين معاك مش معناها إنهم بيحبوك: ممكن مكمّلين عشان الخروج مكلّف. وزيادة الإيراد لكل مستخدم في Microsoft التقرير نفسه بيرجّعها لمميزات أغلى (Copilot و E5)، يعني مش كلها «رفع سعر على عميل محبوس».",
+    "limits": "الـ 10-K مبينشرش نسبة الـ retention لعملاء Microsoft 365، ولا بيقول قد إيه من الزيادة سعر وقد إيه مميزات جديدة. فمنقدرش نقيس الـ switching cost بالفلوس، ولا نثبت إن العملاء مكمّلين عشان محبوسين مش عشان المنتج كويس.",
+    "quiz": {
+      "type": "judgment",
+      "answer": "ب: العرض المجاني مع تحويل الملفات بيلغي تمن البديل وتمن الملفات. بس لسه فاضل تدريب الناس وتغيير طريقة شغلهم، والربط بأنظمة تانية شغالة مع البرنامج القديم، وخطر إن الشغل يقف وقت الانتقال، والسعر بعد سنة ببلاش مش معروف. دول اللي لسه بيحموا الشركة القديمة.",
+      "whyNot": [
+        "أ (مفيش حاجة اتبقت): بيفترض إن تمن الانتقال = فلوس + ملفات بس. أكبر جزء غالباً في الناس والأنظمة والمخاطرة.",
+        "ج (السعر بس): السعر هو أقل حاجة بتحمي هنا، والعرض أصلاً ببلاش لسنة. لو السعر بس اللي بيحمي، الشركة القديمة كانت خسرت."
+      ]
+    },
+    "calcs": [
+      {
+        "label": "نمو الإيراد لكل seat تقريباً %",
+        "expr": "(1.17 / 1.06 - 1) * 100",
+        "expect": 10.38
+      }
+    ],
+    "terms": [
+      "Microsoft",
+      "Microsoft 365",
+      "Switching costs: تمن الانتقال لبديل",
+      "Moat: ميزة بتحمي الشركة من المنافسين",
+      "Seats: عدد المستخدمين اللي بيدفعوا",
+      "Copilot",
+      "E5",
+      "10-K",
+      "Integrated: متكاملة مع بعض"
+    ],
+    "hypothetical": false,
+    "sources": [
+      {
+        "claim": "Microsoft 365 Commercial cloud revenue grew 17% with growth in revenue per user driven by Microsoft 365 Copilot and Microsoft 365 E5؛ Microsoft 365 Commercial seats grew 6% (FY2026 vs FY2025)",
+        "source": "Microsoft Corporation Form 10-K FY2026 (fiscal year ended June 30, 2026), MD&A — Productivity and Business Processes",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "date": "filed 2026-07-29"
+      },
+      {
+        "claim": "We compete by providing secure, integrated … productivity and collaboration tools … that … work well with technologies our customers already have؛ competitors offer free applications or open-source software at little or no cost",
+        "source": "Microsoft Corporation Form 10-K FY2026, Item 1 Competition (Office) + Item 1A Risk Factors",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "date": "filed 2026-07-29"
+      }
+    ]
+  },
+  "segments": [
+    {
+      "id": "hook",
+      "say": "الشركة بتاعتك ممكن تكون بتكره البرنامج اللي شغالين عليه… وبرضه هتجدد السنة الجاية. ليه؟",
+      "scene": {
+        "type": "hook",
+        "lines": [
+          {
+            "text": "بتكره البرنامج…",
+            "size": "h1"
+          },
+          {
+            "text": "وبرضه *هتجدد*",
+            "size": "h1"
+          },
+          {
+            "text": "ليه؟",
+            "size": "h2",
+            "at": "ليه"
+          }
+        ]
+      }
+    },
+    {
+      "id": "term",
+      "say": "ده اسمه switching costs: تمن الانتقال لبديل، مش تمن البديل نفسه. وده نوع من الـ moat، يعني حاجة بتحمي الشركة من المنافسين.",
+      "scene": {
+        "type": "term",
+        "kicker": "نوع من الـ Moat",
+        "en": "Switching Costs",
+        "ar": "تمن الانتقال… مش تمن البديل",
+        "at": {
+          "en": "switching",
+          "ar": "تمن"
+        }
+      }
+    },
+    {
+      "id": "parts",
+      "say": "تمن الانتقال ده فيه إيه؟ تدريب الناس من الأول. تحويل الملفات والقوالب. الربط مع باقي الأنظمة. وخطر إن الشغل يقف أسبوع.",
+      "scene": {
+        "type": "process",
+        "title": "تمن الخروج الحقيقي",
+        "keepAll": true,
+        "steps": [
+          {
+            "title": "تدريب الناس",
+            "at": "تدريب"
+          },
+          {
+            "title": "تحويل الملفات والقوالب",
+            "at": "تحويل"
+          },
+          {
+            "title": "الربط مع باقي الأنظمة",
+            "at": "الربط"
+          },
+          {
+            "title": "خطر إن الشغل يقف",
+            "hl": true,
+            "at": "وخطر"
+          }
+        ]
+      }
+    },
+    {
+      "id": "filing",
+      "say": "Microsoft في الـ 10-K بتقول إنها بتنافس بأدوات integrated، بتشتغل مع اللي عند العميل أصلاً. وبتقول كمان إن فيه منافسين بيدّوا برامج ببلاش. ده وصفها لنفسها، مش دليل.",
+      "scene": {
+        "type": "source",
+        "title": "Microsoft بتوصف نفسها",
+        "items": [
+          {
+            "text": "بتنافس بأدوات integrated بتشتغل مع اللي عند العميل",
+            "kind": "source",
+            "at": "بتنافس"
+          },
+          {
+            "text": "منافسين بيدّوا برامج ببلاش أو بتمن قليل",
+            "kind": "source",
+            "at": "منافسين"
+          },
+          {
+            "text": "ده وصف الشركة… مش دليل على moat",
+            "kind": "assumption",
+            "at": "وصفها"
+          }
+        ],
+        "source": "Microsoft 10-K FY2026 · Item 1 Competition + Item 1A"
+      }
+    },
+    {
+      "id": "evidence",
+      "say": "الدليل بييجي من سلوك العملاء. في سنة 2026، إيراد Microsoft 365 للشركات زاد 17%، وعدد المستخدمين زاد 6% بس. يعني كل مستخدم بيدفع أكتر.",
+      "scene": {
+        "type": "compare",
+        "question": "الدليل: كل مستخدم بيدفع *أكتر*",
+        "a": {
+          "label": "الإيراد (cloud للشركات)",
+          "value": 17,
+          "display": "+17%"
+        },
+        "b": {
+          "label": "عدد المستخدمين",
+          "value": 6,
+          "display": "+6%"
+        },
+        "badge": "≈+10% للمستخدم",
+        "source": "Microsoft 10-K FY2026 · الـ 10% تقريب مننا",
+        "at": {
+          "question": "الدليل",
+          "a": "إيراد",
+          "b": "وعدد"
+        }
+      }
+    },
+    {
+      "id": "careful",
+      "say": "بس خد بالك: التقرير بيقول الزيادة جاية من مميزات أغلى زي Copilot و E5. والعميل اللي مكمّل مش لازم بيحبك. ممكن مكمّل عشان الخروج غالي، وده ولاء هش.",
+      "scene": {
+        "type": "myth",
+        "ground": "ink",
+        "title": "اللي الأرقام متقولهوش",
+        "wrong": [
+          "العميل مكمّل = بيحبنا"
+        ],
+        "rightLabel": "ممكن",
+        "right": "مكمّل عشان الخروج غالي",
+        "at": {
+          "wrong": [
+            0.05
+          ],
+          "strike": "مش",
+          "right": "ممكن"
+        }
+      }
+    },
+    {
+      "id": "quiz",
+      "say": "سؤال: منافس بيعرض نفس البرنامج ببلاش لسنة كاملة، وبيحوّل كل ملفاتك أوتوماتيك. إيه اللي لسه بيحمي الشركة القديمة؟ الإجابة في أول كومنت.",
+      "scene": {
+        "type": "quiz",
+        "kicker": "ببلاش سنة + تحويل الملفات أوتوماتيك",
+        "question": "إيه اللي لسه بيحمي القديم؟",
+        "options": [
+          {
+            "key": "أ",
+            "text": "مفيش حاجة: الفلوس والملفات اتحلوا",
+            "at": "منافس"
+          },
+          {
+            "key": "ب",
+            "text": "تدريب الناس والأنظمة وخطر التوقف",
+            "at": "ببلاش"
+          },
+          {
+            "key": "ج",
+            "text": "السعر بس",
+            "at": "ملفاتك"
+          }
+        ],
+        "ask": "وليه؟",
+        "cta": "الإجابة في أول كومنت",
+        "at": {
+          "question": "إيه",
+          "ask": "القديمة",
+          "cta": "الإجابة"
+        }
+      }
+    }
+  ],
+  "post": {
+    "caption": "Switching cost = تمن الانتقال، مش تمن البديل. Microsoft 365 للشركات: الإيراد +17% والمستخدمين +6% في FY2026، يعني كل مستخدم بيدفع أكتر. بس التقرير بيرجّعها لمميزات أغلى، وكلمة moat تفسيرنا.\nفك شفرة البيزنس · المصدر: Microsoft Form 10-K السنة المالية 2026",
+    "first_comment": "الإجابة (ب): المجاني + تحويل الملفات بيلغي تمن البديل والملفات. بس لسه فاضل تدريب الناس وتغيير طريقة شغلهم، والربط بأنظمة شغالة مع القديم، وخطر إن الشغل يقف، والسعر بعد السنة المجانية مش معروف. (أ) بيفترض إن تمن الانتقال فلوس وملفات بس. (ج) السعر أقل حاجة بتحمي هنا، والعرض أصلاً ببلاش. المصدر: Microsoft Form 10-K FY2026.",
+    "hashtags": [
+      "#SwitchingCosts",
+      "#Moat"
+    ]
+  }
+}

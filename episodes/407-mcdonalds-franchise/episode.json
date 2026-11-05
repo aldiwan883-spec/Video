@@ -1,0 +1,342 @@
+{
+  "id": "407",
+  "roadmap": "S4-07",
+  "series": "decode",
+  "number": 7,
+  "slug": "mcdonalds-franchise",
+  "term": {
+    "en": "Franchise Model",
+    "ar": "تبيع النظام… وغيرك يشغّل"
+  },
+  "cover": {
+    "hook": "95% من فروع ماكدونالدز\n*مش* بتشغّلها ماكدونالدز",
+    "sub": "فك شفرة: Franchise model · McDonald's 10-K",
+    "motif": false
+  },
+  "edu": {
+    "objective": "المشاهد بعد الحلقة هيقدر يفصل في أي income statement بين إيراد الفروع اللي الشركة بتشغّلها وإيراد الـ franchise (إيجار + royalties + رسوم أولية)، ويحسب هامش كل نوع، ويعرف ليه الهامش العالي جاي مع تحكم أقل.",
+    "insights": [
+      "الـ franchisor بياخد نسبة من مبيعات غيره: إيراد الـ franchise في ماكدونالدز 16.5 مليار، والمبيعات اللي اتحسب عليها 129.7 مليار ومش متسجلة إيراد عندها.",
+      "هامش الـ franchise (84% بعد مصاريف المكان) أضعاف هامش الفروع اللي الشركة بتشغّلها (14.7%)، لأن المرتبات والأكل على الـ franchisee.",
+      "الهامش العالي جاي مع تحكم أقل: التقرير نفسه بيقول إن نجاح ماكدونالدز معتمد بدرجة كبيرة على نجاح الـ franchisees وتعاونهم."
+    ],
+    "case": "McDonald's Form 10-K للسنة المالية 2025، بالمليون دولار: Revenues from franchised restaurants 16,548 (Rents 10,442، Royalties 6,018، Initial fees 88)، Franchised restaurants-occupancy expenses 2,618، Franchised margins 13,930. Sales by Company-owned and operated restaurants 9,690، Company-owned and operated margins 1,422. Total revenues 26,885. حوالي 95% من 45,356 فرع franchised. Franchised sales 129,675 (مش متسجلة إيراد). Franchised margins حوالي 90% من restaurant margin dollars.",
+    "assumptions": [
+      "كل الأرقام بالدولار من McDonald's Form 10-K FY2025 (filed 2026-02-24): Consolidated Statement of Income، Restaurant Margins، Franchise Arrangements note.",
+      "Franchised margin و Company-operated margin بتعريف ماكدونالدز نفسها في الـ 10-K؛ النسب المئوية (84.2% و14.7%) حسابنا.",
+      "هامش الفروع المملوكة مبيشملش مصاريف الإدارة العامة (SG&A)، ونفس الكلام للـ franchise، فالمقارنة على مستوى المطعم.",
+      "«ماكدونالدز شركة عقارات» تبسيط منتشر، والتصحيح تفسيرنا مش جملة في التقرير."
+    ],
+    "nonObvious": "«ماكدونالدز شركة عقارات» نص الحقيقة: الإيجار فعلاً 63% من إيراد الـ franchise، بس الـ franchisee بيدفع الإيجار ده عشان البراند والنظام اللي بيجيبوا زباين. والرسوم الأولية (88 مليون) أقل من 1%: الفلوس في مبيعات الفرع كل شهر، مش في بيع الـ franchise نفسه.",
+    "limits": "الأرقام دي متقولش الـ franchisee نفسه بيكسب كام، ولا قد إيه منهم في ضغط. ومتقولش إن الموديل ينفع لأي سلسلة: ماكدونالدز بتملك أو بتأجر الأرض والمبنى لأغلب فروعها، ودي حاجة محتاجة رأس مال كبير.",
+    "quiz": {
+      "type": "prioritization",
+      "answer": "ب: الإيراد الحقيقي في الـ franchise جاي من نسبة على مبيعات كل فرع كل شهر، مش من رسوم البيع (في ماكدونالدز الرسوم الأولية أقل من 1% من إيراد الـ franchise). يعني لو الفرع اشتغل وحش، البراند بيتأذي والنسبة بتقل. أهم شرط: نظام تشغيل وتدريب ورقابة يثبت إنه بيتنقل قبل ما تبيع 50 فرع في سنة.",
+      "whyNot": [
+        "أ (رسوم أولية أعلى): فلوس مرة واحدة. ممكن تخلّيك تبيع لأي حد يدفع، حتى اللي مش هيعرف يشغّل.",
+        "ج (إيجار ثابت أعلى): بيرفع إيرادك على الورق، بس بيضغط على ربح الـ franchisee، ولو فرعه تعب البراند كله بيدفع التمن."
+      ]
+    },
+    "calcs": [
+      {
+        "label": "إيراد الـ franchise ($m)",
+        "expr": "10442 + 6018 + 88",
+        "expect": 16548
+      },
+      {
+        "label": "Franchised margin ($m)",
+        "expr": "16548 - 2618",
+        "expect": 13930
+      },
+      {
+        "label": "Franchised margin %",
+        "expr": "13930 / 16548 * 100",
+        "expect": 84.18
+      },
+      {
+        "label": "Company-operated margin %",
+        "expr": "1422 / 9690 * 100",
+        "expect": 14.67
+      },
+      {
+        "label": "الإيجار من إيراد الـ franchise %",
+        "expr": "10442 / 16548 * 100",
+        "expect": 63.1
+      },
+      {
+        "label": "الرسوم الأولية من إيراد الـ franchise %",
+        "expr": "88 / 16548 * 100",
+        "expect": 0.532
+      },
+      {
+        "label": "إيراد الـ franchise ÷ Franchised sales %",
+        "expr": "16548 / 129675 * 100",
+        "expect": 12.76
+      },
+      {
+        "label": "الـ franchise من هامش المطاعم %",
+        "expr": "13930 / (13930 + 1422) * 100",
+        "expect": 90.74
+      }
+    ],
+    "terms": [
+      "McDonald's",
+      "Franchise: حق تشغيل فرع بنظام الشركة",
+      "Franchisee: صاحب الفرع اللي بيشغّله",
+      "Franchised: فروع بيشغّلها franchisee",
+      "Royalty: نسبة من المبيعات",
+      "10-K",
+      "Royalties: نسب المبيعات",
+      "Franchisees: أصحاب الفروع"
+    ],
+    "hypothetical": false,
+    "sources": [
+      {
+        "claim": "Revenues from franchised restaurants 16,548 (Rents 10,442; Royalties 6,018; Initial fees 88)؛ Franchised occupancy expenses 2,618؛ Company-operated sales 9,690؛ Total revenues 26,885؛ Franchised margins 13,930؛ Company-operated margins 1,422؛ Franchised sales 129,675 ($m, FY2025)",
+        "source": "McDonald's Corporation Form 10-K FY2025 — Consolidated Statement of Income, Restaurant Margins, Franchise Arrangements note",
+        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+        "date": "filed 2026-02-24"
+      },
+      {
+        "claim": "Of the 45,356 restaurants at year-end 2025, approximately 95% were franchised؛ franchised margins ≈90% of restaurant margin dollars؛ success relies to a large degree on the financial success and cooperation of franchisees",
+        "source": "McDonald's Corporation Form 10-K FY2025 — Item 1, MD&A, Item 1A",
+        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+        "date": "filed 2026-02-24"
+      }
+    ]
+  },
+  "segments": [
+    {
+      "id": "hook",
+      "say": "من 45 ألف فرع ماكدونالدز في العالم، حوالي 95% مش ماكدونالدز اللي بتشغّلهم. طب بتكسب منين بالظبط؟",
+      "scene": {
+        "type": "hook",
+        "lines": [
+          {
+            "text": "من 45,356 فرع ماكدونالدز",
+            "size": "quiet"
+          },
+          {
+            "text": "95%",
+            "size": "hero"
+          },
+          {
+            "text": "مش هي اللي *بتشغّلهم*",
+            "size": "h1",
+            "at": "مش"
+          }
+        ]
+      }
+    },
+    {
+      "id": "how",
+      "say": "الفرع بيشغّله franchisee: بيدفع المرتبات والأكل، وبيدفع لماكدونالدز إيجار المكان، ونسبة من المبيعات اسمها royalty.",
+      "scene": {
+        "type": "illustrated",
+        "title": "مين بيدفع لمين؟",
+        "props": [
+          {
+            "type": "shop",
+            "x": 320,
+            "y": 1150,
+            "scale": 1.2,
+            "enter": "none",
+            "opts": {
+              "sign": "فرع franchise",
+              "door": "مفتوح"
+            }
+          },
+          {
+            "type": "invoice",
+            "x": 790,
+            "y": 1140,
+            "scale": 1.1,
+            "at": "لماكدونالدز",
+            "opts": {
+              "amount": "إيجار + نسبة",
+              "stamp": "كل شهر"
+            }
+          }
+        ],
+        "callouts": [
+          {
+            "text": "الـ franchisee: مرتبات وأكل",
+            "x": 320,
+            "y": 420,
+            "at": "المرتبات"
+          },
+          {
+            "text": "لماكدونالدز: إيجار + royalty",
+            "x": 760,
+            "y": 600,
+            "hl": true,
+            "at": "إيجار"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mix",
+      "say": "وفي 2025 إيراد الـ franchise كان 16.5 مليار دولار: 10.4 إيجار، و6 مليار royalties، والرسوم الأولية أقل من 1%. يعني الفلوس مش في بيع الفرع، في تشغيله.",
+      "scene": {
+        "type": "breakdown",
+        "title": "إيراد الـ franchise",
+        "unit": "مليار دولار · 2025",
+        "rows": [
+          {
+            "label": "إيجار",
+            "value": 10.44,
+            "display": "$10.4B",
+            "at": "10.4"
+          },
+          {
+            "label": "Royalties",
+            "value": 6.02,
+            "display": "$6.0B",
+            "op": "+",
+            "at": "royalties"
+          },
+          {
+            "label": "رسوم أولية",
+            "value": 0.09,
+            "display": "$0.09B",
+            "op": "+",
+            "at": "والرسوم"
+          },
+          {
+            "label": "إيراد الـ franchise",
+            "value": 16.55,
+            "display": "$16.5B",
+            "op": "=",
+            "hl": true,
+            "at": "يعني"
+          }
+        ],
+        "source": "McDonald's Form 10-K · FY2025"
+      }
+    },
+    {
+      "id": "margin",
+      "say": "وقارن الهامش. الفروع الـ franchised سابت حوالي 84% بعد مصاريف المكان. والفروع اللي ماكدونالدز بتشغّلها بنفسها، مبيعاتها 9.7 مليار وسابت 14.7% بس.",
+      "scene": {
+        "type": "compare",
+        "question": "هامش المطعم: *franchise* vs تشغيل ذاتي",
+        "a": {
+          "label": "Franchised",
+          "value": 84.2,
+          "display": "84%"
+        },
+        "b": {
+          "label": "بتشغّلها بنفسها",
+          "value": 14.7,
+          "display": "14.7%"
+        },
+        "badge": "≈90% من هامش المطاعم",
+        "source": "McDonald's 10-K FY2025 · تعريف الهامش منهم · النسب حسابنا",
+        "at": {
+          "question": "وقارن",
+          "a": "الـ franchised",
+          "b": "بنفسها"
+        }
+      }
+    },
+    {
+      "id": "myth",
+      "say": "الجملة المشهورة إن ماكدونالدز شركة عقارات، ده تبسيط. الإيجار أكبر جزء فعلاً، بس الـ franchisee بيدفعه عشان البراند والنظام. الاتنين ملهمش قيمة لوحدهم.",
+      "scene": {
+        "type": "myth",
+        "ground": "ink",
+        "title": "شركة عقارات؟",
+        "wrong": [
+          "ماكدونالدز = شركة عقارات"
+        ],
+        "rightLabel": "الأدق",
+        "right": "الإيجار قيمته من البراند والنظام",
+        "at": {
+          "wrong": [
+            0.05
+          ],
+          "strike": "تبسيط",
+          "right": "بيدفعه"
+        }
+      }
+    },
+    {
+      "id": "tradeoff",
+      "say": "والموديل ليه تمن. الهامش العالي جاي مع تحكم أقل، والتقرير نفسه بيقول إن نجاح ماكدونالدز معتمد بدرجة كبيرة على نجاح الـ franchisees وتعاونهم.",
+      "scene": {
+        "type": "proscons",
+        "title": "الـ franchise: بتكسب إيه وبتدفع إيه",
+        "labels": {
+          "pros": "بتكسب",
+          "cons": "بتدفع"
+        },
+        "pros": [
+          {
+            "text": "هامش عالي على كل جنيه",
+            "at": "الهامش"
+          },
+          {
+            "text": "المرتبات والأكل على غيرك",
+            "at": "جاي"
+          }
+        ],
+        "cons": [
+          {
+            "text": "تحكم أقل في التجربة",
+            "at": "تحكم"
+          },
+          {
+            "text": "ربحك = صحة الـ franchisee",
+            "at": "التقرير"
+          }
+        ],
+        "verdict": "مكسبك من *نجاح غيرك*",
+        "at": {
+          "verdict": "معتمد"
+        }
+      }
+    },
+    {
+      "id": "quiz",
+      "say": "سؤال: سلسلة مطاعم مصرية ناجحة جالها عرض تبيع 50 franchise في سنة واحدة. أهم شرط تحطه قبل ما توافق إيه؟ الإجابة في أول كومنت.",
+      "scene": {
+        "type": "quiz",
+        "kicker": "50 franchise في سنة واحدة",
+        "question": "أهم شرط إيه؟",
+        "options": [
+          {
+            "key": "أ",
+            "text": "رسوم أولية أعلى لكل فرع",
+            "at": "سلسلة"
+          },
+          {
+            "key": "ب",
+            "text": "نظام تشغيل وتدريب ورقابة يثبت الأول",
+            "at": "عرض"
+          },
+          {
+            "key": "ج",
+            "text": "إيجار ثابت أعلى من كل فرع",
+            "at": "سنة"
+          }
+        ],
+        "ask": "وليه؟",
+        "cta": "الإجابة في أول كومنت",
+        "at": {
+          "question": "أهم",
+          "ask": "توافق",
+          "cta": "الإجابة"
+        }
+      }
+    }
+  ],
+  "post": {
+    "caption": "ماكدونالدز: إيراد الـ franchise 16.5 مليار دولار في 2025 (63% منه إيجار) بهامش حوالي 84%، والفروع اللي بتشغّلها بنفسها هامشها 14.7%. بس الهامش ده معتمد على نجاح غيرها.\nفك شفرة البيزنس · المصدر: McDonald's Form 10-K السنة المالية 2025",
+    "first_comment": "الإجابة (ب): فلوس الـ franchise الحقيقية من نسبة على مبيعات كل فرع كل شهر، مش من رسوم البيع (في ماكدونالدز الرسوم الأولية أقل من 1% من إيراد الـ franchise). لو الفرع اشتغل وحش، البراند بيتأذي والنسبة بتقل. (أ) فلوس مرة واحدة، وممكن تبيع لأي حد يدفع. (ج) بيرفع إيرادك على الورق، بس بيضغط على الـ franchisee والبراند يدفع التمن. المصدر: McDonald's Form 10-K FY2025.",
+    "hashtags": [
+      "#McDonalds",
+      "#Franchise"
+    ]
+  }
+}

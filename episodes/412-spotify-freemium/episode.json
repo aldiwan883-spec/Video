@@ -1,0 +1,297 @@
+{
+  "id": "412",
+  "roadmap": "S4-12",
+  "series": "decode",
+  "number": 12,
+  "slug": "spotify-freemium",
+  "term": {
+    "en": "Freemium",
+    "ar": "مجاني… وفيه نسخة مدفوعة"
+  },
+  "cover": {
+    "hook": "أغلب مستخدمي Spotify\n*مبيدفعوش*",
+    "sub": "فك شفرة: Freemium",
+    "motif": false
+  },
+  "edu": {
+    "objective": "المشاهد بعد الحلقة هيقدر يقرا أي موديل freemium كـ funnel: يحسب نسبة اللي بيدفعوا من المستخدمين النشطين، ويقارن إيراد وهامش كل شريحة، ويحدد الرقم الناقص قبل ما يحكم إن النسخة المجانية خسارة.",
+    "insights": [
+      "في Spotify (FY2025): 290 مليون مشترك Premium قصاد 751 مليون MAU، والـ Premium بيجيب حوالي 89% من الإيراد بهامش 34%، والمجاني 18%.",
+      "المستخدم المجاني ليه تكلفة (حقوق المحتوى والتوزيع)، بس الشركة نفسها بتقول إن الخدمة المجانية funnel: أغلب المشتركين الجداد جايين منها.",
+      "قيمة المستخدم المجاني = إيراد الإعلانات + احتمال إنه يتحول. من غير نسبة التحويل متقدرش تحكم إنه عبء."
+    ],
+    "case": "Spotify Technology S.A. Form 20-F للسنة المالية 2025 (منتهية 31 ديسمبر 2025): MAUs 751 مليون، Premium Subscribers 290 مليون، Ad-Supported MAUs 476 مليون. الإيراد: Premium 15,350 مليون يورو و Ad-Supported 1,836 (الإجمالي 17,186). Gross margin: Premium 34% و Ad-Supported 18%. Premium ARPU 4.63 يورو في الشهر. الـ 20-F بيقول: «Our Ad-Supported Service serves as a funnel, driving a significant portion of our total gross added Premium Subscribers» و «New Premium Subscribers are primarily sourced from the conversion of our Ad-Supported Users».",
+    "assumptions": [
+      "كل الأرقام باليورو من Spotify Form 20-F لسنة 2025 (filed 2026-02-10). Spotify شركة أجنبية فبتقدّم 20-F مش 10-K.",
+      "نسبة 39% (290 ÷ 751) حسابنا التقريبي: الـ Premium Subscribers ممكن يكون فيهم حسابات مش نشطة في الشهر، فالنسبة دي تقريب مش رقم رسمي.",
+      "نسبة 89% من الإيراد حسابنا (15,350 ÷ 17,186).",
+      "تكلفة الإيراد في الـ 20-F «predominantly royalty and distribution costs»، يعني الهامش بعد حقوق المحتوى أساساً."
+    ],
+    "nonObvious": "المستخدم المجاني مش عبء أوتوماتيك: هو قناة الاكتساب نفسها. لو قفلت المجاني عشان هامشه أقل، ممكن تقفل الحنفية اللي بيجي منها أغلب المشتركين الدافعين.",
+    "limits": "الـ 20-F مبينشرش نسبة التحويل من المجاني للـ Premium ولا تكلفة المستخدم المجاني الواحد، فمنقدرش نحسب قيمته بالظبط. والـ MAU بيعد حسابات مش أشخاص (الـ 20-F نفسه بيقول ممكن يبقى أعلى من عدد الناس الحقيقي). وأرقام سنة واحدة.",
+    "quiz": {
+      "type": "missing-info",
+      "answer": "ب: أول سؤال هو الـ 2% الدافعين جايين منين. لو أغلبهم اتحولوا من المجاني (زي Spotify)، قفل المجاني بيقفل مصدر العملاء الجداد. بعدها تقارن تكلفة المستخدم المجاني بإيراد الإعلانات منه + احتمال تحويله.",
+      "whyNot": [
+        "أ (تكلفة المستخدم المجاني بس) — نص المعادلة: التكلفة من غير قيمة الإعلانات واحتمال التحويل هتخليك تقفل قناة بتكسّبك.",
+        "ج (عدد المستخدمين السنة الجاية) — العدد لوحده vanity metric: مليون مجاني من غير تحويل ممكن يبقى عبء فعلاً."
+      ]
+    },
+    "calcs": [
+      {
+        "label": "Premium ÷ MAU % (تقريبي)",
+        "expr": "290 / 751 * 100",
+        "expect": 38.6
+      },
+      {
+        "label": "إيراد Premium ÷ الإجمالي %",
+        "expr": "15350 / 17186 * 100",
+        "expect": 89.32
+      },
+      {
+        "label": "إيراد Premium + Ad-Supported",
+        "expr": "15350 + 1836",
+        "expect": 17186
+      },
+      {
+        "label": "هامش Premium %",
+        "expr": "5166 / 15350 * 100",
+        "expect": 33.65
+      },
+      {
+        "label": "هامش Ad-Supported %",
+        "expr": "330 / 1836 * 100",
+        "expect": 17.97
+      },
+      {
+        "label": "سؤال: الدافعين من مليون مستخدم بـ 2%",
+        "expr": "1000000 * 2%",
+        "expect": 20000
+      }
+    ],
+    "terms": [
+      "Spotify",
+      "Freemium: نسخة مجانية ونسخة مدفوعة",
+      "Premium: الاشتراك المدفوع",
+      "MAU: Monthly active users، المستخدمين النشطين في الشهر",
+      "Funnel: القمع، مراحل تحويل المستخدم لعميل بيدفع",
+      "20-F",
+      "Gross margin",
+      "Churn: نسبة العملاء اللي بيلغوا"
+    ],
+    "hypothetical": false,
+    "sources": [
+      {
+        "claim": "MAUs 751m؛ Premium Subscribers 290m؛ Ad-Supported MAUs 476m (as of Dec 31, 2025)",
+        "source": "Spotify Technology S.A. Form 20-F FY2025 — Item 5 Key Performance Indicators",
+        "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+        "date": "filed 2026-02-10"
+      },
+      {
+        "claim": "Revenue: Premium €15,350m، Ad-Supported €1,836m؛ Gross profit €5,166m / €330m؛ Gross margin 34% / 18% (FY2025)",
+        "source": "Spotify Form 20-F FY2025 — Segment information + Item 5",
+        "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+        "date": "filed 2026-02-10"
+      },
+      {
+        "claim": "«Our Ad-Supported Service serves as a funnel…»؛ «New Premium Subscribers are primarily sourced from the conversion of our Ad-Supported Users»",
+        "source": "Spotify Form 20-F FY2025 — Item 4 / Item 5",
+        "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+        "date": "filed 2026-02-10"
+      }
+    ],
+    "verify": [
+      "لو Spotify نزّلت 20-F لسنة 2026 قبل التسجيل (عادة فبراير)، حدّث MAUs و Premium Subscribers وإيراد وهامش كل segment.",
+      "اتأكد إن الـ 20-F لسه مبينشرش نسبة تحويل رسمية من المجاني للـ Premium."
+    ]
+  },
+  "segments": [
+    {
+      "id": "hook",
+      "say": "على Spotify فيه 751 مليون حساب بيسمعوا كل شهر. وأغلبهم مبيدفعوش ولا يورو. طب الشركة عايشة إزاي؟",
+      "scene": {
+        "type": "hook",
+        "lines": [
+          {
+            "text": "بيسمعوا Spotify كل شهر",
+            "size": "quiet"
+          },
+          {
+            "text": "751M",
+            "size": "hero"
+          },
+          {
+            "text": "وأغلبهم *مبيدفعوش*",
+            "size": "h1",
+            "at": "وأغلبهم"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ratio",
+      "say": "اللي بيدفعوا اشتراك Premium: 290 مليون. يعني حوالي 39% من الـ MAU، يعني المستخدمين النشطين في الشهر.",
+      "scene": {
+        "type": "ratio",
+        "cells": 10,
+        "take": 4,
+        "partValue": 290,
+        "totalValue": 751,
+        "kicker": "حسابنا التقريبي · FY2025",
+        "formula": "290M ÷ 751M ≈ *39%*",
+        "totalLabel": "MAU بالمليون",
+        "legend": "مشتركين Premium",
+        "source": "Spotify Form 20-F · FY2025",
+        "at": {
+          "take": "290",
+          "formula": "39%",
+          "total": "المستخدمين"
+        }
+      }
+    },
+    {
+      "id": "revenue",
+      "say": "والفلوس؟ 15.4 مليار يورو من الـ Premium، و1.8 مليار بس من الإعلانات على النسخة المجانية. يعني حوالي 89% من الإيراد جاي من اللي بيدفعوا.",
+      "scene": {
+        "type": "chart",
+        "title": "الإيراد · FY2025",
+        "kind": "bar",
+        "data": [
+          {
+            "label": "Premium",
+            "value": 15350,
+            "display": "€15.4B",
+            "hl": true
+          },
+          {
+            "label": "المجاني (إعلانات)",
+            "value": 1836,
+            "display": "€1.8B",
+            "muted": true
+          }
+        ],
+        "annotation": "*89%* من الإيراد من اللي بيدفعوا",
+        "source": "Spotify Form 20-F · FY2025",
+        "at": {
+          "draw": "15.4",
+          "annotation": "يعني"
+        }
+      }
+    },
+    {
+      "id": "margin",
+      "say": "وحتى بعد حقوق الأغاني والمحتوى، الـ Premium بيسيب هامش 34% من كل يورو، والمجاني 18% بس. يبقى الحل نقفل النسخة المجانية؟",
+      "scene": {
+        "type": "compare",
+        "question": "Gross margin بعد حقوق المحتوى",
+        "a": {
+          "label": "Premium",
+          "value": 34,
+          "display": "34%"
+        },
+        "b": {
+          "label": "المجاني",
+          "value": 18,
+          "display": "18%"
+        },
+        "badge": "*نقفل المجاني؟*",
+        "source": "Spotify Form 20-F · FY2025",
+        "at": {
+          "question": "حقوق",
+          "a": "Premium",
+          "b": "والمجاني"
+        }
+      }
+    },
+    {
+      "id": "funnel",
+      "say": "لأ. Spotify نفسها بتقول في تقريرها إن المجاني Funnel: أغلب المشتركين الجداد جايين من المستخدمين المجانيين. يعني المجاني بيجيب إعلانات، وكمان بيجيب العملاء اللي هيدفعوا.",
+      "scene": {
+        "type": "process",
+        "title": "المجاني = قناة اكتساب",
+        "steps": [
+          {
+            "title": "مستخدم مجاني",
+            "detail": "بيسمع بإعلانات",
+            "at": "المستخدمين"
+          },
+          {
+            "title": "بيجيب إيراد إعلانات",
+            "at": "إعلانات"
+          },
+          {
+            "title": "جزء منه بيتحول لـ Premium",
+            "detail": "«primarily sourced» من المجاني",
+            "hl": true,
+            "at": "العملاء"
+          }
+        ],
+        "source": "Spotify 20-F FY2025: «serves as a funnel»",
+        "at": {}
+      }
+    },
+    {
+      "id": "lens",
+      "say": "بس خلي بالك: التقرير مبيقولش نسبة التحويل، ولا تكلفة المستخدم المجاني الواحد، ولا كام مشترك بيلغي ويرجع مجاني، زي الـ churn. فالسؤال الصح: قيمته المتوقعة أكبر من تكلفته؟",
+      "scene": {
+        "type": "takeaway",
+        "ground": "ink",
+        "kicker": "اللي التقرير مبيقولوش",
+        "line": "المجاني *استثمار*… لو قيمته أكبر من تكلفته",
+        "points": [
+          "قيمته: إعلانات + احتمال يتحول",
+          "تكلفته: حقوق المحتوى والسيرفرات"
+        ],
+        "at": {
+          "line": "فالسؤال",
+          "points": [
+            "نسبة",
+            "تكلفة"
+          ]
+        }
+      }
+    },
+    {
+      "id": "quiz",
+      "say": "سؤال: تطبيق مصري عنده مليون مستخدم، و2% بس بيدفعوا. المستثمر عايز يقفل المجاني عشان بيخسر. إيه أول رقم تطلبه؟ الإجابة في أول كومنت.",
+      "scene": {
+        "type": "quiz",
+        "kicker": "مليون مستخدم · 2% بيدفعوا",
+        "question": "أول رقم تطلبه؟",
+        "options": [
+          {
+            "key": "أ",
+            "text": "تكلفة المستخدم المجاني بس",
+            "at": "2%"
+          },
+          {
+            "key": "ب",
+            "text": "الـ 2% جايين من المجاني ولا من بره؟",
+            "at": "المستثمر"
+          },
+          {
+            "key": "ج",
+            "text": "عدد المستخدمين السنة الجاية",
+            "at": "يقفل"
+          }
+        ],
+        "ask": "وليه؟",
+        "cta": "الإجابة في أول كومنت",
+        "at": {
+          "question": "أول رقم",
+          "ask": "أول رقم",
+          "cta": "الإجابة"
+        }
+      }
+    }
+  ],
+  "post": {
+    "caption": "Spotify: 751 مليون مستخدم نشط و290 مليون بيدفعوا. الـ Premium بيجيب 89% من الإيراد بهامش 34%… بس المجاني هو الـ funnel اللي بيجيب أغلب المشتركين الجداد.\nفك شفرة البيزنس · المصدر: Spotify Form 20-F السنة المالية 2025",
+    "first_comment": "الإجابة (ب): لو الدافعين جايين أساساً من المجاني (زي ما Spotify بتقول عن نفسها)، قفله بيقفل مصدر العملاء. بعدها قارن تكلفة المستخدم المجاني بالإعلانات منه + احتمال تحويله. (أ) التكلفة لوحدها نص المعادلة. (ج) العدد من غير تحويل vanity metric. المصدر: Spotify Form 20-F FY2025.",
+    "hashtags": [
+      "#Spotify",
+      "#Freemium",
+      "#فهمني_بيزنس"
+    ]
+  }
+}
