@@ -1,0 +1,5 @@
+node_modules/
+output/
+public/sounds/*.mp3
+episodes/*/.work/
+.hyperframes/

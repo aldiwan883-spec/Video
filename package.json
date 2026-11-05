@@ -1,0 +1,20 @@
+{
+  "name": "fahhemny-business",
+  "private": true,
+  "type": "module",
+  "description": "فهّمني بيزنس — Content production system for educational business reels",
+  "scripts": {
+    "setup": "node src/cli/setup.mjs",
+    "script": "node src/cli/script.mjs",
+    "build:episode": "node src/cli/build.mjs",
+    "preview:episode": "node src/cli/build.mjs --no-render",
+    "studio": "node src/cli/studio.mjs"
+  },
+  "devDependencies": {
+    "gsap": "^3.15.0",
+    "hyperframes": "0.9.14"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
