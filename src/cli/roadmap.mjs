@@ -5,7 +5,7 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const D = path.join(ROOT, "docs/roadmap");
-const SERIES = { 1: "قاموس المستثمر", 2: "إزاي تبقى أحمد طارق في نفسك؟", 3: "إزاي تكسب ثقة الشاركس؟", 4: "فك شفرة البيزنس", 5: "من فكرة لشركة" };
+const SERIES = { 1: "قاموس المستثمر", 2: "فكّر زي المستثمر", 3: "إزاي تكسب ثقة الشاركس؟", 4: "فك شفرة البيزنس", 5: "من فكرة لشركة" };
 const all = [1, 2, 3, 4, 5].flatMap((n) => JSON.parse(fs.readFileSync(path.join(D, `data/S${n}.json`), "utf8")).map((e) => ({ ...e, sn: n })));
 const byId = Object.fromEntries(all.map((e) => [e.id, e]));
 const esc = (s) => String(s ?? "").replace(/\|/g, "/").replace(/\n/g, " ");

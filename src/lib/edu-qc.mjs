@@ -62,9 +62,9 @@ export function eduReview(episode, series = {}) {
   const est = words / 2.4 + episode.segments.length * 0.5;
   add("length", `الطول مناسب (${words} كلمة ≈ ${Math.round(est)}s، المستهدف ${tmin}–${tmax}s)`, est >= tmin - 10 && est <= tmax + 20, false,
     est < tmin - 10 ? "الحلقة قصيرة: فيه فكرة داعمة ناقصة؟ (مش حشو)" : "الحلقة طويلة: فيه فكرة ممكن تتشال أو تتأجل لحلقة تانية؟");
-  if (e.series === "investor-mind" || episode.series === "investor-mind")
-    add("attribution", "مفيش رأي أو قرار منسوب لشخص حقيقي", !/أحمد طارق (قال|بيقول|بيحب|بيفضّل|عمل)/.test(script), true,
-      "السلسلة استعارة: شيل أي نسبة لرأي أو تصرف لشخص حقيقي.");
+  const REAL_PEOPLE = /(أحمد طارق|محمد فاروق|أيمن عباس|أحمد أبو هشيمة|أحمد عز|ماجد شاكر)\s+(قال|بيقول|بيحب|بيفضّل|بيفضل|عمل|شايف|رأيه)/;
+  add("attribution", "مفيش رأي أو قرار منسوب لشخص حقيقي من غير مصدر", !REAL_PEOPLE.test(script) || (e.sources ?? []).some((s) => s.quote), true,
+    "شيل أي نسبة لرأي أو تصرف لشخص حقيقي، أو حط كلامه المنشور بنصه في edu.sources[].quote.");
 
   const passed = checks.filter((c) => c.critical).every((c) => c.ok);
   const score = checks.filter((c) => c.ok).length;
