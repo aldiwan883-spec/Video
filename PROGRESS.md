@@ -14,6 +14,10 @@ Branch: `claude/lucid-heisenberg-2zaul3` · Brand: **فهّمني بيزنس** (
 | 3c | 5 pilots (episode.json + LEARNING.md) | ✅ edu-check 5/5, visual QC 0 errors |
 | 3d | Silent preview renders (5) | ✅ previews/ |
 | 3e | Reports (OVERNIGHT_REPORT, NEXT_STEPS, CONTENT_QUALITY_AUDIT, RESEARCH_SOURCES) | ✅ |
+| 4 | Rename S2 → «فكّر زي المستثمر» | ✅ |
+| 5 | Illustrated scene + SVG prop library, recurring Egyptian cast | ✅ |
+| 6 | **All 100 episodes written** (episode.json + script.md), validate 100/100 | ✅ |
+| 7 | Final visual QC on all 100 + PR merged to main | ✅ |
 
 ## Decisions log
 - Brand name stays **فهّمني بيزنس**; the five series live under it (`series/*.json`).
@@ -24,5 +28,6 @@ Branch: `claude/lucid-heisenberg-2zaul3` · Brand: **فهّمني بيزنس** (
 - Layout QC treats wrapped words of the same paragraph as non-overlapping (line-box geometry, not a defect).
 
 ## Resume here
+- Everything is done. To record: see NEXT_STEPS.md §1 and EPISODES.md.
 - Render: `npm run build:episode -- 001 203 307 402 502` (≈8 min each on this container).
 - Next content: S1-02 per docs/roadmap/PUBLISHING_ORDER.md; apply CONTENT_QUALITY_AUDIT §3 fixes.

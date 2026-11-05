@@ -31,9 +31,10 @@ npm run build:episode -- 001
 - **Music bed:** مفيش موسيقى خلفية (مفيش مصدر مجاني موثوق متجرّب). Pixabay Music خيار، والـ ducking متاح في HyperFrames (`data-automation`).
 - `composition_file_too_large` في captions.html متجاهَلة عن قصد (ملف متولّد).
 
-## 4. محتوى (بالترتيب)
+## 4. محتوى
 
-1. سجّل الـ 5 pilots، وشوف رد فعل الجمهور على الـ quiz (الكومنتات أهم من الـ views).
-2. اكتب الحلقات اللي بعد كده بترتيب `docs/roadmap/PUBLISHING_ORDER.md`. أولهم **S1-02** (Revenue vs Profit vs Cash) لأن نص المنهج معتمد عليها.
-3. طبّق مقترحات `CONTENT_QUALITY_AUDIT.md §3`: دمج S3-17 مع S3-18، وزاوية جديدة لـ S1-10 و S1-13.
-4. كل حلقة جديدة: `episode.json` (مع `edu`) → `edu-check` → Learning notes → preview صامت → تسجيل.
+**الـ 100 حلقة مكتوبة وجاهزة للتسجيل** (`EPISODES.md`). مفيش محتاج agent:
+1. سجّل بترتيب `docs/roadmap/PUBLISHING_ORDER.md` (أول حلقة: 001).
+2. الحلقات اللي في عمود "راجع قبل التسجيل" في `EPISODES.md`: افتح آخر `script.md` وراجع الأرقام من المصادر المكتوبة، وعدّل `say` + `edu.calcs` لو اتغيرت، وبعدين `npm run validate -- <رقم>`.
+3. بعد أول 3 حلقات منشورة: قيس (retention، saves، جودة إجابات الكومنتات) قبل ما تغيّر أي حاجة في الاستراتيجية.
+4. أفكار مستقبلية (مش متنفذة): حاسبات تفاعلية، و Knowledge graph، و Case library أعمق، و Dashboard أداء.

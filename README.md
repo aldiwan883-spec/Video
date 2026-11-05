@@ -5,9 +5,10 @@
 
 | ابدأ من هنا | |
 |---|---|
+| **الـ 100 حلقة (السكريبتات)** | **`EPISODES.md`** ← فيه رابط `script.md` لكل حلقة وحالتها |
 | الاستراتيجية | `docs/strategy/CONTENT_BIBLE.md` · `docs/strategy/CONCEPT_MAP.md` |
 | المنهج (100 حلقة) | `docs/roadmap/ROADMAP.md` · `RATINGS.md` · `TOP10.md` · `PUBLISHING_ORDER.md` |
-| الـ 5 Pilots | `episodes/{001,203,307,402,502}-*/` + `docs/pilots/*/LEARNING.md` |
+| الحلقات | `episodes/<رقم>-<slug>/` (100 حلقة) · الـ 5 pilots ليهم `docs/pilots/*/LEARNING.md` |
 | المكتبة المالية | `docs/library/README.md` (19 مفهوم) |
 | البحث والأسئلة | `docs/research/WORKFLOW.md` · `RESEARCH_SOURCES.md` · `docs/quiz/QUIZ_FRAMEWORK.md` |
 | المحرك | `docs/ENGINE.md` (الأوامر، والـ 18 مشهد، والـ QC، وإعدادات السلاسل) |
