@@ -1,0 +1,324 @@
+{
+  "id": "408",
+  "roadmap": "S4-08",
+  "series": "decode",
+  "number": 8,
+  "slug": "margin-strategy",
+  "term": {
+    "en": "Gross Margin as Strategy",
+    "ar": "الهامش بيقول البيزنس بيلعب إزاي"
+  },
+  "cover": {
+    "hook": "هامش 89% ولا 24%؟\nالسؤال نفسه *غلط*",
+    "sub": "فك شفرة: Gross margin · Adobe vs Walmart",
+    "motif": false
+  },
+  "edu": {
+    "objective": "المشاهد بعد الحلقة هيقدر يقرا الـ gross margin كوصف لطبيعة البيزنس مش كدرجة نجاح، ويكمّل لتحت (operating margin) ولـ asset turnover قبل ما يقارن شركتين، ويعرف إن المقارنة الصح بتبقى جوه نفس الصناعة.",
+    "insights": [
+      "هامش عالي غالباً معناه إن النسخة الزيادة تكلفتها قليلة، والمصاريف الكبيرة بتبقى تحت: Adobe بتصرف حوالي 53% من إيرادها على R&D والتسويق والإدارة.",
+      "هامش قليل ممكن يكسب لو البضاعة بتلف بسرعة: Walmart إيرادها حوالي 2.5 ضعف أصولها، وAdobe حوالي 0.8.",
+      "لما تحسب الربح التشغيلي على الأصول، الفرق بين الشركتين بيقل من 8.7 أضعاف (في الهامش التشغيلي) لحوالي 2.8 ضعف."
+    ],
+    "case": "Adobe Form 10-K للسنة المالية 2025 (انتهت 28 نوفمبر 2025)، بالمليون دولار: Total revenue 23,769، Gross profit 21,218، Total operating expenses 12,512، Operating income 8,706، Total assets 29,496. Walmart Form 10-K للسنة المالية 2026 (انتهت 31 يناير 2026): Net sales 706,413، Total revenues 713,163، Gross profit 171,018 (24.2% من net sales)، Operating expenses 147,943، Operating income 29,825 (4.2% من net sales)، Total assets 284,668.",
+    "assumptions": [
+      "Adobe FY2025 و Walmart FY2026: سنتين ماليتين بينهم شهرين تقريباً، فالمقارنة تقريبية.",
+      "Walmart بتحسب الـ gross profit والـ operating margin كنسبة من net sales (من غير membership income) زي ما الـ 10-K بيعرضها؛ Adobe كنسبة من total revenue. حسبنا asset turnover على total revenues لكل واحدة.",
+      "الأصول = إجمالي الأصول آخر السنة، مش المتوسط؛ تبسيط.",
+      "كل شركة بتعرّف cost of revenue بطريقتها، فالمقارنة بين صناعتين مختلفتين للتوضيح مش للترتيب."
+    ],
+    "nonObvious": "الهامش العالي مش أحسن دايماً: الفرق في الهامش التشغيلي بين Adobe و Walmart حوالي 8.7 أضعاف، بس لما تحسب الربح على الأصول اللي محتاجاها كل واحدة، الفرق بيقل لأقل من 3 أضعاف، لأن Walmart بتلف أصولها 2.5 مرة في السنة.",
+    "limits": "الأرقام دي متقولش أنهي شركة استثمار أحسن، ولا أنهي موديل أصعب يتقلّد. والهامش لوحده مبيقولش الشركة قوية جوه صناعتها: عشان كده بتقارن Walmart بشركات تجزئة، وAdobe بشركات software.",
+    "quiz": {
+      "type": "judgment",
+      "answer": "ب: القاعدة بتحميه في صناعات الهامش العالي فيها طبيعي (software مثلاً): شركة software هامشها 30% غالباً عندها مشكلة. بس بتفوّت عليه بيزنس تجزئة أو توزيع هامشه قليل ودوران بضاعته سريع وبيكسب كويس على الأصول. الصح: قارن الهامش بنفس الصناعة، وكمّل للربح على الأصول.",
+      "whyNot": [
+        "أ (دايماً بتحميه): Walmart هامشها 24% وبتعمل حوالي 10.5% ربح تشغيلي على أصولها. القاعدة كانت هتشطبها.",
+        "ج (الهامش مبيفرقش، المهم النمو): الهامش بيفرق جداً جوه نفس الصناعة، وبيقولك الشركة بتنافس إزاي."
+      ]
+    },
+    "calcs": [
+      {
+        "label": "Adobe gross margin %",
+        "expr": "21218 / 23769 * 100",
+        "expect": 89.27
+      },
+      {
+        "label": "Adobe مصاريف التشغيل ÷ الإيراد %",
+        "expr": "12512 / 23769 * 100",
+        "expect": 52.64
+      },
+      {
+        "label": "Adobe operating margin %",
+        "expr": "8706 / 23769 * 100",
+        "expect": 36.63
+      },
+      {
+        "label": "Walmart gross margin % (من net sales)",
+        "expr": "171018 / 706413 * 100",
+        "expect": 24.21
+      },
+      {
+        "label": "Walmart operating margin % (من net sales)",
+        "expr": "29825 / 706413 * 100",
+        "expect": 4.22
+      },
+      {
+        "label": "فرق الهامش التشغيلي (x)",
+        "expr": "36.63 / 4.22",
+        "expect": 8.68
+      },
+      {
+        "label": "Walmart asset turnover (x)",
+        "expr": "713163 / 284668",
+        "expect": 2.505
+      },
+      {
+        "label": "Adobe asset turnover (x)",
+        "expr": "23769 / 29496",
+        "expect": 0.806
+      },
+      {
+        "label": "Adobe ربح تشغيلي ÷ الأصول %",
+        "expr": "8706 / 29496 * 100",
+        "expect": 29.52
+      },
+      {
+        "label": "Walmart ربح تشغيلي ÷ الأصول %",
+        "expr": "29825 / 284668 * 100",
+        "expect": 10.48
+      },
+      {
+        "label": "الفرق على الأصول (x)",
+        "expr": "29.52 / 10.48",
+        "expect": 2.817
+      }
+    ],
+    "terms": [
+      "Adobe",
+      "Walmart",
+      "Software: برامج",
+      "Gross margin: الهامش بعد تكلفة البضاعة أو الخدمة",
+      "Operating margin: الهامش التشغيلي",
+      "Asset turnover: الإيراد ÷ الأصول",
+      "R&D"
+    ],
+    "hypothetical": false,
+    "sources": [
+      {
+        "claim": "Total revenue 23,769؛ total cost of revenue 2,551؛ gross profit 21,218؛ total operating expenses 12,512؛ operating income 8,706؛ total assets 29,496 ($m, FY2025)",
+        "source": "Adobe Inc. Form 10-K FY2025 (fiscal year ended November 28, 2025) — Consolidated Statements of Income + Balance Sheets",
+        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm",
+        "date": "filed 2026-01-15"
+      },
+      {
+        "claim": "Net sales 706,413؛ total revenues 713,163؛ gross profit 171,018 (24.2%)؛ operating expenses 147,943؛ operating income 29,825 (4.2%)؛ total assets 284,668 ($m, FY2026)",
+        "source": "Walmart Inc. Form 10-K FY2026 (fiscal year ended January 31, 2026) — MD&A Consolidated Results of Operations + Balance Sheets",
+        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+        "date": "filed 2026-03-13"
+      }
+    ],
+    "verify": [
+      "لو Adobe نشرت 10-K السنة المالية 2026 (بينزل عادة في يناير) قبل التسجيل، نحدّث أرقامها عشان السنتين يبقوا أقرب."
+    ]
+  },
+  "segments": [
+    {
+      "id": "hook",
+      "say": "Adobe هامشها الإجمالي حوالي 89%. وWalmart هامشها 24%. مين فيهم بيزنس أحسن؟ السؤال نفسه غلط من أوله.",
+      "scene": {
+        "type": "hook",
+        "ground": "ink",
+        "lines": [
+          {
+            "text": "Adobe 89% · Walmart 24%",
+            "size": "h1"
+          },
+          {
+            "text": "مين أحسن؟",
+            "size": "h2",
+            "at": "مين"
+          },
+          {
+            "text": "السؤال نفسه *غلط*",
+            "size": "h1",
+            "at": "السؤال"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nature",
+      "say": "الـ gross margin بيوصف نوع البيزنس. Adobe بتبيع software، والنسخة الزيادة تكلفتها قليلة. Walmart بتبيع بضاعة، وكل كرتونة ليها تمن.",
+      "scene": {
+        "type": "chart",
+        "title": "Gross margin",
+        "kind": "bar",
+        "data": [
+          {
+            "label": "Adobe",
+            "value": 89.3,
+            "display": "89.3%"
+          },
+          {
+            "label": "Walmart",
+            "value": 24.2,
+            "display": "24.2%",
+            "hl": true
+          }
+        ],
+        "annotation": "الهامش بيوصف *نوع* البيزنس",
+        "source": "Adobe 10-K FY2025 · Walmart 10-K FY2026",
+        "at": {
+          "draw": "Adobe",
+          "annotation": "Walmart"
+        }
+      }
+    },
+    {
+      "id": "below",
+      "say": "بس انزل تحت. Adobe بتصرف حوالي 53% من إيرادها على التطوير والتسويق والإدارة، فيفضل ربح تشغيلي حوالي 36.6%.",
+      "scene": {
+        "type": "breakdown",
+        "title": "Adobe: من الهامش للربح",
+        "unit": "% من الإيراد · FY2025",
+        "rows": [
+          {
+            "label": "Gross margin",
+            "value": 89.3,
+            "display": "89.3%",
+            "at": "انزل"
+          },
+          {
+            "label": "تطوير وتسويق وإدارة",
+            "value": 52.6,
+            "display": "52.6%",
+            "op": "-",
+            "at": "بتصرف"
+          },
+          {
+            "label": "Operating margin",
+            "value": 36.6,
+            "display": "36.6%",
+            "op": "=",
+            "hl": true,
+            "at": "فيفضل"
+          }
+        ],
+        "source": "Adobe Form 10-K · FY2025"
+      }
+    },
+    {
+      "id": "turnover",
+      "say": "وWalmart ربحها التشغيلي 4.2% بس. بس بص على رقم تاني: Walmart بتعمل إيراد قد أصولها مرتين ونص في السنة، وAdobe أقل من مرة. ده اسمه asset turnover.",
+      "scene": {
+        "type": "compare",
+        "question": "الإيراد ÷ الأصول: *مين بيلف أسرع*؟",
+        "a": {
+          "label": "Walmart",
+          "value": 2.5,
+          "display": "2.5x"
+        },
+        "b": {
+          "label": "Adobe",
+          "value": 0.81,
+          "display": "0.8x"
+        },
+        "badge": "Asset turnover",
+        "source": "حسابنا: total revenues ÷ total assets آخر السنة",
+        "at": {
+          "question": "رقم",
+          "a": "مرتين",
+          "b": "وAdobe"
+        }
+      }
+    },
+    {
+      "id": "assets",
+      "say": "فلما تحسب الربح التشغيلي على الأصول، الفرق بينهم بيقل من حوالي 9 أضعاف لأقل من 3. الهامش القليل بيتعوّض جزء منه بالسرعة.",
+      "scene": {
+        "type": "beforeafter",
+        "before": {
+          "label": "الهامش التشغيلي",
+          "lines": [
+            "Adobe 36.6% · Walmart 4.2%",
+            "الفرق ≈ 8.7x"
+          ]
+        },
+        "after": {
+          "label": "الربح التشغيلي ÷ الأصول",
+          "lines": [
+            "Adobe 29.5% · Walmart 10.5%",
+            "الفرق ≈ *2.8x*"
+          ]
+        },
+        "source": "حسابنا من الـ 10-K بتاع كل شركة",
+        "at": {
+          "before": "فلما",
+          "after": "بيقل"
+        }
+      }
+    },
+    {
+      "id": "myth",
+      "say": "يعني الهامش العالي مش دايماً أحسن. والأهم: قارن الهامش بشركات من نفس الصناعة، لأن كل شركة بتعرّف تكلفة الإيراد بطريقتها. المقارنة بين صناعتين بتوضّح بس.",
+      "scene": {
+        "type": "myth",
+        "title": "قاعدة شائعة",
+        "wrong": [
+          "هامش أعلى = بيزنس أحسن"
+        ],
+        "rightLabel": "الأدق",
+        "right": "قارن في نفس الصناعة",
+        "at": {
+          "wrong": [
+            0.05
+          ],
+          "strike": "مش",
+          "right": "قارن"
+        }
+      }
+    },
+    {
+      "id": "quiz",
+      "say": "سؤال: مستثمر بيقول: أنا مبدخلش أي بيزنس هامشه أقل من 50%. إمتى القاعدة دي بتحميه، وإمتى بتفوّت عليه فرصة؟ الإجابة في أول كومنت.",
+      "scene": {
+        "type": "quiz",
+        "kicker": "«مبدخلش أي هامش أقل من 50%»",
+        "question": "القاعدة دي صح؟",
+        "options": [
+          {
+            "key": "أ",
+            "text": "دايماً بتحميه: الهامش العالي أأمن",
+            "at": "مستثمر"
+          },
+          {
+            "key": "ب",
+            "text": "تحميه في software وتفوّت تجزئة سريعة",
+            "at": "مبدخلش"
+          },
+          {
+            "key": "ج",
+            "text": "الهامش مبيفرقش: المهم النمو",
+            "at": "50%"
+          }
+        ],
+        "ask": "وإمتى بتفوّت عليه؟",
+        "cta": "الإجابة في أول كومنت",
+        "at": {
+          "question": "إمتى",
+          "ask": "بتفوّت",
+          "cta": "الإجابة"
+        }
+      }
+    }
+  ],
+  "post": {
+    "caption": "Adobe هامشها الإجمالي 89% وWalmart 24%. بس على الأصول: Adobe حوالي 29.5% ربح تشغيلي وWalmart حوالي 10.5%. الفرق اتقلص من 8.7x لـ 2.8x. الهامش بيوصف الموديل، مش بيرتّب الشركات.\nفك شفرة البيزنس · المصدر: Adobe 10-K FY2025 · Walmart 10-K FY2026",
+    "first_comment": "الإجابة (ب): القاعدة بتحميه في صناعات الهامش العالي فيها طبيعي، زي software (لو شركة software هامشها 30% غالباً فيه مشكلة). بس بتفوّت عليه تجزئة أو توزيع هامشه قليل ودوران بضاعته سريع وبيكسب كويس على الأصول. (أ) Walmart بهامش 24% بتعمل حوالي 10.5% ربح تشغيلي على أصولها. (ج) الهامش بيفرق جداً جوه نفس الصناعة. المصدر: Adobe 10-K FY2025، Walmart 10-K FY2026.",
+    "hashtags": [
+      "#GrossMargin",
+      "#Strategy"
+    ]
+  }
+}

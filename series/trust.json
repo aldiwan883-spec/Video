@@ -1,0 +1,35 @@
+{
+  "slug": "trust",
+  "name": "إزاي تكسب ثقة الشاركس؟",
+  "hashtag": "#ثقة_الشاركس",
+  "hashtags": [
+    "#شارك_تانك_مصر",
+    "#Pitch"
+  ],
+  "creative": {
+    "animationIntensity": 1.15,
+    "_animationIntensity": "0.7 هادي جداً · 1 عادي · 1.3 حيوي (بيأثر على سرعة ومسافة الحركة)",
+    "visualDensity": "medium",
+    "_visualDensity": "low = خط أكبر وعناصر أقل · medium · high = معلومات أكتر في الفريم",
+    "captionStyle": "karaoke",
+    "_captionStyle": "karaoke = الكلمة اللي بتتقال بتنوّر · phrase = الجملة كلها مرة واحدة · off",
+    "transitions": [
+      "whip",
+      "cut",
+      "blur"
+    ],
+    "_transitions": "من: blur, whip, flood, iris, cut — بالترتيب حسب الأفضلية",
+    "darkSceneShare": 0.2,
+    "chip": "ink"
+  },
+  "mix": {
+    "sfx": 0.5,
+    "maxSfxPer10s": 3,
+    "voiceLufs": -16,
+    "keepPause": 0.45
+  },
+  "targetDuration": [
+    60,
+    75
+  ]
+}

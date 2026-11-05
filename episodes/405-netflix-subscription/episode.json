@@ -1,0 +1,184 @@
+{
+  "id": "405",
+  "roadmap": "S4-05",
+  "series": "decode",
+  "number": 5,
+  "slug": "netflix-subscription",
+  "term": {
+    "en": "Subscription Economics",
+    "ar": "اقتصاد الاشتراك"
+  },
+  "cover": {
+    "hook": "اشتراك كل شهر\n= فلوس *مضمونة*؟",
+    "sub": "فك شفرة: Subscription · Netflix 10-K",
+    "motif": false
+  },
+  "edu": {
+    "objective": "المشاهد بعد الحلقة هيقدر يفكك إيراد أي شركة اشتراكات لعدد مشتركين × اللي بيدفعه كل واحد، ويعرف إن مقياس الـ churn وتكلفة المحتوى هما اللي بيحددوا الاستمرار، ويقارن الربح التشغيلي بالكاش قبل ما يحكم.",
+    "insights": [
+      "الإيراد = عدد المشتركين × متوسط اللي بيدفعه كل واحد. Netflix قالت إن نمو 2025 (16%) جه من مشتركين أكتر وأسعار أعلى وإعلانات أكتر.",
+      "من 2025 Netflix بطّلت تنشر عدد المشتركين ومتوسط الإيراد لكل مشترك، فبقى صعب من بره تفصل نمو السعر عن نمو العدد.",
+      "المحتوى بيتدفع بدري وبيتوزع على الأرباح على سنين (amortization)، فالربح التشغيلي (13.3 مليار) أعلى من الكاش من التشغيل (10.1 مليار)."
+    ],
+    "case": "Netflix Form 10-K للسنة المالية 2025، بالمليار دولار (الأرقام في التقرير بالألف): Revenues 45.18 (+16%)، Operating income 13.33 (margin 29.5%)، Cost of revenues 23.28 (52% من الإيراد)، Amortization of content assets 16.42، Additions to content assets 17.10، Net cash provided by operating activities 10.15. التقرير بيقول إن الشركة وقفت نشر عدد المشتركين و average monthly revenue per paying membership خلال 2025.",
+    "assumptions": [
+      "كل الأرقام بالدولار من Netflix Form 10-K FY2025 (filed 2026-01-23): Results of Operations و Consolidated Statements of Cash Flows، ومقرّبة لمليار بعلامة عشرية.",
+      "الـ Additions to content assets بند في قايمة الكاش (جوه التشغيل)؛ الـ 10-K بيقول إن مدفوعات المحتوى = الـ additions + التغير في الالتزامات المرتبطة بيها، فهو مش «الكاش المدفوع» بالظبط.",
+      "«أكتر من 90% من المحتوى بيتوزع خلال 4 سنين» من وصف Netflix لسياسة الـ amortization في الـ 10-K.",
+      "ربط الفرق بين الربح والكاش بالمحتوى لوحده تبسيط: فيه بنود working capital وضرايب كمان."
+    ],
+    "nonObvious": "الاشتراك مش إيراد مضمون: المشترك بيدفع كل شهر وممكن يلغي أي شهر، والضمان الوحيد إنه يفضل شايف قيمة، وده بيتكلف محتوى جديد كل سنة. وكمان: لما شركة تبطّل تنشر رقم، ده نفسه معلومة: بقيت محتاج تحكم من الإيراد والهامش بس.",
+    "limits": "أرقام 2025 متقولش كام مشترك لغى ولا كام جديد دخل، ولا النمو جه من السعر قد إيه ومن العدد قد إيه: Netflix بطّلت تنشر الأرقام دي. ومتقولش المحتوى اللي اتدفع النهارده هيجيب مشتركين قد إيه بكره.",
+    "quiz": {
+      "type": "interpretation",
+      "answer": "ب: زيادة السعر بتزوّد الإيراد فوراً حتى لو العملاء بدأوا يمشوا، لأن اللي بيمشي بيمشي على شهور. لازم تتابع نسبة الإلغاء (churn) والمشتركين الجداد كام شهر بعد الزيادة: لو الـ churn ثابت يبقى عندك قيمة تستاهل السعر، لو زاد يبقى بتصرف من رصيد العملاء القدام.",
+      "whyNot": [
+        "أ (الإيراد زاد يبقى نجح): ده أول شهر بس. الإيراد بيتأخر في إنه يبيّن الخسارة، لأن الإلغاء بيحصل تدريجياً.",
+        "ج (أقارن بسعر المنافسين): مفيد كسياق، بس مبيقولكش عملاءك انت عملوا إيه فعلاً بعد الزيادة."
+      ]
+    },
+    "calcs": [
+      { "label": "Operating margin %", "expr": "13326603 / 45183036 * 100", "expect": 29.49 },
+      { "label": "Cost of revenues ÷ Revenues %", "expr": "23275329 / 45183036 * 100", "expect": 51.51 },
+      { "label": "نمو الإيراد %", "expr": "(45183036 - 39000966) / 39000966 * 100", "expect": 15.85 },
+      { "label": "Additions − Amortization ($k)", "expr": "17096617 - 16422166", "expect": 674451 },
+      { "label": "Operating income − Operating cash flow ($k)", "expr": "13326603 - 10149273", "expect": 3177330 },
+      { "label": "Operating cash flow ÷ Operating income %", "expr": "10149273 / 13326603 * 100", "expect": 76.16 }
+    ],
+    "terms": [
+      "Netflix",
+      "Subscription: اشتراك",
+      "Churn: نسبة اللي بيلغوا",
+      "Amortization: توزيع التكلفة على سنين",
+      "Operating cash flow: الكاش من التشغيل",
+      "10-K"
+    ],
+    "hypothetical": false,
+    "sources": [
+      {
+        "claim": "Revenues 45,183,036؛ operating income 13,326,603 (29.5%)؛ cost of revenues 23,275,329؛ revenue +16% due to growth in memberships, price increases, and increased advertising revenue ($k, FY2025)",
+        "source": "Netflix, Inc. Form 10-K FY2025, MD&A — Results of Operations",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "date": "filed 2026-01-23"
+      },
+      {
+        "claim": "During 2025 Netflix discontinued the reporting of membership numbers, including average paying memberships and average monthly revenue per paying membership",
+        "source": "Netflix, Inc. Form 10-K FY2025, MD&A footnote (1) to Results of Operations table",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "date": "filed 2026-01-23"
+      },
+      {
+        "claim": "Additions to content assets (17,096,617)؛ amortization of content assets 16,422,166؛ net cash provided by operating activities 10,149,273 ($k)؛ over 90% of a content asset expected to be amortized within four years؛ payment terms require more upfront cash payments relative to amortization",
+        "source": "Netflix, Inc. Form 10-K FY2025, Consolidated Statements of Cash Flows + Critical Accounting Estimates (Content)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "date": "filed 2026-01-23"
+      }
+    ],
+    "verify": [
+      "Netflix في نص صفقة WBD (مذكورة في الـ 10-K): لو الصفقة اتقفلت أو نزل 10-K جديد قبل التسجيل، نراجع إن الأرقام والإفصاح عن المشتركين لسه زي ما هي."
+    ]
+  },
+  "segments": [
+    {
+      "id": "hook",
+      "say": "اشتراك كل شهر، يبقى فلوس مضمونة؟ مش بالظبط. المشترك بيدفع شهر بشهر، وممكن يلغي في أي شهر.",
+      "scene": {
+        "type": "hook",
+        "lines": [
+          { "text": "اشتراك كل شهر", "size": "h1" },
+          { "text": "= فلوس *مضمونة*؟", "size": "h1" },
+          { "text": "بيدفع شهر بشهر… ويلغي أي شهر", "size": "quiet", "at": "المشترك" }
+        ]
+      }
+    },
+    {
+      "id": "case",
+      "say": "خد Netflix في 2025: إيراد 45.2 مليار دولار، زاد 16%. وربح تشغيلي حوالي 29.5% من الإيراد. والتقرير بيقول النمو جه من مشتركين أكتر، وأسعار أعلى، وإعلانات.",
+      "scene": {
+        "type": "case",
+        "label": "Netflix 10-K · السنة المالية 2025",
+        "title": "Netflix في سنة",
+        "facts": [
+          { "k": "الإيراد", "v": "$45.2B", "at": "إيراد" },
+          { "k": "النمو", "v": "+16%", "at": "زاد" },
+          { "k": "Operating margin", "v": "29.5%", "at": "تشغيلي" },
+          { "k": "النمو جه من", "v": "مشتركين + أسعار + إعلانات", "hl": true, "at": "مشتركين" }
+        ],
+        "source": "Netflix Form 10-K · FY2025"
+      }
+    },
+    {
+      "id": "metric",
+      "say": "بس طب كام من الـ 16% دول سعر، وكام مشتركين؟ صعب تعرف. في 2025 Netflix بطّلت تنشر عدد المشتركين ومتوسط اللي بيدفعه كل واحد.",
+      "scene": {
+        "type": "beforeafter",
+        "title": "اللي بقيت تقدر تشوفه",
+        "before": { "label": "قبل 2025", "lines": ["عدد المشتركين", "الإيراد لكل مشترك"] },
+        "after": { "label": "تقرير 2025", "lines": ["الإيراد", "*الهامش* بس"] },
+        "source": "Netflix 10-K FY2025 · وقف نشر أرقام المشتركين",
+        "at": { "before": "سعر", "after": "بطّلت" }
+      }
+    },
+    {
+      "id": "content",
+      "say": "والتكلفة الأكبر هي المحتوى. بيتدفع بدري، وبيتوزع على الأرباح على سنين، اسمها amortization. أكتر من 90% منه بيتوزع في 4 سنين.",
+      "scene": {
+        "type": "process",
+        "title": "رحلة جنيه المحتوى",
+        "steps": [
+          { "title": "بيتدفع بدري", "detail": "قبل ما الحلقة تنزل", "at": "بيتدفع" },
+          { "title": "بيتوزع على الأرباح", "detail": "Amortization على سنين", "at": "وبيتوزع" },
+          { "title": "أكتر من 90% في 4 سنين", "detail": "حسب سياسة Netflix", "hl": true, "at": "أكتر" }
+        ],
+        "source": "Netflix 10-K FY2025 · Critical Accounting Estimates"
+      }
+    },
+    {
+      "id": "cash",
+      "say": "عشان كده الربح والكاش بيحكوا قصتين. الربح التشغيلي 13.3 مليار، بس الكاش اللي جه من التشغيل 10.1 مليار بس.",
+      "scene": {
+        "type": "compare",
+        "question": "الربح ≠ *الكاش*",
+        "a": { "label": "الربح التشغيلي", "value": 13.3, "display": "$13.3B" },
+        "b": { "label": "الكاش من التشغيل", "value": 10.1, "display": "$10.1B" },
+        "badge": "−$3.2B",
+        "source": "Netflix 10-K FY2025 · Income statement + Cash flow",
+        "at": { "question": "عشان", "a": "الربح التشغيلي", "b": "الكاش اللي" }
+      }
+    },
+    {
+      "id": "lens",
+      "say": "فالاشتراك إيراد بيتجدد، بشرط إن المشترك يفضل شايف قيمة. يبقى اسأل: مين بيلغي، يعني الـ churn؟ والقيمة دي بتتكلف كام كاش كل سنة؟",
+      "scene": {
+        "type": "takeaway",
+        "ground": "ink",
+        "kicker": "عشان تقرا أي بيزنس اشتراكات",
+        "line": "بيتجدد… *بشرط*",
+        "points": ["مين بيلغي؟ · Churn", "القيمة بتتكلف كام كاش؟"],
+        "at": { "line": "بشرط", "points": ["مين", "والقيمة"] }
+      }
+    },
+    {
+      "id": "quiz",
+      "say": "سؤال: شركة اشتراكات رفعت السعر 20%. الإيراد زاد، بس المشتركين الجداد قلّوا. تعرف منين إن القرار ده صح؟ الإجابة في أول كومنت.",
+      "scene": {
+        "type": "quiz",
+        "kicker": "السعر +20% · الإيراد زاد · جداد أقل",
+        "question": "القرار صح؟ تعرف منين؟",
+        "options": [
+          { "key": "أ", "text": "الإيراد زاد… يبقى نجح", "at": "الإيراد" },
+          { "key": "ب", "text": "أتابع نسبة الإلغاء كام شهر", "at": "المشتركين" },
+          { "key": "ج", "text": "أقارن بسعر المنافسين", "at": "تعرف" }
+        ],
+        "ask": "وليه؟",
+        "cta": "الإجابة في أول كومنت",
+        "at": { "question": "تعرف", "ask": "صح", "cta": "الإجابة" }
+      }
+    }
+  ],
+  "post": {
+    "caption": "Netflix 2025: إيراد 45.2 مليار دولار وربح تشغيلي 13.3 مليار… والكاش من التشغيل 10.1 مليار. ومن السنة دي مبقتش بتنشر عدد المشتركين. الاشتراك بيتجدد، بشرط.\nفك شفرة البيزنس · المصدر: Netflix Form 10-K السنة المالية 2025",
+    "first_comment": "الإجابة (ب): زيادة السعر بتزوّد الإيراد فوراً حتى لو العملاء بدأوا يمشوا، لأن الإلغاء بيحصل على شهور. تابع الـ churn والمشتركين الجداد كام شهر بعد الزيادة: لو الـ churn ثابت، العملاء شايفين قيمة تستاهل السعر. لو زاد، بتصرف من رصيد العملاء القدام. (أ) أول شهر مبيقولش حاجة. (ج) سياق مفيد، بس مبيقولكش عملاءك عملوا إيه. المصدر: Netflix Form 10-K FY2025.",
+    "hashtags": ["#Netflix", "#Subscription"]
+  }
+}
