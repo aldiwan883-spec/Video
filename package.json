@@ -11,7 +11,8 @@
     "studio": "node src/cli/studio.mjs",
     "test": "node --test test/*.test.mjs",
     "edu-check": "node src/cli/edu-check.mjs",
-    "roadmap": "node src/cli/roadmap.mjs"
+    "roadmap": "node src/cli/roadmap.mjs",
+    "validate": "node src/cli/validate.mjs"
   },
   "devDependencies": {
     "gsap": "^3.15.0",

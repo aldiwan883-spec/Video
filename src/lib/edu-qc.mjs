@@ -74,5 +74,6 @@ export function eduReview(episode, series = {}) {
   if (e.objective) L.push(`**الهدف:** ${e.objective}`, "");
   if (e.nonObvious) L.push(`**الفكرة غير الواضحة:** ${e.nonObvious}`, "");
   if (e.limits) L.push(`**حدود الاستنتاج:** ${e.limits}`, "");
+  if (e.verify?.length) L.push("**⚠️ راجع قبل التسجيل:**", ...e.verify.map((v) => `- ${v}`), "");
   return { passed, score, max: checks.length, checks, issues: checks.filter((c) => !c.ok), markdown: L.join("\n") + "\n" };
 }

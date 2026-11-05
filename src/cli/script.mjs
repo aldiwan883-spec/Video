@@ -9,6 +9,7 @@ export function writeScript(dir, ep) {
     `حوالي ${words} كلمة ≈ ${Math.round(words / 2.6)} ثانية.`, "",
     "**طريقة التسجيل:** ملف واحد WAV (أو MP3) باسم `voice.wav` جوه فولدر الحلقة. اسكت حوالي نص ثانية بين كل جزء والتاني. الوقفات الطبيعية جوه الجملة سيبها زي ما هي.", "", "---", ""];
   ep.segments.forEach((s, i) => L.push(`**[${i + 1} — ${s.id}]**`, s.say.replace(/\*/g, ""), ""));
+  if (ep.edu?.verify?.length) L.push("---", "", "## ⚠️ راجع قبل التسجيل (أرقام بتتغير)", ...ep.edu.verify.map((v) => `- ${v}`), "");
   if (ep.post?.first_comment) L.push("---", "", `**أول كومنت:** ${ep.post.first_comment}`);
   fs.writeFileSync(path.join(dir, "script.md"), L.join("\n") + "\n");
   return path.join(dir, "script.md");
