@@ -12,7 +12,7 @@ export default {
     const extra = `
 #${id}-list{display:flex;flex-direction:column;gap:22px;width:100%}
 .${id}-it{display:flex;gap:18px;align-items:baseline;text-align:right;font-size:36px;font-weight:500;line-height:1.35}
-.${id}-tag{flex:none;font-size:26px;font-weight:700;padding:4px 14px;border-radius:30px;border:2px solid currentColor;color:${color.muted}}`;
+.${id}-tag{flex:none;font-size:30px;font-weight:700;padding:4px 14px;border-radius:30px;border:2px solid currentColor;color:${color.muted}}`;
     const js = [groundIn(ctx), `FB.blurLine(tl, "#${id}-h", 0.05);`];
     p.items.forEach((it, i) => js.push(`FB.blurLine(tl, "#${id}-i${i}", ${ctx.at(it.at ?? 0.4 + i * 0.5)});`));
     js.push(exitAll(ctx));
