@@ -52,7 +52,7 @@ export const PROPS = {
     <rect x="20" y="10" width="220" height="440" rx="34" fill="${K}"/>
     <rect x="34" y="40" width="192" height="380" rx="18" fill="${P}"/>
     <rect x="100" y="22" width="60" height="10" rx="5" fill="${G}"/>
-    ${(o.notes ?? ["أوردر جديد", "أوردر جديد", "تم الدفع"]).map((t, i) => `<g id="${id}-n${i}"><rect x="46" y="${70 + i * 92}" width="168" height="76" rx="14" fill="${W}" stroke="${K}" stroke-width="3"/><circle cx="74" cy="${108 + i * 92}" r="14" fill="${i === 0 ? A : G}"/><text x="142" y="${115 + i * 92}" text-anchor="middle" font-family="FB Readex" font-weight="600" font-size="22" fill="${K}">${t}</text></g>`).join("")}` }),
+    ${(o.notes ?? ["أوردر جديد", "أوردر جديد", "تم الدفع"]).map((t, i) => `<g id="${id}-n${i}"><rect x="46" y="${70 + i * 92}" width="168" height="76" rx="14" fill="${W}" stroke="${K}" stroke-width="3"/><circle cx="74" cy="${108 + i * 92}" r="14" fill="${i === 0 ? A : G}"/><text x="142" y="${115 + i * 92}" text-anchor="middle" font-family="FB Readex" font-weight="600" font-size="19" fill="${K}">${t}</text></g>`).join("")}` }),
 
   // كراتين مخزون
   boxes: (id, o = {}) => ({ w: 380, h: 330, svg: `${[[30, 190], [150, 190], [270, 190], [90, 70], [210, 70]].slice(0, o.count ?? 5).map(([x, y], i) => `
