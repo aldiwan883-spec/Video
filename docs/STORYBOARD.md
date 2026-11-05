@@ -14,25 +14,37 @@
 
 ## أنواع المشاهد
 
-| type | العيلة | امتى تستخدمه | أهم الـ params |
-|---|---|---|---|
-| `hook` | Typography | أول 3 ثواني. أول سطر ظاهر من الفريم 0 | `lines[]: {text, size: hero/h1/h2/quiet, at?, punch?}` |
-| `term` | Typography | ظهور المصطلح | `en, ar, def, at:{en, ar, def}` |
-| `ratio` | Numbers + Diagram | نسبة من كل (حصة من شركة، Equity، Dilution) | `cells, take, partValue, totalValue, formula, legend, at:{formula, take, total}` |
-| `compare` | Diagram | مقارنة رقمين بنفس المقياس | `a:{label,value,display}, b:{…}, badge, question, at:{question, a, b}` |
-| `myth` | Typography | غلطة شائعة بتتشطب، والصح بيتختم | `wrong[], right, rightLabel, at:{wrong[], strike, right}`، وعادة `ground: "ink"` |
-| `quiz` | Quiz | سؤال للمشاهد وعدّاد | `question, ask, cta, countdown, at:{question, ask, cta}` |
-| `next` | Typography | الحلقة الجاية | `en, ar, at:{en}` |
+**المرجع الكامل للـ 18 نوع وكل الـ params في [`docs/ENGINE.md`](ENGINE.md#مكتبة-المشاهد-18).**
 
-أي مشهد يقبل `"ground": "ink"` (أرضية سودا). الانتقال بين أرضيتين مختلفتين بيبقى دايرة بتفرش اللون ومعاها whoosh.
+| العيلة | الأنواع | استخدمها لما… |
+|---|---|---|
+| Typography | hook, term, myth, takeaway, next | فكرة أو جملة لازم تتقري وتستقر |
+| Numbers | ratio, breakdown, chart, scenario | الرقم بيتحسب أو بيتغير قدامك |
+| Diagram | compare, decision, process, timeline, proscons | علاقة أو ترتيب أو trade-off |
+| Case | case, beforeafter | حالة واحدة بأرقامها وافتراضاتها |
+| Interaction / Reference | quiz, source | سؤال حكم، مصادر وافتراضات |
 
-## قواعد الإخراج (الـ QC بيراجعها)
+أي مشهد يقبل `"ground": "ink"`، و`"layout"`، و`"transition"`، و`"camera"`، و`"source"`. لو محددتهمش، خطة الإخراج (`src/lib/variation.mjs`) بتختارهم.
 
-- مفيش مشهدين **ورا بعض** من نفس النوع.
-- ترتيب المشاهد ميبقاش **نفس ترتيب** أي حلقة من آخر 3 حلقات (ERROR لو متطابق، WARN لو التشابه أكتر من 75%).
-- كل حلقة فيها مثال واحد حقيقي بأرقام بيمشي لحد الإجابة.
-- المدة المثالية من 30 لـ 50 ثانية، وحوالي 100 لـ 120 كلمة.
+## بلوك `edu` (إجباري): البوابة التعليمية بتقراه
 
-## أنواع جاية (Phase 4)
+```json
+"edu": {
+  "objective": "المشاهد بعد الحلقة هيقدر …",
+  "insights": ["…", "…"],
+  "case": "…", "assumptions": ["…", "…"],
+  "nonObvious": "…", "limits": "الرقم ده مش بيقول …",
+  "quiz": { "type": "judgment|missing-info|tradeoff|prioritization|interpretation|risk", "answer": "…", "whyNot": ["…"] },
+  "calcs": [{ "label": "Post-money", "expr": "2000000 / 10%", "expect": 20000000 }],
+  "terms": ["Post-money: …"],
+  "hypothetical": true,
+  "sources": [{ "claim": "…", "source": "…", "url": "…", "date": "…" }]
+}
+```
 
-`steps` (خطوات بالترتيب)، و`timeline` (Burn rate / Runway)، و`split` (Pre-money / Post-money)، و`chart` (Revenue vs Profit)، و`footage` (بعدين، لما نقرر مصدر اللقطات).
+## قواعد الإخراج
+
+- مفيش مشهدين ورا بعض من نفس النوع **ونفس التكوين**. الـ QC بيحكم على التكوين البصري، مش على ترتيب الأنواع.
+- كل حلقة فيها مثال واحد حقيقي (أو افتراضي معلن) بيمشي لحد الإجابة، ومتغير واحد بيتغير (scenario) لو ينفع.
+- المدة المستهدفة من إعدادات السلسلة (`targetDuration`)، عادة 60–75 ثانية (حوالي 150–180 كلمة).
+- السؤال من `docs/quiz/QUIZ_FRAMEWORK.md`، ومفيش أسئلة آلة حاسبة.
