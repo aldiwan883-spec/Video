@@ -1,0 +1,968 @@
+[
+  {
+    "id": "S4-01",
+    "folder": "401",
+    "series": "decode",
+    "title": "الفلوس بتدخل منين؟",
+    "title_en": "Where does the money come from? Reading any business model",
+    "domains": [
+      "Business models"
+    ],
+    "level": 1,
+    "hook": "قبل ما تسأل الشركة دي بتكسب كام، اسأل: مين بيدفع، بيدفع على إيه، وكل قد إيه؟",
+    "objective": "المشاهد بعد الحلقة هيقدر يفكك أي business model لأربع أسئلة: مين بيدفع، على إيه، كل قد إيه، والجنيه ده بيكلّف كام عشان يدخل.",
+    "supporting_insights": [
+      "مصدر الإيراد الأكبر مش لازم يكون مصدر الربح الأكبر: لازم تبص على gross profit لكل revenue stream.",
+      "الـ business model = طريقة الإيراد + هيكل التكلفة، مش المنتج نفسه."
+    ],
+    "key_concepts": [
+      "Business model",
+      "Revenue stream",
+      "Gross profit",
+      "Fixed vs Variable costs"
+    ],
+    "case": "كافيه افتراضي في مدينة نصر (مثال افتراضي، الأرقام للتوضيح): بيبيع 120 مشروب في اليوم بمتوسط 60 جنيه (تكلفة متغيرة 20 جنيه للمشروب)، و50 قطعة pastry بـ 40 جنيه (بيشتريها من مورد بـ 25). على 30 يوم: إيراد المشروبات 216,000 وإيراد الـ pastry 60,000، يعني إجمالي 276,000 جنيه. الـ gross profit: مشروبات 144,000 (هامش 66.7%) و pastry 22,500 (هامش 37.5%)، الإجمالي 166,500 (حوالي 60.3%). التكاليف الثابتة 145,000 (إيجار 50,000، مرتبات 70,000، كهربا ومصاريف تانية 25,000)، فالربح التشغيلي 21,500 جنيه في الشهر. الـ pastry = حوالي 21.7% من الإيراد بس 13.5% بس من الـ gross profit. المتغير اللي بنلعب بيه: لو الإيجار زاد 10,000، الربح ينزل لـ 11,500، يعني الربح اتقطع قرب النص من غير ما الإيراد يتغير.",
+    "non_obvious_insight": "إن الحاجة اللي بتبيع أكتر هي اللي بتكسّبك أكتر. في الكافيه، كل جنيه pastry بيسيب أقل من نص اللي بيسيبه جنيه مشروبات.",
+    "prerequisites": [
+      "S1-02"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "breakdown",
+      "chart",
+      "scenario",
+      "takeaway"
+    ],
+    "closing_question": "صاحب الكافيه عايز يزوّد الـ pastry عشان «الناس بتحبها» وهيقلل مساحة البار. من غير ما تحسب: إيه المعلومة اللي محتاج تعرفها الأول قبل ما تقول له يعمل كده ولا لأ؟",
+    "research": "مثال افتراضي بالكامل، والحساب متراجع (276,000 − 109,500 تكلفة متغيرة = 166,500؛ − 145,000 = 21,500). محتاج بس نراجع إن الأرقام معقولة لكافيه متوسط في القاهرة (إيجار ومرتبات وسعر المشروب) من مصادر زي قوائم أسعار معلنة أو مقابلة مع أصحاب كافيهات، ونكتب على الشاشة «مثال افتراضي».",
+    "ratings": {
+      "educational": 4,
+      "practical": 5,
+      "originality": 3,
+      "research_difficulty": 1,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-02",
+    "folder": "402",
+    "series": "decode",
+    "title": "Costco بتكسب من الاشتراك أكتر من البضاعة؟",
+    "title_en": "Does Costco earn more from memberships than merchandise?",
+    "domains": [
+      "Business models",
+      "Strategy"
+    ],
+    "level": 2,
+    "hook": "Costco بتبيع بضاعة بأكتر من 269 مليار دولار في السنة… بس تقريباً نص ربحها التشغيلي ممكن يتقارن برقم أصغر من 2% من الإيراد.",
+    "objective": "المشاهد بعد الحلقة هيقدر يقرا income statement فيه مصدرين إيراد بهوامش مختلفة جداً، ويستنتج منه استراتيجية التسعير، ويعرف حدود الاستنتاج ده.",
+    "supporting_insights": [
+      "هامش البضاعة القليل ممكن يكون اختيار استراتيجي مش ضعف: الاشتراك هو اللي بيموّل الأسعار الواطية.",
+      "نسبة الـ renewal هي المؤشر اللي يقولك الاشتراك ده ماشي ولا لأ، مش حجم المبيعات بس."
+    ],
+    "key_concepts": [
+      "Membership fees",
+      "Merchandise margin",
+      "Operating income",
+      "Renewal rate",
+      "Pricing strategy"
+    ],
+    "case": "أرقام متحققة من Costco Form 10-K للسنة المالية 2025 (52 أسبوع منتهية 31 أغسطس 2025، Consolidated Statements of Income، بالمليون دولار): Net sales 269,912؛ Membership fees 5,323؛ Total revenue 275,235؛ Merchandise costs 239,886؛ SG&A 24,966؛ Operating income 10,383. نفس التقرير بيقول إن نسبة الـ renewal في نهاية 2025 كانت 92.3% في أمريكا وكندا و89.8% عالمياً. حسابنا (مش رقم من التقرير): Net sales − Merchandise costs = 30,026، يعني حوالي 11.1% من المبيعات قبل الـ SG&A. الـ Membership fees = حوالي 1.9% من إجمالي الإيراد، لكنها تساوي حوالي 51% من الـ operating income (5,323 ÷ 10,383). ولو طرحنا الـ SG&A كلها من هامش البضاعة بيفضل حوالي 5,060. التفسير (رأي مش حقيقة): Costco بتسعّر البضاعة قريب من التكلفة عشان تخلّي الاشتراك يستاهل، والاشتراك بيجدد نفسه.",
+    "non_obvious_insight": "إن «الاشتراك هو الربح كله» غلط برضه: الـ 51% دي مقارنة حسابية، مش توزيع رسمي للربح. التقرير مبيقسمش الـ SG&A بين الاشتراك والبضاعة، والعضو مبيدفعش الاشتراك غير عشان البضاعة رخيصة. المصدرين ملهمش معنى لوحدهم.",
+    "prerequisites": [
+      "S1-03"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "breakdown",
+      "chart",
+      "myth",
+      "source",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "مدير جديد في Costco اقترح يرفع هامش البضاعة 1% بس «ومحدش هيحس». الرقم على الورق هيزوّد الربح كتير. إيه اللي ممكن يحصل لنسبة الـ renewal، وإزاي ده يأثر على الربح على المدى الطويل؟",
+    "research": "متحقق: Costco 10-K FY2025 (SEC EDGAR، accession 0000909832-25-000101، cost-20250831.htm): income statement و MD&A (Membership Fees و renewal rates). قبل التسجيل: (1) نقارن بآخر 10-K متاح (FY2026، accession 0000909832-26-000093) ونقرر هنستخدم أنهي سنة. (2) نقرا الـ Note بتاعة revenue recognition عشان نشرح إن الـ membership fee بتتسجّل على مدار سنة العضوية. (3) نتأكد من طريقة تسجيل مكافآت Executive membership (2% reward). (4) نوضّح على الشاشة إن نسبة 51% وهامش 11.1% حساباتنا إحنا.",
+    "ratings": {
+      "educational": 5,
+      "practical": 4,
+      "originality": 4,
+      "research_difficulty": 3,
+      "visual": 5
+    },
+    "pilot": true
+  },
+  {
+    "id": "S4-03",
+    "folder": "403",
+    "series": "decode",
+    "title": "الماكينة رخيصة… والحبر هو البيزنس",
+    "title_en": "Razor & blades: the printer is cheap, the ink is the business",
+    "domains": [
+      "Business models"
+    ],
+    "level": 2,
+    "hook": "ليه الطابعة ممكن تبقى أرخص من 3 علب حبر؟",
+    "objective": "المشاهد هيفهم الـ razor-and-blades model: منتج أساسي بهامش قليل بيفتح سوق لمنتج متكرر بهامش أعلى، وإزاي تكتشفه في تقرير شركة.",
+    "supporting_insights": [
+      "الموديل ده محتاج حاجتين: العميل يفضل محتاج الـ consumable، ويكون صعب يشتريه من حد تاني.",
+      "مجرد الحبر الرخيص من منافس ممكن يكسر الموديل كله، عشان كده الشركات بتحمي الـ consumables."
+    ],
+    "key_concepts": [
+      "Razor & blades",
+      "Installed base",
+      "Recurring revenue",
+      "Segment margin"
+    ],
+    "case": "HP Inc. Form 10-K (آخر سنة مالية متاحة): segment Printing بيتقسم في التقرير لـ Supplies وهاردوير (Consumer و Commercial). الحلقة هتعرض نسبة الـ Supplies من إيراد Printing وتطور الـ segment operating margin، بس الأرقام هتتسحب من الـ 10-K نفسه قبل التسجيل. التحليل: لو الـ Supplies نسبة كبيرة من إيراد الـ segment، يبقى الطابعة نفسها وسيلة. الـ installed base هو الأصل الحقيقي.",
+    "non_obvious_insight": "الأرباح مش في المنتج اللي بتشوفه في الإعلان. ولو الشركة مبتنشرش هامش الطابعة لوحدها، يبقى إحنا بنستنتج الموديل من الشكل العام للأرقام مش من رقم مباشر.",
+    "prerequisites": [
+      "S1-03"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "breakdown",
+      "chart",
+      "proscons",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "منافس نزل حبر متوافق بنص التمن. HP قدامها اختيارين: ترفع سعر الطابعة وتنزل سعر الحبر، أو تقفل الطابعة على الحبر الأصلي بس. إيه اللي بتكسبه وإيه اللي بتخسره في كل اختيار؟",
+    "research": "HP Inc. 10-K (sec.gov): Segment information لـ Printing (net revenue و earnings from operations)، وتقسيم net revenue لـ Supplies و Consumer و Commercial، لآخر 3 سنين مالية. نتأكد من أي وصف في الـ 10-K لموديلات الاشتراك (Instant Ink). مفيش رقم هامش الطابعة لوحدها، فلازم نقول إن ده استنتاج.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-04",
+    "folder": "404",
+    "series": "decode",
+    "title": "Airbnb بتاخد كام من كل حجز؟",
+    "title_en": "Marketplace take rate: Airbnb",
+    "domains": [
+      "Business models"
+    ],
+    "level": 2,
+    "hook": "Airbnb مش بتملك ولا شقة… طب الإيراد بتاعها جاي منين بالظبط؟",
+    "objective": "المشاهد هيفهم الفرق بين Gross Booking Value والـ Revenue، ويحسب الـ take rate بنفسه، ويعرف إمتى رقم «حجم المعاملات» بيضلّل.",
+    "supporting_insights": [
+      "الـ take rate = Revenue ÷ Gross bookings، وهو اللي بيقولك الـ marketplace بتاخد قد إيه من كل جنيه بيعدّي عليها.",
+      "Take rate عالي مش دايماً أحسن: ممكن يزق البائعين والمشترين بره المنصة."
+    ],
+    "key_concepts": [
+      "Marketplace",
+      "Gross Booking Value",
+      "Take rate",
+      "Two-sided market"
+    ],
+    "case": "Airbnb Form 10-K (آخر سنة مالية): الـ 10-K بيعرض Gross Booking Value كـ key business metric جنب الـ Revenue. الحلقة هتحسب Revenue ÷ GBV لـ 3 سنين وتشوف ثابت ولا بيتغير، والأرقام هتتسحب من الـ 10-K قبل التسجيل. الشرح: الضيف بيدفع للمضيف من خلال المنصة، واللي بيتسجل إيراد هو رسوم الخدمة بس، مش قيمة الحجز كله.",
+    "non_obvious_insight": "إن «المنصة عملت حجوزات بـ X مليار» معناها إن الإيراد X مليار. الحقيقة إن الإيراد جزء صغير منه، والفرق ده هو الموديل كله.",
+    "prerequisites": [
+      "S4-01"
+    ],
+    "format": [
+      "hook",
+      "term",
+      "case",
+      "ratio",
+      "chart",
+      "myth",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "شركتين marketplace: الأولى GBV بتاعها أكبر بالضعف، والتانية الـ take rate بتاعها أعلى بالضعف، والإيراد تقريباً واحد. أنهي واحدة موقفها أقوى؟ وإيه المعلومة اللي ناقصاك عشان تحكم؟",
+    "research": "Airbnb 10-K (sec.gov): Revenue و Gross Booking Value و Nights and Experiences Booked لآخر 3 سنين، والتعريف الرسمي للـ GBV من الـ 10-K (ده key business metric مش رقم GAAP). نوضّح إن الـ take rate حسابنا إحنا.",
+    "ratings": {
+      "educational": 5,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 2,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-05",
+    "folder": "405",
+    "series": "decode",
+    "title": "Netflix: الاشتراك الشهري مش فلوس سهلة",
+    "title_en": "Subscription economics: Netflix",
+    "domains": [
+      "Business models",
+      "Finance"
+    ],
+    "level": 2,
+    "hook": "اشتراك كل شهر = فلوس مضمونة؟ مش بالظبط.",
+    "objective": "المشاهد هيفهم إن الـ subscription business بيتقاس بـ ARPU (أو average revenue per membership) و churn وتكلفة المحتوى، ويعرف ليه الربح المحاسبي ممكن يختلف عن الكاش.",
+    "supporting_insights": [
+      "الإيراد = عدد المشتركين × متوسط الإيراد لكل مشترك. أي واحد فيهم يتحرك والإيراد يتحرك.",
+      "تكلفة المحتوى بتتدفع كاش النهارده وبتتوزع محاسبياً على سنين (amortization)، فالربح والكاش ممكن يحكوا قصص مختلفة."
+    ],
+    "key_concepts": [
+      "Subscription",
+      "ARPU",
+      "Churn",
+      "Content amortization",
+      "Free cash flow"
+    ],
+    "case": "Netflix Form 10-K (آخر سنة مالية): الحلقة هتحط جنب بعض streaming revenue و cost of revenues (اللي معظمها content amortization) و الكاش اللي اتصرف على content assets في cash flow statement. الأرقام هتتسحب من الـ 10-K. ملاحظة: Netflix أعلنت إنها هتبطّل تنشر عدد المشتركين كل ربع من 2025، فلازم نتأكد إيه الـ metrics المنشورة فعلاً في آخر 10-K.",
+    "non_obvious_insight": "إن الـ subscription معناها إيراد مضمون. المشترك ممكن يلغي في أي شهر، والضمان الوحيد هو إنه يفضل شايف قيمة، وده بيتكلف محتوى كل سنة.",
+    "prerequisites": [
+      "S1-16"
+    ],
+    "format": [
+      "hook",
+      "breakdown",
+      "case",
+      "compare",
+      "chart",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "شركة اشتراكات رفعت السعر 20% والإيراد زاد، بس عدد المشتركين الجداد قل. إزاي تعرف إذا كان ده قرار ذكي ولا بتصرف من رصيد العملاء القدام؟",
+    "research": "Netflix 10-K (sec.gov): streaming revenues، cost of revenues، amortization of content assets، additions to content assets (cash flow)، وأي metric عن المشتركين أو average monthly revenue per membership متاح في آخر تقرير. نتأكد من سياسة الإفصاح الجديدة عن المشتركين من خطاب المساهمين أو الـ 10-K نفسه.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-06",
+    "folder": "406",
+    "series": "decode",
+    "title": "Network effects: كل ما الناس تزيد المنتج يحلى",
+    "title_en": "Network effects: Airbnb and Uber",
+    "domains": [
+      "Strategy",
+      "Business models"
+    ],
+    "level": 2,
+    "hook": "ليه مش أي حد يقدر يعمل Airbnb تانية بكره الصبح؟",
+    "objective": "المشاهد هيفرّق بين network effects حقيقية (كل مستخدم جديد بيزوّد القيمة لغيره) وبين مجرد حجم كبير، ويعرف يسأل: الـ effect ده محلي ولا عالمي؟",
+    "supporting_insights": [
+      "في marketplace، الـ network effect غالباً محلي: كتر السواقين في القاهرة مبيفيدش راكب في أسوان.",
+      "لو المستخدمين بيستخدموا كذا منصة في نفس الوقت (multi-homing)، الـ network effect بيضعف."
+    ],
+    "key_concepts": [
+      "Network effects",
+      "Two-sided market",
+      "Multi-homing",
+      "Liquidity"
+    ],
+    "case": "وصف بس، من غير أرقام: الحلقة هتستخدم إزاي Airbnb و Uber بيوصفوا البيزنس والمنافسة والمخاطر في الـ Business و Risk Factors في الـ 10-K بتاعهم (وصف الشركة لنفسها، مش دليل إن الـ moat موجود). المقارنة: الضيف في Airbnb بيدور في مدينة بعينها، والراكب في Uber عايز عربية قريبة دلوقتي. التفسير إن قوة الـ network effect بتختلف حسب المسافة والوقت هو رأي تحليلي، والحلقة لازم تقوله كده.",
+    "non_obvious_insight": "إن الشركة الكبيرة عندها network effect أوتوماتيك. الحجم لوحده مش network effect. السؤال هو: المستخدم رقم مليون بيضيف قيمة للمستخدم رقم واحد؟",
+    "prerequisites": [
+      "S4-04"
+    ],
+    "format": [
+      "hook",
+      "term",
+      "compare",
+      "myth",
+      "scenario",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "تطبيق توصيل جديد في مصر بيدي السواقين عمولة أقل بكتير، وأغلب السواقين نزّلوا التطبيقين. مين هيكسب على المدى الطويل، وإيه اللي هيحسم المعركة؟",
+    "research": "Airbnb و Uber 10-K (sec.gov): أقسام Business و Competition و Risk Factors بس، لوصف الشركة لنفسها. مفيش أرقام مالية في الحلقة دي. لو حبينا مثال أكاديمي عن الـ network effects المحلية، نستخدم ورقة بحثية منشورة باسمها.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 4,
+      "research_difficulty": 2,
+      "visual": 3
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-07",
+    "folder": "407",
+    "series": "decode",
+    "title": "ماكدونالدز بتبيع برجر ولا بتأجر أراضي؟",
+    "title_en": "Franchise model: McDonald's",
+    "domains": [
+      "Business models"
+    ],
+    "level": 2,
+    "hook": "أغلب فروع ماكدونالدز مش ملك ماكدونالدز… طب بتكسب منين؟",
+    "objective": "المشاهد هيفهم الفرق بين إيراد المطاعم اللي الشركة بتشغلها وإيراد الـ franchise (إيجار + royalties)، وليه هوامشهم مختلفة.",
+    "supporting_insights": [
+      "الـ franchisor بياخد نسبة من مبيعات غيره، فالمخاطرة التشغيلية بتنتقل للـ franchisee.",
+      "الهامش العالي بييجي مع تحكم أقل: الـ brand في إيد ناس مش موظفين عندك."
+    ],
+    "key_concepts": [
+      "Franchise",
+      "Royalty",
+      "Company-operated vs Franchised",
+      "Margin mix"
+    ],
+    "case": "McDonald's Form 10-K (آخر سنة مالية): الـ income statement بيفصل Sales by Company-owned and operated restaurants عن Revenues from franchised restaurants، والمصاريف كمان متقسمة (Company-operated restaurant expenses و Franchised restaurants-occupancy expenses). الحلقة هتحسب هامش كل نوع من أرقام الـ 10-K نفسه، ونسبة الفروع الـ franchised من إجمالي الفروع. الأرقام هتتسحب قبل التسجيل.",
+    "non_obvious_insight": "إن ماكدونالدز «شركة عقارات» ده تبسيط شهير. الأدق إن جزء كبير من إيراد الـ franchise هو rent، بس قيمة الإيجار ده جاية من البراند والنظام. الاتنين ملهمش قيمة لوحدهم.",
+    "prerequisites": [
+      "S1-03"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "breakdown",
+      "compare",
+      "myth",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "سلسلة مطاعم مصرية ناجحة جالها عرض تبيع 50 franchise في سنة واحدة. الإيراد هيزيد والمخاطرة هتقل على الورق. إيه اللي ممكن يبوظ، وإيه الشروط اللي تحطها قبل ما توافق؟",
+    "research": "McDonald's 10-K (sec.gov): Revenues (company-operated sales، franchised revenues مقسمة لـ rents و royalties و initial fees)، المصاريف المقابلة، وعدد المطاعم حسب نوع الملكية، لآخر سنة مالية. نتأكد من إن الـ 10-K بيقسم الـ franchised revenues بالتفصيل ده.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 2,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-08",
+    "folder": "408",
+    "series": "decode",
+    "title": "هامش 80% ولا 25%؟ الاستراتيجية بتبان من هنا",
+    "title_en": "Gross margin as strategy: software vs grocery",
+    "domains": [
+      "Strategy",
+      "Finance"
+    ],
+    "level": 2,
+    "hook": "شركة هامشها 80% وشركة هامشها 25%… مين فيهم أحسن؟ السؤال نفسه غلط.",
+    "objective": "المشاهد هيفهم إن الـ gross margin بيعكس طبيعة البيزنس وطريقة التنافس، وإن المقارنة لازم تكون بين شركات في نفس الصناعة.",
+    "supporting_insights": [
+      "هامش عالي غالباً معناه تكلفة إنتاج نسخة زيادة قليلة، والمصاريف الكبيرة بتبقى تحت (R&D و Sales).",
+      "هامش قليل ممكن يكسب لو الـ asset turnover عالي: بتلف البضاعة بسرعة."
+    ],
+    "key_concepts": [
+      "Gross margin",
+      "Asset turnover",
+      "Operating leverage",
+      "Cost structure"
+    ],
+    "case": "مقارنة 10-Ks (آخر سنة مالية لكل شركة): شركة software (مثلاً Adobe أو Microsoft) قصاد شركة grocery (مثلاً Kroger). الحلقة هتحسب gross margin و operating margin لكل واحدة من الـ income statement، وهتوري إن الترتيب ممكن يتغير لما تنزل من gross لـ operating. الأرقام هتتسحب قبل التسجيل. ممكن نربط بـ Costco من S4-02 (هامش بضاعة حوالي 11.1% في FY2025، حسابنا من الـ 10-K).",
+    "non_obvious_insight": "إن الهامش العالي أحسن دايماً. شركة هامشها 25% بتلف بضاعتها كذا مرة في السنة ممكن تكسب على رأس المال أحسن من شركة هامشها 80% وبتصرف كتير على المبيعات.",
+    "prerequisites": [
+      "S1-03"
+    ],
+    "format": [
+      "hook",
+      "compare",
+      "chart",
+      "breakdown",
+      "myth",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "مستثمر بيقولك «أنا مبدخلش أي بيزنس هامشه أقل من 50%». إمتى القاعدة دي تحميه، وإمتى تخليه يفوّت فرصة كويسة؟",
+    "research": "10-K لشركة software و 10-K لشركة grocery (sec.gov)، نفس السنة المالية تقريباً: revenue و cost of revenue و operating income و total assets. لازم ننتبه إن كل شركة بتعرّف cost of revenue بطريقتها، ونقول كده على الشاشة.",
+    "ratings": {
+      "educational": 5,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 2,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-09",
+    "folder": "409",
+    "series": "decode",
+    "title": "Economies of scale: الكبير بياكل الصغير؟",
+    "title_en": "Economies of scale: Costco and Walmart",
+    "domains": [
+      "Strategy",
+      "Operations"
+    ],
+    "level": 3,
+    "hook": "ليه السوبر ماركت اللي جنبك ميقدرش يبيع بسعر Costco حتى لو عايز؟",
+    "objective": "المشاهد هيعرف يدوّر على أثر الـ economies of scale في الأرقام: تكلفة التشغيل كنسبة من المبيعات، والمبيعات لكل فرع أو لكل متر.",
+    "supporting_insights": [
+      "الـ scale بيظهر لما التكاليف الثابتة تتوزع على مبيعات أكبر: نسبة الـ SG&A من المبيعات بتقل.",
+      "الحجم بيدي قوة تفاوض مع الموردين، بس ده صعب تشوفه مباشرة في الأرقام."
+    ],
+    "key_concepts": [
+      "Economies of scale",
+      "SG&A ratio",
+      "Bargaining power",
+      "Sales per store"
+    ],
+    "case": "Costco Form 10-K FY2025 (متحقق): SG&A 24,966 مليون دولار على net sales 269,912، يعني حوالي 9.2% (حسابنا). الحلقة هتقارن النسبة دي بنفس النسبة عند Walmart من الـ 10-K بتاعها (Operating, selling, general and administrative expenses ÷ net sales) لنفس الفترة تقريباً، وبعدد الفروع والمبيعات لكل فرع لكل شركة. أرقام Walmart هتتسحب قبل التسجيل.",
+    "non_obvious_insight": "إن الـ scale ميزة لا تُقهر. الحجم بيقلل التكلفة لحد معين، وبعده ممكن التعقيد يزوّدها (diseconomies of scale). وكمان Costco و Walmart موديلين مختلفين (عدد أصناف قليل vs كبير)، فمش كل الفرق حجم.",
+    "prerequisites": [
+      "S4-02"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "ratio",
+      "compare",
+      "chart",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "سلسلة سوبر ماركت مصرية بتفتح فروع بسرعة عشان «توصل للـ scale». إيه الرقم اللي لو شفته بيتحسن، يقولك إن الـ scale بيشتغل فعلاً، وإيه الرقم اللي يقولك إنها بتكبر بس؟",
+    "research": "متحقق: Costco 10-K FY2025 (SEC EDGAR، accession 0000909832-25-000101): SG&A و net sales. مطلوب: Walmart 10-K (السنة المالية المنتهية في يناير الأقرب لنفس الفترة): net sales، operating SG&A، عدد الفروع. Costco: عدد الـ warehouses من نفس الـ 10-K. نوضح إن تعريف SG&A مختلف شوية بين الشركتين.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-10",
+    "folder": "410",
+    "series": "decode",
+    "title": "Switching costs: ليه مش بتغيّر البرنامج حتى لو بتكرهه؟",
+    "title_en": "Moats: switching costs (Microsoft / Adobe)",
+    "domains": [
+      "Strategy"
+    ],
+    "level": 3,
+    "hook": "الشركة بتاعتك ممكن تكره البرنامج اللي بتستخدمه… وبرضه هتجدد السنة الجاية.",
+    "objective": "المشاهد هيفهم الـ switching costs كنوع من الـ moat: التكلفة مش بس فلوس، دي وقت وتدريب وبيانات ومخاطرة، ويعرف يفرّق بين وصف الشركة لنفسها وبين الدليل.",
+    "supporting_insights": [
+      "الـ switching cost الحقيقي غالباً مش سعر البديل، ده تمن الانتقال: تدريب الناس وتحويل الملفات وخطر إن الشغل يقف.",
+      "الـ moat تفسير، والدليل بييجي من سلوك العملاء على سنين (retention، القدرة على رفع السعر)."
+    ],
+    "key_concepts": [
+      "Moat",
+      "Switching costs",
+      "Retention",
+      "Lock-in"
+    ],
+    "case": "وصف بس: الحلقة هتستخدم أقسام Business و Competition في 10-K بتاع Microsoft (Office/Microsoft 365) أو Adobe (Creative Cloud) عشان تشرح إزاي المنتج داخل في شغل العميل اليومي. أي رقم عن retention أو نمو الاشتراكات هيتقال بس لو موجود في الـ 10-K نفسه ومتسحب منه. كلمة «moat» هتتقال إنها تفسيرنا، مش حقيقة من التقرير.",
+    "non_obvious_insight": "إن العملاء اللي مكملين معاك معناها إنهم بيحبوك. ممكن يكونوا مكملين عشان الخروج مكلّف، وده بيخلي ولاءهم هش لو ظهر بديل بيقلل تمن الانتقال.",
+    "prerequisites": [
+      "S4-08"
+    ],
+    "format": [
+      "hook",
+      "term",
+      "case",
+      "myth",
+      "proscons",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "منافس جديد بيعرض نفس البرنامج ببلاش لسنة كاملة وبيحوّل كل ملفاتك أوتوماتيك. إيه اللي اتبقى من الـ switching cost، وإيه اللي لسه بيحمي الشركة القديمة؟",
+    "research": "Microsoft أو Adobe 10-K (sec.gov): أقسام Business و Competition و Risk Factors. لو هنستخدم أي metric (زي عدد مشتركي Microsoft 365 consumer أو Adobe Digital Media ARR) نتأكد إنه منشور في الـ 10-K نفسه أو في مواد IR رسمية ونذكر السنة.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 4,
+      "research_difficulty": 2,
+      "visual": 3
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-11",
+    "folder": "411",
+    "series": "decode",
+    "title": "Apple: البراند بيتقاس بالهامش مش بالإعلان",
+    "title_en": "Brand & pricing power: Apple gross margin",
+    "domains": [
+      "Strategy",
+      "Marketing"
+    ],
+    "level": 2,
+    "hook": "ليه الناس بتدفع أكتر في موبايل ممكن يكون مواصفاته قريبة من موبايل أرخص؟",
+    "objective": "المشاهد هيعرف يقيس الـ pricing power من الأرقام: gross margin عالي وثابت رغم المنافسة، ويفرّق بين هامش المنتجات وهامش الخدمات.",
+    "supporting_insights": [
+      "الـ pricing power بيبان لما تقدر ترفع السعر أو تثبته من غير ما تخسر حصة كبيرة.",
+      "Apple بتفصل في الـ 10-K بين gross margin بتاع Products و Services، والفرق بينهم بيقول حاجة عن الموديل."
+    ],
+    "key_concepts": [
+      "Pricing power",
+      "Brand",
+      "Gross margin",
+      "Product vs Services mix"
+    ],
+    "case": "Apple Form 10-K (آخر سنة مالية): الـ income statement بيعرض net sales و cost of sales لكل من Products و Services، والـ MD&A بيعرض gross margin percentage لكل واحد. الحلقة هتعرض الرقمين لآخر 3 سنين من الـ 10-K، وهتسأل: الهامش ثابت ولا بيتحرك؟ والأرقام هتتسحب قبل التسجيل.",
+    "non_obvious_insight": "إن البراند القوي = إعلانات كتير. المقياس الأصدق هو إن العميل بيقبل يدفع أكتر، وده بيبان في الهامش. بس الهامش لوحده مبيقولش هل ده براند ولا ecosystem ولا switching costs. الأسباب بتتداخل.",
+    "prerequisites": [
+      "S4-10"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "chart",
+      "compare",
+      "myth",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "براند ملابس مصري هامشه 70% وبيقول «ده من قوة البراند». إيه الأسئلة اللي تسألها عشان تعرف هل ده pricing power حقيقي ولا الهامش عالي عشان المبيعات قليلة وبيبيع لشريحة صغيرة؟",
+    "research": "Apple 10-K (sec.gov): products و services net sales و cost of sales، و gross margin percentages من الـ MD&A، لآخر 3 سنين مالية. نقول بوضوح إن ربط الهامش بالبراند تفسير.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 2,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-12",
+    "folder": "412",
+    "series": "decode",
+    "title": "Freemium: ملايين بيسمعوا ببلاش… مين بيدفع؟",
+    "title_en": "Freemium: Spotify",
+    "domains": [
+      "Business models",
+      "Marketing"
+    ],
+    "level": 2,
+    "hook": "أغلب الناس على Spotify مش بيدفعوا… والشركة عايشة إزاي؟",
+    "objective": "المشاهد هيفهم الـ freemium كـ funnel: الـ free tier قناة اكتساب عملاء، والربح من نسبة التحويل لـ Premium، وهيعرف يقرا الأرقام دي في 20-F.",
+    "supporting_insights": [
+      "الـ free users ليهم تكلفة (حقوق المحتوى والسيرفرات)، فمش «ببلاش» للشركة.",
+      "المقياس المهم مش عدد المستخدمين، ده نسبة الـ Premium subscribers من الـ MAUs والهامش لكل segment."
+    ],
+    "key_concepts": [
+      "Freemium",
+      "Conversion rate",
+      "MAU",
+      "Premium vs Ad-supported",
+      "Royalty costs"
+    ],
+    "case": "Spotify Form 20-F (آخر سنة مالية، شركة أجنبية بتقدّم 20-F مش 10-K): بيفصل Premium عن Ad-Supported في الإيراد والـ gross profit، وبينشر MAUs و Premium subscribers. الحلقة هتحسب نسبة المشتركين الدافعين من الـ MAUs وهتقارن هامش الـ segmentين. الأرقام هتتسحب من الـ 20-F قبل التسجيل.",
+    "non_obvious_insight": "إن الـ free users عبء. هما جزء من الـ funnel، وكمان بيجيبوا إيراد إعلانات. السؤال الصح: هل تكلفة الـ free user أقل من قيمته المتوقعة (إعلانات + احتمال إنه يحول)؟",
+    "prerequisites": [
+      "S1-16"
+    ],
+    "format": [
+      "hook",
+      "process",
+      "case",
+      "ratio",
+      "chart",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "تطبيق مصري freemium عنده مليون مستخدم مجاني و 2% بس بيدفعوا. المستثمر عايز يقفل الـ free tier «عشان بيخسر». إيه اللي ممكن يحصل للـ 2% دول، وإيه الرقم اللي تحتاجه قبل ما تقرر؟",
+    "research": "Spotify 20-F (sec.gov): revenue و gross profit لكل segment (Premium و Ad-Supported)، MAUs و Premium subscribers، لآخر 3 سنين مالية. نتأكد إن التعريفات (MAU) من الـ 20-F نفسه.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 2,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-13",
+    "folder": "413",
+    "series": "decode",
+    "title": "لو المنتج ببلاش… انت المنتج؟",
+    "title_en": "Advertising model & ARPU: Meta",
+    "domains": [
+      "Business models",
+      "Marketing"
+    ],
+    "level": 2,
+    "hook": "فيسبوك مبياخدش منك ولا جنيه… بس بيكسب منك.",
+    "objective": "المشاهد هيفهم معادلة الـ advertising model: مستخدمين × وقت/انتباه × سعر الإعلان، وإزاي ARPU بيختلف حسب المنطقة.",
+    "supporting_insights": [
+      "الـ ARPU (Average Revenue Per User) بيختلف جداً بين المناطق، فمستخدم في منطقة ممكن يساوي أضعاف مستخدم في منطقة تانية.",
+      "العميل الحقيقي في الـ ad model هو المعلن، فقرارات المنتج بتتاخد عشانه."
+    ],
+    "key_concepts": [
+      "Advertising model",
+      "ARPU",
+      "DAU/MAU",
+      "Ad impressions & price per ad"
+    ],
+    "case": "Meta Form 10-K (آخر سنة مالية): بينشر revenue حسب المنطقة الجغرافية و ARPP (Average Revenue Per Person) وعدد الـ Daily Active People، وكمان التغير في ad impressions و average price per ad. الحلقة هتقارن الـ ARPP أو الإيراد لكل مستخدم بين منطقة أمريكا وكندا ومنطقة Rest of World. الأرقام هتتسحب من الـ 10-K، والتعريفات منه هو.",
+    "non_obvious_insight": "إن عدد المستخدمين هو كل حاجة. نمو المستخدمين في منطقة الـ ARPU فيها قليل ممكن يزود العدد كتير والإيراد شوية بس.",
+    "prerequisites": [
+      "S4-01"
+    ],
+    "format": [
+      "hook",
+      "breakdown",
+      "case",
+      "chart",
+      "compare",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "منصة محتوى مصرية عندها 5 مليون مستخدم وبتكسب من الإعلانات. عرض جالها تبيع اشتراك من غير إعلانات. إيه اللي هيحصل للـ ARPU عند الفئتين، وليه القرار ده ممكن يكسّب أو يخسّر؟",
+    "research": "Meta 10-K (sec.gov): revenue by user geography، family daily active people (DAP)، ARPP، ad impressions و average price per ad (نسب تغير)، لآخر سنة مالية. نتأكد من التعريفات الحالية لأن Meta غيّرت الـ metrics المنشورة على مر السنين.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-14",
+    "folder": "414",
+    "series": "decode",
+    "title": "Zara: المخزون كسلاح",
+    "title_en": "Inventory & working capital as a weapon: Inditex",
+    "domains": [
+      "Operations",
+      "Finance"
+    ],
+    "level": 3,
+    "hook": "إزاي شركة أزياء بتنزّل تصميمات جديدة كل كام أسبوع ومن غير ما تغرق في بضاعة قديمة؟",
+    "objective": "المشاهد هيفهم إن دورة المخزون وطريقة إدارة الـ working capital ممكن تكون ميزة تنافسية، ويعرف يحسب inventory ÷ cost of sales كمؤشر.",
+    "supporting_insights": [
+      "كل يوم البضاعة بتقعد فيه في المخزن فلوس متجمدة ومخاطرة إنها تبقى موضة قديمة.",
+      "الإنتاج القريب والدفعات الصغيرة بيتكلف أكتر للقطعة، بس ممكن يوفّر في الـ markdowns (التخفيضات الإجبارية)."
+    ],
+    "key_concepts": [
+      "Inventory turnover",
+      "Working capital",
+      "Days inventory",
+      "Markdowns",
+      "Supply chain"
+    ],
+    "case": "Inditex Annual Report (آخر سنة مالية، منشور على موقع inditex.com IR): الحلقة هتحسب inventory ÷ cost of sales (وبالتالي days of inventory تقريباً) من القوائم المالية الموحدة، وهتشوف وصف التقرير لنموذج الـ proximity sourcing. لو حبينا مقارنة، H&M annual report بنفس الطريقة. الأرقام هتتسحب قبل التسجيل.",
+    "non_obvious_insight": "إن الإنتاج الأرخص هو الأكفأ دايماً. التكلفة الأقل للقطعة ممكن تتاكل كلها لو نص البضاعة اتباع بخصم كبير.",
+    "prerequisites": [
+      "S1-12"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "ratio",
+      "compare",
+      "process",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "مصنع ملابس مصري ممكن يطلب من المورد كمية كبيرة بخصم 15%، أو كميات صغيرة كل شهر بسعر أعلى. إيه المعلومات اللي محتاجها عن المبيعات والموضة عشان تختار؟",
+    "research": "Inditex Annual Report (IR site، inditex.com): consolidated balance sheet (inventories)، income statement (cost of sales)، ووصف الـ supply chain والـ proximity sourcing. ننتبه إن السنة المالية بتنتهي في 31 يناير. لو هنقارن بـ H&M نستخدم تقريرها السنوي الرسمي.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 4,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-15",
+    "folder": "415",
+    "series": "decode",
+    "title": "Marriott مش بتملك الفنادق؟ Asset-light vs Asset-heavy",
+    "title_en": "Asset-light vs asset-heavy: Marriott vs Hilton",
+    "domains": [
+      "Operations",
+      "Business models"
+    ],
+    "level": 3,
+    "hook": "أكبر شركات الفنادق في العالم ممكن متكونش مالكة معظم الفنادق اللي عليها اسمها.",
+    "objective": "المشاهد هيفهم الفرق بين البيزنس اللي بيملك الأصول والبيزنس اللي بيدير أو بيدّي franchise، وتأثير ده على الهامش والعائد على الأصول والمخاطرة.",
+    "supporting_insights": [
+      "الـ asset-light بياخد fees (management و franchise) فالإيراد أصغر بس الهامش أعلى ومحتاج رأس مال أقل.",
+      "في الأزمات، الـ asset-heavy بيتحمل التكاليف الثابتة للمبنى، والـ asset-light بيقل إيراده بس من غير الحمل ده."
+    ],
+    "key_concepts": [
+      "Asset-light",
+      "Management & franchise fees",
+      "Return on assets",
+      "Operating leverage"
+    ],
+    "case": "Marriott International و Hilton Worldwide Form 10-K (آخر سنة مالية): الاتنين بيفصلوا الإيراد لـ base management fees و franchise fees و incentive fees و owned/leased hotels و cost reimbursements. الحلقة هتعرض نسبة الـ fees من الإيراد، وعدد الغرف حسب نوع العقد (managed و franchised و owned/leased). الأرقام هتتسحب من الـ 10-Ks. ملحوظة: الـ cost reimbursement revenue بيكبّر الإيراد الإجمالي من غير ربح تقريباً، ولازم نشرحه.",
+    "non_obvious_insight": "إن الإيراد الأكبر معناه بيزنس أكبر. في الفنادق، جزء من الإيراد المعلن reimbursements بتعدّي من غير هامش، فلازم تبص على الـ fee revenue.",
+    "prerequisites": [
+      "S4-07"
+    ],
+    "format": [
+      "hook",
+      "compare",
+      "case",
+      "breakdown",
+      "proscons",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "صاحب سلسلة فنادق في الساحل الشمالي جاله عرض يبيع المباني ويفضل يديرها بعقد إدارة. هيبقى عنده كاش وهامش أعلى. إيه اللي بيتخلى عنه، وإمتى ده يبقى قرار غلط؟",
+    "research": "Marriott و Hilton 10-K (sec.gov): revenue breakdown (fees، owned/leased، cost reimbursements)، عدد الفنادق والغرف حسب نوع العقد، total assets، لنفس السنة المالية. نتأكد من التعريفات لأن الشركتين ممكن يصنّفوا البنود بشكل مختلف.",
+    "ratings": {
+      "educational": 4,
+      "practical": 3,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 3
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-16",
+    "folder": "416",
+    "series": "decode",
+    "title": "الطلب وصل… بس مين كسب؟",
+    "title_en": "Delivery apps unit economics: DoorDash",
+    "domains": [
+      "Business models",
+      "Finance"
+    ],
+    "level": 3,
+    "hook": "الأوردر بتاعك بيعدّي على 3 أطراف: المطعم والمندوب والتطبيق. مين فيهم بيطلع كسبان؟",
+    "objective": "المشاهد هيعرف يفكك unit economics للأوردر الواحد: قيمة الأوردر، اللي التطبيق بياخده، اللي بيدفعه للمندوب والدعم والتسويق، ويعرف إن التقرير السنوي مش بيديك كل التفاصيل دي.",
+    "supporting_insights": [
+      "Revenue ÷ Gross Order Value = الـ take rate، بس الربح محتاج تطرح تكاليف كل أوردر.",
+      "الحجم بيساعد لو كل أوردر بيكسب contribution margin موجب، وبيضر لو سالب."
+    ],
+    "key_concepts": [
+      "Unit economics",
+      "Gross Order Value",
+      "Contribution margin",
+      "Take rate",
+      "Incentives"
+    ],
+    "case": "DoorDash Form 10-K (آخر سنة مالية): بينشر Total Orders و Marketplace GOV جنب الـ Revenue. الحلقة هتحسب revenue per order و revenue ÷ GOV من أرقام الـ 10-K، وبعدين تبني مثال افتراضي لأوردر واحد بافتراضات معلنة (تكلفة مندوب، تسويق، دعم عملاء) عشان توري إزاي الـ contribution margin بيتكوّن. الأرقام الحقيقية هتتسحب قبل التسجيل، والجزء الافتراضي هيتقال إنه افتراضي.",
+    "non_obvious_insight": "إن الحجم هيحل مشكلة الخسارة. لو كل أوردر خسران، الحجم بيزوّد الخسارة. الحجم بيفيد بس لما التكاليف الثابتة تكون هي المشكلة.",
+    "prerequisites": [
+      "S1-14"
+    ],
+    "format": [
+      "hook",
+      "breakdown",
+      "case",
+      "ratio",
+      "scenario",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "تطبيق توصيل في القاهرة بيدي خصومات كبيرة عشان يكبر، وعدد الأوردرات زاد 3 مرات في سنة. إيه الرقمين اللي تطلبهم عشان تعرف هل ده نمو صحي ولا بيشتري عملاء هيمشوا أول ما الخصم يقف؟",
+    "research": "DoorDash 10-K (sec.gov): revenue، Total Orders، Marketplace GOV (key metrics وتعريفاتهم)، و cost of revenue و sales & marketing. الجزء بتاع الأوردر الواحد افتراضي ولازم يتعلّم على الشاشة. مفيش استخدام لأرقام عن التطبيقات المصرية من غير مصدر رسمي.",
+    "ratings": {
+      "educational": 4,
+      "practical": 4,
+      "originality": 3,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-17",
+    "folder": "417",
+    "series": "decode",
+    "title": "فوري: بتكسب إيه من دفع فاتورتك؟",
+    "title_en": "Payments in Egypt: Fawry",
+    "domains": [
+      "Business models",
+      "Finance"
+    ],
+    "level": 3,
+    "hook": "لما بتدفع فاتورة الكهربا من ماكينة فوري… فوري بتكسب منك ولا من شركة الكهربا ولا من حد تالت؟",
+    "objective": "المشاهد هيفهم الموديل بتاع شبكات المدفوعات: إيراد صغير لكل معاملة، شبكة نقاط بيع، والفرق بين قيمة المعاملات والإيراد، وإزاي يقرا ده في تقارير شركة مصرية مقيدة في البورصة.",
+    "supporting_insights": [
+      "قيمة المدفوعات اللي بتعدّي على الشبكة غير إيراد الشركة، زي الـ take rate في الـ marketplaces بالظبط.",
+      "التضخم وتعويم الجنيه بيأثروا على القيم الاسمية، فالنمو بالجنيه لازم يتقرا جنب التضخم."
+    ],
+    "key_concepts": [
+      "Payment network",
+      "Transaction fees",
+      "Take rate",
+      "Nominal vs Real growth"
+    ],
+    "case": "Fawry for Banking Technology and Electronic Payments (مقيدة في EGX): الحلقة هتعتمد على القوائم المالية السنوية المعتمدة والـ earnings releases الرسمية من موقع IR بتاع فوري أو إفصاحات البورصة المصرية: الإيراد حسب خط البيزنس (مدفوعات، banking services، microfinance وغيرها لو متقسمة)، وأي metric عن قيمة المعاملات أو عدد نقاط البيع لو منشورة. مفيش ولا رقم هيتقال قبل ما يتسحب من المصدر الرسمي. هنقارن نمو الإيراد بالجنيه بمعدل التضخم الرسمي (CAPMAS / البنك المركزي) لنفس الفترة.",
+    "non_obvious_insight": "إن نمو الإيراد 50% بالجنيه معناه إن البيزنس كبر 50%. في سنة تضخمها عالي، جزء كبير من النمو ده ممكن يكون أسعار مش حجم.",
+    "prerequisites": [
+      "S4-04"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "breakdown",
+      "compare",
+      "chart",
+      "source",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "شركة مدفوعات مصرية إيرادها زاد 40% في سنة التضخم فيها 35%. المدير بيقول «سنة قياسية». إيه اللي ممكن يكون صح في كلامه وإيه اللي ناقص عشان تحكم؟",
+    "research": "صعب: القوائم المالية السنوية لفوري (IR site / EGX disclosures)، غالباً بالعربي والإنجليزي، ومحتاجة فهم للتقسيم القطاعي والـ IFRS/EAS. محتاجين: الإيراد حسب القطاع، صافي الربح، أي KPIs تشغيلية منشورة رسمياً (عدد نقاط البيع، قيمة المعاملات). معدل التضخم السنوي من CAPMAS أو CBE. ممنوع أخبار أو منشورات سوشيال كمصدر للأرقام.",
+    "ratings": {
+      "educational": 4,
+      "practical": 5,
+      "originality": 5,
+      "research_difficulty": 5,
+      "visual": 3
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-18",
+    "folder": "418",
+    "series": "decode",
+    "title": "البنك بيكسب إزاي؟ Net interest margin",
+    "title_en": "How a bank makes money: Net interest margin (CIB)",
+    "domains": [
+      "Finance"
+    ],
+    "level": 3,
+    "hook": "البنك بياخد فلوسك وديعة ويديك فايدة… ويديها لحد تاني قرض. الفرق ده هو البيزنس كله؟ تقريباً، بس مش بالظبط.",
+    "objective": "المشاهد هيفهم الـ net interest income والـ net interest margin، وإن البنك بيكسب كمان من fees، وإن المخاطرة الحقيقية هي إن القرض ميرجعش.",
+    "supporting_insights": [
+      "NIM = صافي إيراد الفوائد ÷ متوسط الأصول اللي بتكسب فايدة. ده سعر «بيع الفلوس» ناقص سعر «شرائها».",
+      "ارتفاع سعر الفايدة مش دايماً في صالح البنك: بيعتمد على إذا كانت الأصول ولا الالتزامات بتتسعّر أسرع."
+    ],
+    "key_concepts": [
+      "Net interest income",
+      "Net interest margin",
+      "Fee income",
+      "Credit risk",
+      "Provisions"
+    ],
+    "case": "Commercial International Bank (CIB) Egypt annual report / audited financial statements (آخر سنة مالية، من موقع IR بتاع CIB أو إفصاحات EGX): الحلقة هتعرض net interest income و non-interest (fees & commissions) income و provisions (impairment charges)، و NIM لو البنك بينشره في الـ investor presentation الرسمي. مفيش أرقام هتتقال قبل التحقق. هنربط بتحركات سعر الفايدة الرسمية من البنك المركزي المصري في نفس الفترة.",
+    "non_obvious_insight": "إن البنك ربحه أكبر لما بيدي قروض أكتر. القروض الزيادة بتزود المخاطرة، والـ provisions ممكن تاكل الفرق. والبنك اللي بيحط جزء كبير في أذون خزانة بيكسب بشكل مختلف تماماً عن البنك اللي بيقرض شركات.",
+    "prerequisites": [
+      "S2-02"
+    ],
+    "format": [
+      "hook",
+      "breakdown",
+      "term",
+      "ratio",
+      "case",
+      "scenario",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "البنك المركزي رفع سعر الفايدة. بنك عنده ودائع كتير بتتجدد كل 3 شهور وقروض بفايدة ثابتة لـ 5 سنين. ده خبر حلو ولا وحش للبنك ده على المدى القصير؟ وليه؟",
+    "research": "صعب جداً: القوائم المالية للبنوك مختلفة عن الشركات العادية (IFRS 9 و ECL provisions، treasury bills، تعليمات البنك المركزي). محتاجين: CIB audited financial statements و investor presentation الرسمي لآخر سنة: net interest income، fees & commissions، impairment charges، وتعريف NIM لو منشور. سعر الكوريدور من CBE. مراجعة من حد عنده خلفية بنكية قبل التسجيل.",
+    "ratings": {
+      "educational": 5,
+      "practical": 4,
+      "originality": 4,
+      "research_difficulty": 5,
+      "visual": 3
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-19",
+    "folder": "419",
+    "series": "decode",
+    "title": "لما النمو يدمّر القيمة: WeWork",
+    "title_en": "When growth destroys value: WeWork's S-1",
+    "domains": [
+      "Business models",
+      "Finance"
+    ],
+    "level": 3,
+    "hook": "شركة إيرادها بيتضاعف… وكل ما بتكبر خسارتها بتكبر. ده نمو ولا مشكلة؟",
+    "objective": "المشاهد هيتعلم يقرا الـ unit economics ورا النمو: هل كل وحدة جديدة بتكسب ولا بتخسر، وإيه المقاييس «المعدلة» اللي ممكن تضلّل، من خلال S-1 بتاع WeWork سنة 2019.",
+    "supporting_insights": [
+      "النمو بيخلق قيمة بس لو العائد على الاستثمار الجديد أعلى من تكلفة رأس المال.",
+      "الـ mismatch بين التزامات إيجار طويلة وإيراد من عملاء ممكن يمشوا بسرعة = خطر هيكلي."
+    ],
+    "key_concepts": [
+      "Unit economics",
+      "Adjusted metrics",
+      "Lease obligations",
+      "Duration mismatch",
+      "Value creation"
+    ],
+    "case": "The We Company Form S-1 (أغسطس 2019، sec.gov، التسجيل اللي اتسحب بعد كده): الحلقة هتعرض الإيراد وصافي الخسارة لآخر سنتين في الـ S-1، وإجمالي الـ lease obligations المنشورة، والـ metric اللي الشركة نفسها عرّفته (Contribution margin excluding non-cash GAAP straight-line lease cost) وشرح ليه مقاييس زي دي محتاجة حذر. كل رقم هيتسحب من الـ S-1 نفسه قبل التسجيل. أي حكم على الإدارة مش جزء من الحلقة. بنركز على قراءة الأرقام.",
+    "non_obvious_insight": "إن الخسارة في شركة سريعة النمو دايماً «استثمار في المستقبل». بتبقى استثمار بس لو الوحدات القديمة بقت بتكسب. لو الوحدات القديمة لسه خسرانة، النمو بيكبّر المشكلة.",
+    "prerequisites": [
+      "S1-09",
+      "S1-11"
+    ],
+    "format": [
+      "hook",
+      "case",
+      "timeline",
+      "breakdown",
+      "myth",
+      "source",
+      "quiz",
+      "takeaway"
+    ],
+    "closing_question": "Startup مصري لمساحات العمل المشتركة بيقولك «كل فرع بيكسب بعد سنتين». إيه الأدلة اللي تطلبها عشان تصدق الجملة دي، وإيه الخطر اللي ممكن يكون مستخبي في عقود الإيجار؟",
+    "research": "The We Company S-1 (sec.gov، 2019): revenue، net loss، lease obligations (future undiscounted minimum lease payments)، وتعريف الشركة لـ adjusted metrics. نذكر تاريخ الإيداع وإن الطرح اتسحب. ممنوع استخدام كتب أو أفلام أو مقالات عن القصة كمصدر للأرقام. ننتبه لعدم الاستهزاء بأشخاص.",
+    "ratings": {
+      "educational": 5,
+      "practical": 4,
+      "originality": 4,
+      "research_difficulty": 3,
+      "visual": 4
+    },
+    "pilot": false
+  },
+  {
+    "id": "S4-20",
+    "folder": "420",
+    "series": "decode",
+    "title": "تقرا Annual report في 10 دقايق",
+    "title_en": "Read an annual report in 10 minutes",
+    "domains": [
+      "Finance"
+    ],
+    "level": 2,
+    "hook": "الـ 10-K ممكن يبقى أكتر من 100 صفحة… بس فيه 5 أماكن بس هتقولك أغلب الحكاية.",
+    "objective": "المشاهد هيبقى عنده طريقة ثابتة يقرا بيها أي تقرير سنوي: وصف البيزنس، الـ segments، الـ income statement، الـ cash flow، والـ risk factors، والسؤال اللي يطلع بيه من كل جزء.",
+    "supporting_insights": [
+      "ابدأ بالـ segment note: هتعرف الفلوس جاية منين قبل ما تتوه في الإجمالي.",
+      "قارن net income بالـ operating cash flow: الفرق الكبير بينهم سؤال لازم تدور على إجابته."
+    ],
+    "key_concepts": [
+      "Annual report / 10-K",
+      "Segment reporting",
+      "MD&A",
+      "Cash flow statement",
+      "Risk factors"
+    ],
+    "case": "أي 10-K: الحلقة هتمشي على تقرير حقيقي واحد (مقترح: Costco 10-K FY2025 لأننا قريناه في S4-02، وأرقامه متحققة) كخريطة بس: فين Item 1 (Business)، فين Item 1A (Risk Factors)، فين Item 7 (MD&A)، فين Item 8 (القوائم المالية والـ notes). مثلاً: Costco 10-K FY2025 بيقول operating income 10,383 مليون دولار. الحلقة هتوري فين تلاقي الرقم ده وفين تلاقي الـ operating cash flow عشان تقارنهم (رقم الـ cash flow هيتسحب قبل التسجيل).",
+    "non_obvious_insight": "إن التقرير السنوي أرقام بس. أهم المعلومات غالباً في الكلام: الـ risk factors والـ MD&A والـ notes، وده المكان اللي الشركة بتشرح فيه ليه الرقم اتحرك.",
+    "prerequisites": [
+      "S1-02",
+      "S1-12"
+    ],
+    "format": [
+      "hook",
+      "process",
+      "case",
+      "source",
+      "takeaway",
+      "quiz"
+    ],
+    "closing_question": "صاحبك قرا في الـ 10-K إن صافي الربح زاد 30% واتحمس يشتري السهم. إيه أول 3 حاجات تقوله يبص عليها في نفس التقرير قبل ما يحكم إن الشركة اتحسنت؟",
+    "research": "متحقق: Costco 10-K FY2025 operating income (SEC EDGAR، accession 0000909832-25-000101). مطلوب: net cash provided by operating activities من نفس التقرير، وأرقام الصفحات أو الـ Item numbers الفعلية. نوضح إن هيكل الـ 10-K ثابت بقانون SEC (Form 10-K items). مفيش نصيحة استثمار.",
+    "ratings": {
+      "educational": 5,
+      "practical": 5,
+      "originality": 3,
+      "research_difficulty": 1,
+      "visual": 3
+    },
+    "pilot": false
+  }
+]

@@ -3,8 +3,14 @@ import path from "node:path";
 
 export const ROOT = path.resolve(import.meta.dirname, "../..");
 
-export function loadSeries() {
-  return JSON.parse(fs.readFileSync(path.join(ROOT, "series.json"), "utf8"));
+// البراند (series.json) + إعدادات السلسلة (series/<slug>.json). السلسلة بتغلب.
+export function loadSeries(episode) {
+  const brand = JSON.parse(fs.readFileSync(path.join(ROOT, "series.json"), "utf8"));
+  const slug = episode?.series ?? "dictionary";
+  const f = path.join(ROOT, "series", `${slug}.json`);
+  if (!fs.existsSync(f)) throw new Error(`series "${slug}" مش موجودة في series/`);
+  const s = JSON.parse(fs.readFileSync(f, "utf8"));
+  return { ...brand, ...s, mix: { ...brand.mix, ...s.mix }, hashtags: [...(s.hashtags ?? []), ...(brand.hashtags ?? [])] };
 }
 
 export function findEpisodeDir(idArg) {
@@ -26,4 +32,9 @@ export function loadEpisode(dir) {
 export function findVoice(dir) {
   for (const f of ["voice.wav", "voice.mp3", "voice.m4a"]) if (fs.existsSync(path.join(dir, f))) return path.join(dir, f);
   return null;
+}
+
+export function listEpisodeDirs() {
+  const dir = path.join(ROOT, "episodes");
+  return fs.readdirSync(dir).filter((d) => /^\d{3}-/.test(d) && fs.existsSync(path.join(dir, d, "episode.json"))).sort().map((d) => path.join(dir, d));
 }

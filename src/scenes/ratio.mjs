@@ -55,7 +55,6 @@ export default {
       `FB.blurLine(tl, "#${id}-totalLbl", ${tTotal + 0.2});`,
       exitAll(ctx)];
     ctx.cue("pop", tTake + 0.03);
-    for (let i = 0; i < cells - take; i += 3) ctx.cue("click-soft", tTotal + i * 0.07, { volume: 0.25 });
     ctx.cue("riser", land, { lead: true, volume: 0.28 });
     ctx.cue("impact-bass-1", land, { volume: 0.4 });
     return { css: css + extra, html, js: js.join("\n") };

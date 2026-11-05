@@ -16,8 +16,8 @@ export function composeCover({ episode, series, outDir }) {
   const c = episode.cover;
   const hook = c.hook.split("\n").map((l) => `<div>${rich(l).replace(/<span class="hl">/g, '<span class="mark">')}</div>`).join("");
   const en = episode.term.en.toUpperCase();
-  const motif = c.motif ?? { cells: 10, take: 1 };
-  const tiles = Array.from({ length: motif.cells }, (_, i) => `<i class="${i < motif.take ? "on" : ""}"></i>`).join("");
+  const motif = c.motif === false ? null : c.motif ?? { cells: 10, take: 1 };
+  const tiles = !motif ? "" : Array.from({ length: motif.cells }, (_, i) => `<i class="${i < motif.take ? "on" : ""}"></i>`).join("");
   const html = `<!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=${W}, height=${H}">
 <style>
@@ -35,15 +35,16 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${color.paper}}
 #cover .tiles{margin-top:80px;display:grid;grid-template-columns:repeat(5,64px);gap:12px}
 #cover .tiles i{display:block;width:64px;height:64px;border:4px solid ${color.ink};border-radius:12px}
 #cover .tiles i.on{background:${color.accent};border-color:${color.accent}}
-#cover .series{position:absolute;bottom:330px;font-size:40px;font-weight:700}
+#cover .series{position:absolute;bottom:300px;text-align:center;font-size:40px;font-weight:700}
+#cover .series small{display:block;font-size:30px;font-weight:500;color:${color.muted};margin-top:6px}
 #cover .series .dot{display:inline-block;width:16px;height:16px;border-radius:50%;background:${color.accent};margin-inline-start:12px}
 </style></head>
 <body><div id="cover" data-composition-id="cover" data-width="${W}" data-height="${H}" data-start="0" data-duration="1" data-no-timeline>
   <div class="ep"><b>الحلقة <span class="num">${String(episode.number).padStart(2, "0")}</span></b></div>
   <div class="hook">${hook}</div>
   <div class="band"><div class="en">${esc(en)}</div><div class="ar">${rich(c.sub ?? episode.term.ar)}</div></div>
-  <div class="tiles">${tiles}</div>
-  <div class="series">${esc(series.name)}<span class="dot"></span></div>
+  ${tiles ? `<div class="tiles">${tiles}</div>` : ""}
+  <div class="series">${esc(series.brand ?? series.name)}<span class="dot"></span><small>${esc(series.brand ? series.name : "")}</small></div>
 </div></body></html>`;
   fs.writeFileSync(path.join(proj, "index.html"), html);
   fs.writeFileSync(path.join(proj, "meta.json"), JSON.stringify({ id: `fb-cover-${episode.id}`, name: "cover" }));

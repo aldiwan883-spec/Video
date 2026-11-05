@@ -7,7 +7,7 @@ export default {
   build(ctx) {
     const { id, p } = ctx;
     const max = Math.max(p.a.value, p.b.value);
-    const H = 520;
+    const H = 420;
     const ha = Math.max(14, Math.round((p.a.value / max) * H));
     const hb = Math.max(14, Math.round((p.b.value / max) * H));
     const inner = `
@@ -21,7 +21,7 @@ export default {
       <div id="${id}-labels"><div class="sz-body">${rich(p.a.label)}</div><div class="sz-body">${rich(p.b.label)}</div></div>`;
     const { css, html } = frame(ctx, inner, { stageCss: "gap:0" });
     const extra = `
-#${id}-q{margin-bottom:56px}
+#${id}-q{margin-bottom:40px}
 #${id}-chart{position:relative;display:flex;gap:150px;align-items:flex-end;height:${H + 90}px}
 .${id}-col{width:250px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:14px;position:relative;height:100%}
 .${id}-val{font-size:64px;font-weight:800}

@@ -6,6 +6,7 @@ import { SCENES } from "../scenes/index.mjs";
 import { findAnchor, round } from "./timing.mjs";
 import { buildCaptions } from "./captions.mjs";
 import { esc } from "./text.mjs";
+import { planVariation, signature } from "./variation.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const SFX = () => JSON.parse(fs.readFileSync(path.join(ROOT, "public/sounds/manifest.json"), "utf8"));
@@ -24,7 +25,8 @@ export function composeEpisode({ episode, series, timeline, outDir, voiceFile })
 
   // ---- توقيت المشاهد: كل مشهد بيبدأ قبل أول كلمة في الجزء بتاعه بشوية
   const segs = timeline.segments;
-  const starts = segs.map((s, i) => (i === 0 ? 0 : round(s.start - 0.18)));
+  // القطع بين المشاهد في نص السكتة الطبيعية بين الجملتين (مش على أول كلمة)
+  const starts = segs.map((s, i) => (i === 0 ? 0 : round(Math.max(segs[i - 1].end + 0.05, s.start - Math.min(0.3, (s.start - segs[i - 1].end) / 2)))));
   const scenes = episode.segments.map((seg, i) => {
     const start = starts[i];
     const end = i < segs.length - 1 ? starts[i + 1] : timeline.total;
@@ -32,28 +34,37 @@ export function composeEpisode({ episode, series, timeline, outDir, voiceFile })
   });
 
   const cues = [];
+  const notes = []; // تحذيرات التوقيت من المشاهد نفسها
   const manifest = SFX();
+  const plan = planVariation(episode, series);
   const built = scenes.map((sc, i) => {
     const def = SCENES[sc.seg.scene.type];
     if (!def) throw new Error(`نوع مشهد مش معروف: ${sc.seg.scene.type}`);
-    const ground = sc.seg.scene.ground ?? "paper";
-    const prevGround = i > 0 ? episode.segments[i - 1].scene.ground ?? "paper" : null;
+    const v = plan[i];
+    const ground = v.ground, prevGround = v.prevGround;
     const ctx = {
-      id: sc.id, p: sc.seg.scene, dur: sc.dur, ground, prevGround, series, episode,
+      id: sc.id, p: sc.seg.scene, dur: sc.dur, ground, prevGround, series, episode, v,
+      density: series.creative?.visualDensity ?? "medium",
       isFirst: i === 0, isLast: i === scenes.length - 1,
-      at: (a) => (a == null ? 0 : round(Math.max(0, findAnchor(sc.timing, a) - sc.start))),
+      at: (a) => {
+        if (a == null) return 0;
+        const t = round(Math.max(0, findAnchor(sc.timing, a) - sc.start));
+        if (t > sc.dur - 0.4) notes.push({ level: "warn", msg: `${sc.id}: العنصر المربوط بـ "${a}" بيظهر في آخر ${(sc.dur - t).toFixed(2)}s من المشهد — مش هيلحق يتقري` });
+        return t;
+      },
       cue: (name, t, o = {}) => cues.push({ name, t: round(sc.start + t), ...o, scene: sc.id }),
     };
     const out = def.build(ctx);
     const accents = (out.html.match(/data-accent/g) || []).length;
     fs.writeFileSync(path.join(proj, "compositions", `${sc.id}.html`), sceneFile(sc, out));
-    return { ...sc, ground, type: def.type, family: def.family, accents };
+    if (sc.dur < 1.5) notes.push({ level: "warn", msg: `${sc.id}: المشهد قصير جداً (${sc.dur}s)` });
+    return { ...sc, ground, type: def.type, family: def.family, accents, v, sig: signature(def.type, v) };
   });
 
   // ---- Chrome: اسم السلسلة + رقم الحلقة + شريط التقدم (ثابتين طول الفيديو)
   fs.writeFileSync(path.join(proj, "compositions", "chrome.html"), chromeFile(built, series, episode, timeline.total));
   // ---- Captions
-  const cap = buildCaptions(timeline, episode, built);
+  const cap = buildCaptions(timeline, episode, built, series.creative?.captionStyle ?? "karaoke");
   fs.writeFileSync(path.join(proj, "compositions", "captions.html"), cap.file);
 
   // ---- Audio
@@ -64,6 +75,7 @@ export function composeEpisode({ episode, series, timeline, outDir, voiceFile })
   }
   // مستوى الـ SFX كله من series.json → mix.sfx (1 = الأصلي، 0.5 = النص). الافتراضي هادي وتحت صوتك.
   const sfxGain = series.mix?.sfx ?? 0.45;
+  const placed = [];
   const used = {};
   const trackEnds = [];
   const trackFor = (s, e) => {
@@ -85,13 +97,14 @@ export function composeEpisode({ episode, series, timeline, outDir, voiceFile })
     if (start < 0) { mediaStart = -start; dur -= mediaStart; start = 0; }
     dur = Math.min(dur, timeline.total - start);
     if (dur <= 0.05) return;
+    placed.push({ name: c.name, file: m.file, t: c.t, start: round(start), dur: round(dur), volume: round((c.volume ?? 0.3) * sfxGain) });
     audio.push(`<audio id="sfx-${k}" class="clip" src="${file}" data-start="${round(start)}" data-duration="${round(dur)}"${mediaStart ? ` data-media-start="${round(mediaStart)}"` : ""} data-track-index="${trackFor(start, start + dur)}" data-volume="${round((c.volume ?? 0.3) * sfxGain)}"${fadeIn ? ` data-fade-in="${fadeIn}"` : ""}${fadeOut ? ` data-fade-out="${fadeOut}"` : ""}></audio>`);
   });
 
-  fs.writeFileSync(path.join(proj, "index.html"), indexFile(built, timeline.total, audio));
+  fs.writeFileSync(path.join(proj, "index.html"), indexFile(built, timeline.total, audio, series));
   fs.writeFileSync(path.join(proj, "hyperframes.json"), JSON.stringify({ paths: { blocks: "compositions", assets: "assets" }, media: { autoProxy: true } }, null, 2));
   fs.writeFileSync(path.join(proj, "meta.json"), JSON.stringify({ id: `fb-${episode.id}`, name: `${series.name} ${episode.id}` }, null, 2));
-  return { proj, scenes: built, cues, captions: cap.groups, total: timeline.total };
+  return { proj, scenes: built, cues, sfx: placed, notes, captions: cap.groups, total: timeline.total };
 }
 
 function sceneFile(sc, out) {
@@ -128,12 +141,12 @@ function chromeFile(scenes, series, episode, total) {
 ${baseCss()}
 #chrome-bar{position:absolute;top:${safe.top - 40}px;left:${safe.side}px;right:${safe.side}px;display:flex;justify-content:space-between;align-items:center;color:${color.ink};font-size:34px;font-weight:700}
 #chrome-bar .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:${color.accent};margin-inline-start:12px;vertical-align:middle}
-#chrome-ep{font-weight:800;opacity:.55}
+#chrome-ep{font-weight:600;opacity:.6;font-size:30px}
 #chrome-track{position:absolute;top:${safe.top + 16}px;left:${safe.side}px;right:${safe.side}px;height:6px;border-radius:3px;background:${color.ghost};overflow:hidden}
 #chrome-fill{width:100%;height:100%;background:${color.ink}}
 </style>
 <div id="root" data-composition-id="chrome" data-width="${W}" data-height="${H}">
-  <div id="chrome-bar"><div>${esc(series.name)}<span class="dot"></span></div><div id="chrome-ep" class="num">EP ${String(episode.number).padStart(2, "0")}</div></div>
+  <div id="chrome-bar"><div>${esc(series.brand ?? series.name)}<span class="dot"></span></div><div id="chrome-ep">${esc(series.brand ? series.name : "")} <span class="num">${String(episode.number).padStart(2, "0")}</span></div></div>
   <div id="chrome-track" data-layout-ignore><div id="chrome-fill"></div></div>
 </div>
 <script>
@@ -147,7 +160,7 @@ window.__timelines["chrome"] = tl;
 `;
 }
 
-function indexFile(scenes, total, audio) {
+function indexFile(scenes, total, audio, series) {
   const hosts = scenes.map((s, i) =>
     `<div id="${s.id}" data-composition-id="${s.id}" data-composition-src="compositions/${s.id}.html" data-start="${s.start}" data-duration="${s.dur}" data-track-index="1" data-track-kind="graphics" data-width="${W}" data-height="${H}" style="z-index:${i + 1}"></div>`);
   return `<!doctype html>
@@ -157,6 +170,7 @@ function indexFile(scenes, total, audio) {
 <meta name="viewport" content="width=${W}, height=${H}" />
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/fx.js"></script>
+<script>window.FB_INTENSITY = ${series.creative?.animationIntensity ?? 1};</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{margin:0;width:${W}px;height:${H}px;overflow:hidden;background:${color.paper}}

@@ -5,10 +5,10 @@ import { round } from "./timing.mjs";
 
 const MAX_WORDS = 4, MAX_CHARS = 24;
 
-export function buildCaptions(timeline, episode, scenes) {
+export function buildCaptions(timeline, episode, scenes, style = "karaoke") {
   const groups = [];
   timeline.segments.forEach((seg, si) => {
-    if (episode.segments[si].captions === false) return;
+    if (style === "off" || episode.segments[si].captions === false) return;
     let cur = [];
     const flush = () => { if (cur.length) groups.push({ seg: si, words: cur }); cur = []; };
     seg.words.forEach((w, i) => {
@@ -23,15 +23,17 @@ export function buildCaptions(timeline, episode, scenes) {
   const darkAt = (t) => scenes.some((s) => s.ground === "ink" && t >= s.start && t < s.start + s.dur);
   const html = [], js = [];
   groups.forEach((g, gi) => {
-    const start = round(Math.max(0.15, g.words[0].start - 0.08));
+    const prevEnd = groups[gi - 1]?.end ?? 0;
+    const start = round(Math.max(0.15, prevEnd, g.words[0].start - 0.08));
     const next = groups[gi + 1];
-    const end = round(Math.min(g.words.at(-1).end + 0.35, next ? next.words[0].start - 0.1 : 1e9));
+    const lastEnd = g.words.at(-1).end;
+    const end = round(Math.max(lastEnd, Math.min(lastEnd + 0.35, next ? next.words[0].start - 0.04 : 1e9)));
     g.start = start; g.end = end;
     const dark = darkAt(start);
     const words = g.words.map((w, wi) => `<span class="cw" id="cap-${gi}-${wi}">${esc(w.text.replace(/[*]/g, "").replace(/[،,]$/, ""))}</span>`).join(" ");
     html.push(`<div class="cg${dark ? " dark" : ""}" id="cap-${gi}">${words}</div>`);
     js.push(`tl.fromTo("#cap-${gi}", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.14, ease: "power3.out" }, ${start});`);
-    g.words.forEach((w, wi) => js.push(`tl.fromTo("#cap-${gi}-${wi}", { color: "${dark ? "#9C9488" : "#8A8172"}" }, { color: "${dark ? color.paper : color.ink}", duration: 0.06 }, ${round(w.start)});`));
+    if (style === "karaoke") g.words.forEach((w, wi) => js.push(`tl.fromTo("#cap-${gi}-${wi}", { color: "${dark ? "#9C9488" : "#8A8172"}" }, { color: "${dark ? color.paper : color.ink}", duration: 0.06 }, ${round(w.start)});`));
     js.push(`tl.to("#cap-${gi}", { opacity: 0, duration: 0.1, ease: "power2.in" }, ${round(end - 0.1)});`);
     js.push(`tl.set("#cap-${gi}", { visibility: "hidden" }, ${end});`);
   });

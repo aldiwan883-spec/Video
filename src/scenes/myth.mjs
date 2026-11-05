@@ -18,7 +18,7 @@ export default {
 .${id}-wrong i{position:absolute;right:-6px;left:-6px;top:52%;height:9px;border-radius:5px;background:${ink}}
 #${id}-title{font-size:44px}
 #${id}-right{margin-top:40px;background:${color.accent};color:${color.ink};padding:26px 48px 34px;border-radius:22px}
-#${id}-right #${id}-rl{color:${color.ink};opacity:.75}`;
+#${id}-right #${id}-rl{color:${color.ink};opacity:.75;margin-bottom:12px;line-height:1.2}`;
     const js = [groundIn(ctx),
       `FB.blurLine(tl, "#${id}-title", 0.35);`,];
     p.wrong.forEach((_, i) => {

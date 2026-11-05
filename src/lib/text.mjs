@@ -2,7 +2,20 @@
 const DIACRITICS = /[ؐ-ًؚ-ٰٟۖ-ۭـ]/g;
 const AR_DIGITS = "٠١٢٣٤٥٦٧٨٩";
 
+// الأرقام المنطوقة بالعامية/الفصحى → أرقام، عشان "اتنين مليون" تتطابق مع "2 مليون" في المحاذاة
+const NUM_WORDS = {
+  واحد: "1", اتنين: "2", اثنين: "2", اثنان: "2", تلاته: "3", ثلاثه: "3", اربعه: "4", خمسه: "5", سته: "6",
+  سبعه: "7", تمانيه: "8", ثمانيه: "8", تسعه: "9", عشره: "10", عشر: "10", عشرين: "20", عشرون: "20", تلاتين: "30",
+  ثلاثين: "30", ثلاثون: "30", اربعين: "40", اربعون: "40", خمسين: "50", خمسون: "50", ستين: "60", سبعين: "70",
+  تمانين: "80", ثمانين: "80", تسعين: "90", ميه: "100", مايه: "100", مئه: "100", الف: "1000",
+};
 export function normalize(s) {
+  const base = normalizeText(s);
+  if (NUM_WORDS[base]) return NUM_WORDS[base];
+  if (/^[وب]/.test(base) && NUM_WORDS[base.slice(1)]) return NUM_WORDS[base.slice(1)];
+  return base;
+}
+function normalizeText(s) {
   return String(s)
     .replace(DIACRITICS, "")
     .replace(/[٠-٩]/g, (d) => String(AR_DIGITS.indexOf(d)))

@@ -1,0 +1,35 @@
+{
+  "slug": "investor-mind",
+  "name": "إزاي تبقى أحمد طارق في نفسك؟",
+  "hashtag": "#فكر_زي_المستثمر",
+  "hashtags": [
+    "#استثمار",
+    "#قرارات"
+  ],
+  "creative": {
+    "animationIntensity": 0.85,
+    "_animationIntensity": "0.7 هادي جداً · 1 عادي · 1.3 حيوي (بيأثر على سرعة ومسافة الحركة)",
+    "visualDensity": "low",
+    "_visualDensity": "low = خط أكبر وعناصر أقل · medium · high = معلومات أكتر في الفريم",
+    "captionStyle": "phrase",
+    "_captionStyle": "karaoke = الكلمة اللي بتتقال بتنوّر · phrase = الجملة كلها مرة واحدة · off",
+    "transitions": [
+      "flood",
+      "blur",
+      "iris"
+    ],
+    "_transitions": "من: blur, whip, flood, iris, cut — بالترتيب حسب الأفضلية",
+    "darkSceneShare": 0.4,
+    "chip": "ink"
+  },
+  "mix": {
+    "sfx": 0.35,
+    "maxSfxPer10s": 3,
+    "voiceLufs": -16,
+    "keepPause": 0.45
+  },
+  "targetDuration": [
+    65,
+    80
+  ]
+}
