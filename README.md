@@ -1,6 +1,17 @@
 # فهّمني بيزنس — Content Production System
 
-سلسلة Reels تعليمية (Instagram, Facebook, YouTube Shorts) بتشرح مصطلحات البيزنس اللي بتتقال في شارك تانك مصر، بالعامية المصرية وبصوتك.
+موسوعة بيزنس مبسّطة بالمصري في شكل Reels (Instagram, Facebook, YouTube Shorts)، بصوتك، و5 سلاسل:
+**قاموس المستثمر** · **إزاي تبقى أحمد طارق في نفسك؟** · **إزاي تكسب ثقة الشاركس؟** · **فك شفرة البيزنس** · **من فكرة لشركة**
+
+| ابدأ من هنا | |
+|---|---|
+| الاستراتيجية | `docs/strategy/CONTENT_BIBLE.md` · `docs/strategy/CONCEPT_MAP.md` |
+| المنهج (100 حلقة) | `docs/roadmap/ROADMAP.md` · `RATINGS.md` · `TOP10.md` · `PUBLISHING_ORDER.md` |
+| الـ 5 Pilots | `episodes/{001,203,307,402,502}-*/` + `docs/pilots/*/LEARNING.md` |
+| المكتبة المالية | `docs/library/README.md` (19 مفهوم) |
+| البحث والأسئلة | `docs/research/WORKFLOW.md` · `RESEARCH_SOURCES.md` · `docs/quiz/QUIZ_FRAMEWORK.md` |
+| المحرك | `docs/ENGINE.md` (الأوامر، والـ 18 مشهد، والـ QC، وإعدادات السلاسل) |
+| الحالة | `OVERNIGHT_REPORT.md` · `NEXT_STEPS.md` · `CONTENT_QUALITY_AUDIT.md` · `PROGRESS.md` |
 
 ده مش "Video Generator" بيطلّع فيديوهات شبه بعض. ده pipeline بيقوم بأربع أدوار:
 
@@ -44,7 +55,7 @@ npm run build:episode -- 001
    - `QC.md`: تقرير الجودة
    - `review/`: فريمات من كل مشهد عشان تراجع بعينك
 
-### أوامر تانية
+### أوامر تانية (التفاصيل في `docs/ENGINE.md`)
 
 | الأمر | بيعمل إيه |
 |---|---|
@@ -52,6 +63,11 @@ npm run build:episode -- 001
 | `npm run build:episode -- 001 --draft` | ريندر بجودة أقل، أسرع |
 | `npm run script -- 001` | يطلّع `script.md` بس |
 | `npm run studio -- 001` | يفتح المشروع في HyperFrames Studio في المتصفح عشان تعدّل بإيدك |
+| `npm run build:episode -- 001 203 402` / `--all` | Batch |
+| `npm run build:episode -- 001 --silent` | preview صامت حتى لو فيه `voice.wav` |
+| `npm run edu-check -- --all` | البوابة التعليمية |
+| `npm run roadmap` | يبني ملفات الـ roadmap من الـ JSON |
+| `npm test` | الاختبارات |
 
 من غير `voice.wav`، النظام بيقدّر التوقيت وبيطلع preview، وده بينفع عشان تشوف الشكل قبل ما تسجل.
 
@@ -74,8 +90,8 @@ episode.json ──► script.md ──► (انت بتسجل) voice.wav
 ## ملفات مهمة
 
 - `docs/IDENTITY.md`: قواعد الهوية (الألوان والخطوط والـ hierarchy والحركة)
-- `docs/STORYBOARD.md`: أنواع المشاهد وإزاي تتكتب في `episode.json`
-- `series.json`: اسم السلسلة والهاشتاجات الثابتة
+- `docs/STORYBOARD.md`: إزاي تكتب حلقة (`episode.json` + بلوك `edu`)
+- `series.json` (البراند) + `series/<slug>.json` (إعدادات كل سلسلة: الحركة، والكابشن، والـ SFX، والـ transitions، والمدة)
 
 ## التراخيص
 

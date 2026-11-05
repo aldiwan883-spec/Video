@@ -128,13 +128,21 @@ window.__timelines["${sc.id}"] = tl;
 }
 
 function chromeFile(scenes, series, episode, total) {
-  const dark = scenes.filter((s) => s.ground === "ink");
+  // المشاهد الغامقة المتتالية = فترة واحدة (عشان اللون ميتقلبش مرتين ورا بعض)
+  const dark = [];
+  for (const sc of scenes.filter((x) => x.ground === "ink")) {
+    const last = dark.at(-1);
+    if (last && Math.abs(last.start + last.dur - sc.start) < 0.01) last.dur = round(sc.start + sc.dur - last.start);
+    else dark.push({ start: sc.start, dur: sc.dur });
+  }
   const js = [`tl.fromTo("#chrome-fill", { scaleX: 0, transformOrigin: "right center" }, { scaleX: 1, duration: ${total}, ease: "none" }, 0);`];
   for (const s of dark) {
     js.push(`tl.to("#chrome-bar", { color: "${color.paper}", duration: 0.3 }, ${round(s.start + 0.15)});`);
     js.push(`tl.to("#chrome-fill", { backgroundColor: "${color.paper}", duration: 0.3 }, ${round(s.start + 0.15)});`);
-    js.push(`tl.to("#chrome-bar", { color: "${color.ink}", duration: 0.3 }, ${round(s.start + s.dur + 0.15)});`);
-    js.push(`tl.to("#chrome-fill", { backgroundColor: "${color.ink}", duration: 0.3 }, ${round(s.start + s.dur + 0.15)});`);
+    if (s.start + s.dur < total - 0.5) {
+      js.push(`tl.to("#chrome-bar", { color: "${color.ink}", duration: 0.3 }, ${round(s.start + s.dur + 0.15)});`);
+      js.push(`tl.to("#chrome-fill", { backgroundColor: "${color.ink}", duration: 0.3 }, ${round(s.start + s.dur + 0.15)});`);
+    }
   }
   return `<template>
 <style>
