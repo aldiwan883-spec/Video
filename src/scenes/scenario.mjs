@@ -7,6 +7,7 @@ export default {
   build(ctx) {
     const { id, p } = ctx;
     const ink = ctx.ground === "ink" ? color.paper : color.ink;
+    const vp = (x) => +(10 + x * 0.8).toFixed(2); // المؤشر ميلزقش في حرف الشاشة
     const s0 = p.states[0];
     const inner = `
       ${p.title ? `<div id="${id}-title" class="sz-h2">${rich(p.title, { words: true })}</div>` : ""}
@@ -34,14 +35,14 @@ export default {
 .${id}-o[data-accent] .${id}-ov{color:${color.accent}}`;
     const js = [groundIn(ctx), p.title ? `FB.blurWords(tl, "#${id}-title", 0.05);` : "",
       `FB.blurLine(tl, "#${id}-var", 0.2);`,
-      `FB.knob(tl, "#${id}-knob", 0, ${s0.pos}, ${s0.pos}, { dur: 0.01, first: true });`,
-      `tl.fromTo("#${id}-fill", { scaleX: ${s0.pos / 100} }, { scaleX: ${s0.pos / 100}, duration: 0.01 }, 0);`,
+      `FB.knob(tl, "#${id}-knob", 0, ${vp(s0.pos)}, ${vp(s0.pos)}, { dur: 0.01, first: true });`,
+      `tl.fromTo("#${id}-fill", { scaleX: ${vp(s0.pos) / 100} }, { scaleX: ${vp(s0.pos) / 100}, duration: 0.01 }, 0);`,
       `FB.rise(tl, "#${id}-outs", 0.5, { y: 30 });`];
     p.states.slice(1).forEach((s, k) => {
       const prev = p.states[k];
       const t = ctx.at(s.at);
-      js.push(`FB.knob(tl, "#${id}-knob", ${t}, ${prev.pos}, ${s.pos});`);
-      js.push(`tl.to("#${id}-fill", { scaleX: ${s.pos / 100}, duration: 0.8, ease: "power2.inOut" }, ${t});`);
+      js.push(`FB.knob(tl, "#${id}-knob", ${t}, ${vp(prev.pos)}, ${vp(s.pos)});`);
+      js.push(`tl.to("#${id}-fill", { scaleX: ${vp(s.pos) / 100}, duration: 0.8, ease: "power2.inOut" }, ${t});`);
       js.push(`tl.set("#${id}-kv", { textContent: ${JSON.stringify(String(s.value))} }, ${t + 0.4});`);
       p.outputs.forEach((o, i) => {
         const a = Number(prev.raw?.[i] ?? NaN), b = Number(s.raw?.[i] ?? NaN);

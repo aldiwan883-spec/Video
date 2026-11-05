@@ -16,7 +16,8 @@ import chart from "./chart.mjs";
 import scenario from "./scenario.mjs";
 import takeaway from "./takeaway.mjs";
 import source from "./source.mjs";
+import illustrated from "./illustrated.mjs";
 
 export const SCENES = Object.fromEntries(
-  [hook, term, ratio, compare, myth, quiz, next, breakdown, caseScene, timeline, decision, process, proscons, beforeafter, chart, scenario, takeaway, source].map((s) => [s.type, s]),
+  [hook, term, ratio, compare, myth, quiz, next, breakdown, caseScene, timeline, decision, process, proscons, beforeafter, chart, scenario, takeaway, source, illustrated].map((s) => [s.type, s]),
 );
